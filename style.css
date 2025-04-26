@@ -39,11 +39,15 @@ img{
     width: 20rem;
     height: 20rem;
 }
-.format-content{
+.format-horizontal{
     padding-left: 5rem;
     padding-right: 5rem;
     margin-left: auto;
     margin-right: auto;
+}
+.format-vertical{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 .hero-section{
     background-color: #0f172a;
@@ -68,4 +72,26 @@ img{
 .about-container{
     
     
+}
+
+.price-head{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.price-box-container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.price-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
 }
