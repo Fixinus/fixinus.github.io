@@ -19,13 +19,13 @@ body{
     justify-content: space-between;
 }
 
-ul{
+nav ul{
     list-style-type:none;
     overflow: hidden;
     padding: 0;
 }
 
-li{
+nav ul li{
     float:left;
 }
 
@@ -61,7 +61,6 @@ img{
 
 .hero-text{
     color:white;
-    
 }
 
 .hero-picture{
@@ -69,11 +68,22 @@ img{
     justify-content: center;
 }
 
-.about-container{
-    
-    
+.about-head{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
+.service-head{
+    text-align: center;
+}
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.service-content div{
+    padding: 2rem;
+}
 .price-head{
     display: flex;
     flex-direction: column;
@@ -94,4 +104,112 @@ img{
     background: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 1rem;
+    position: relative;
+}
+
+.price-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.price-box button{
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+  }
+
+  .info-box.show {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+  }
+
+.contact-head{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-body{
+    display: flex;
+    justify-content: center;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box{
+    padding: 2rem;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-info{
+    padding: 2rem;
+    margin: auto;
+}
+.form-box input, textarea, button {
+    margin: 1rem;
+}
+footer{
+    background-color: #0f172a;
+}
+.footer-container{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+}
+.footer-container > div:last-child {
+    grid-column: 1 / -1;
+}
+
+.footer-info{
+    padding: 2rem;
+}
+
+.footer-links{
+    padding: 2rem;
+}
+
+.footer-links ul{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.footer-links ul li{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a{
+    text-align: start;
+    padding-left: 0;
+}
+
+.footer-copyright{
+    text-align: center;
 }

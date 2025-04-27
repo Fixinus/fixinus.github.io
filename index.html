@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Fixinus</title>
 </head>
 
@@ -47,14 +48,60 @@
                 <h2>About Fixinus</h2>
             </div>
             <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vehicula justo. Donec mollis libero
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vehicula justo. Donec mollis
+                    libero
                     blandit felis ultrices, a imperdiet quam laoreet. Vivamus sagittis felis lectus, id pretium sapien
                     semper viverra. Fusce id tincidunt nisi. Ut in lorem sit amet est ullamcorper blandit. Suspendisse
-                    egestas, lacus vel vestibulum tincidunt, ex nunc fermentum nisl, in vestibulum velit lectus et lorem.
-                    Etiam pharetra elit urna, eu molestie dui dictum ut. In scelerisque, turpis quis tincidunt tempus, urna
+                    egestas, lacus vel vestibulum tincidunt, ex nunc fermentum nisl, in vestibulum velit lectus et
+                    lorem.
+                    Etiam pharetra elit urna, eu molestie dui dictum ut. In scelerisque, turpis quis tincidunt tempus,
+                    urna
                     augue feugiat metus, vel placerat lorem ex a sapien. Donec sit amet dictum nisl, ac tincidunt velit.
                     Curabitur et dolor metus. Mauris ac finibus purus. </p>
             </div>
+        </div>
+    </section>
+
+    <section class="service-section">
+        <div class="service-container max-w format-horizontal format-vertical">
+            <div class="service-head">
+                <h2>Services</h2>
+            </div>
+            <div class="service-content">
+                <div>
+                    <h3>Tietokonehuolto</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
+                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
+                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
+                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
+                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
+                </div>
+                <div>
+                    <h3>ICT-Palvelut yrityksille</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
+                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
+                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
+                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
+                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
+                </div>
+                <div>
+                    <h3>Koti- ja yrityskäynnit</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
+                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
+                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
+                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
+                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
+                </div>
+                <div>
+                    <h3>Etäyhteys</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
+                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
+                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
+                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
+                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -71,13 +118,20 @@
                         <span>49€</span>
                         <span>/ one-time</span>
                     </div>
-                    
+                    <button class="show-info-btn">Show more</button>
+                    <div class="info-box">
+                        <p>This plan is perfect for small businesses just starting out. Upgrade anytime!</p>
+                    </div>
                 </div>
                 <div class="price-box">
                     <h3>Standard Repair</h3>
                     <div>
                         <span>129€</span>
                         <span>/ one-time</span>
+                    </div>
+                    <button class="show-info-btn">Show more</button>
+                    <div class="info-box">
+                        <p>This plan is perfect for medium businesses just starting out. Upgrade anytime!</p>
                     </div>
                 </div>
                 <div class="price-box">
@@ -86,17 +140,76 @@
                         <span>199€</span>
                         <span>/ one-time</span>
                     </div>
+                    <button class="show-info-btn">Show more</button>
+                    <div class="info-box">
+                        <p>This plan is perfect for small businesses just starting out. Upgrade anytime!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="contact-section">
-
+        <div class="contact-container max-w format-horizontal format-vertical">
+            <div class="contact-head">
+                <h2>Contact Us</h2>
+                <p>Have a question or need help with your computer? Get in touch with our team today.</p>
+            </div>
+            <div class="contact-body">
+                <div class="form-box">
+                    <h3>Send Us A Message</h3>
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Name" required />
+                        <input type="email" name="email" placeholder="Email" required />
+                        <input type="text" name="phone" placeholder="Phone" required />
+                        <textarea name="message" placeholder="Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div>
+                        <h4>Address</h4>
+                        <p>123 Hurrigatan</p>
+                        <p>Borgå 12345</p>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>040 12345678</p>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@fixinus.fi</p>
+                    </div>
+                    <div>
+                        <h4>Business Hours</h4>
+                        <p>Monday-Friday: 08:00 - 16:00</p>
+                        <p>Saturday: 09:00 - 15:00</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
-
+        <div class="footer-container max-w format-horizontal format-vertical">
+            <div class="footer-info">
+                <h3>Fixinus</h3>
+                <p>Professional computer repair services with a focus on customer satisfaction and quality workmanship.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="">Abous Us</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 Fixinus. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 
