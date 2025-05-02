@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Fixinus</title>
 </head>
 
@@ -17,16 +20,19 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Prices</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#prices">Prices</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
+    </header>
+
+    <section class="hero-section">
         <div class="hero-section">
             <div class="hero-container max-w format-horizontal">
                 <div class="hero-text">
-                    <h2>Hello World</h2>
+                    <h2>Reliable IT Support & Computer Repairs</h2>
                     <p>Fixinus has been helping people with computer problems since 2010. Whether your laptop won’t
                         boot, your
                         desktop is too slow, or you need help setting up a new device—we’ve got your back. Friendly,
@@ -34,42 +40,47 @@
                         affordable.</p>
                 </div>
                 <div class="hero-picture">
-                    <img src="birdsvg.svg" alt="">
+                    <img src="/media/computersvg.svg" alt="Computer and IT support illustration">
                 </div>
-            </div>
-        </div>
-
-
-    </header>
-
-    <section class="about-section">
-        <div class="about-container max-w format-horizontal format-vertical">
-            <div class="about-head">
-                <h2>About Fixinus</h2>
-            </div>
-            <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vehicula justo. Donec mollis
-                    libero
-                    blandit felis ultrices, a imperdiet quam laoreet. Vivamus sagittis felis lectus, id pretium sapien
-                    semper viverra. Fusce id tincidunt nisi. Ut in lorem sit amet est ullamcorper blandit. Suspendisse
-                    egestas, lacus vel vestibulum tincidunt, ex nunc fermentum nisl, in vestibulum velit lectus et
-                    lorem.
-                    Etiam pharetra elit urna, eu molestie dui dictum ut. In scelerisque, turpis quis tincidunt tempus,
-                    urna
-                    augue feugiat metus, vel placerat lorem ex a sapien. Donec sit amet dictum nisl, ac tincidunt velit.
-                    Curabitur et dolor metus. Mauris ac finibus purus. </p>
             </div>
         </div>
     </section>
 
-    <section class="service-section">
+    <section id="about" class="about-section">
+        <div class="about-container max-w format-horizontal format-vertical">
+            <div class="about-head">
+                <h2>About Fixinus</h2>
+                <p>Your trusted partner for all computer repair needs</p>
+            </div>
+            <div class="about-content">
+                <div class="about-picture">
+                    <img src="/media/wrenchsvg.svg" alt="">
+                </div>
+                <div class="about-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vehicula justo. Donec mollis
+                        libero
+                        blandit felis ultrices, a imperdiet quam laoreet. Vivamus sagittis felis lectus, id pretium sapien
+                        semper viverra. Fusce id tincidunt nisi. Ut in lorem sit amet est ullamcorper blandit. Suspendisse
+                        egestas, lacus vel vestibulum tincidunt, ex nunc fermentum nisl, in vestibulum velit lectus et
+                        lorem.
+                        Etiam pharetra elit urna, eu molestie dui dictum ut. In scelerisque, turpis quis tincidunt tempus,
+                        urna
+                        augue feugiat metus, vel placerat lorem ex a sapien. Donec sit amet dictum nisl, ac tincidunt velit.
+                        Curabitur et dolor metus. Mauris ac finibus purus. </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="service" class="service-section">
         <div class="service-container max-w format-horizontal format-vertical">
             <div class="service-head">
                 <h2>Services</h2>
             </div>
             <div class="service-content">
                 <div>
-                    <h3>Tietokonehuolto</h3>
+                    <h3>💻 Tietokonehuolto</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
                         molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
                         pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
@@ -77,7 +88,7 @@
                         dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
                 </div>
                 <div>
-                    <h3>ICT-Palvelut yrityksille</h3>
+                    <h3>🏢 ICT-Palvelut yrityksille</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
                         molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
                         pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
@@ -85,7 +96,7 @@
                         dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
                 </div>
                 <div>
-                    <h3>Koti- ja yrityskäynnit</h3>
+                    <h3>🚗 Koti- ja yrityskäynnit</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
                         molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
                         pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
@@ -93,7 +104,7 @@
                         dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
                 </div>
                 <div>
-                    <h3>Etäyhteys</h3>
+                    <h3>🌐 Etäyhteys</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
                         molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
                         pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
@@ -105,7 +116,7 @@
         </div>
     </section>
 
-    <section class="price-section">
+    <section id="prices" class="price-section">
         <div class="price-container max-w format-horizontal format-vertical">
             <div class="price-head">
                 <h2>Our Service Pricing</h2>
@@ -149,7 +160,7 @@
         </div>
     </section>
 
-    <section class="contact-section">
+    <section id="contact" class="contact-section">
         <div class="contact-container max-w format-horizontal format-vertical">
             <div class="contact-head">
                 <h2>Contact Us</h2>
@@ -162,6 +173,15 @@
                         <input type="text" name="name" placeholder="Name" required />
                         <input type="email" name="email" placeholder="Email" required />
                         <input type="text" name="phone" placeholder="Phone" required />
+                        <label for="service">Service Needed</label>
+                        <select name="service" id="service" required>
+                            <option value=""> Select a service </option>
+                            <option value="diagnostics">Basic Diagnostics</option>
+                            <option value="standard-repair">Standard Repair</option>
+                            <option value="premium">Premium Services</option>
+                            <option value="remote">Remote Support</option>
+                            <option value="onsite">On-Site Visit</option>
+                        </select>
                         <textarea name="message" placeholder="Message" required></textarea>
                         <button type="submit">Send</button>
                     </form>
@@ -174,8 +194,12 @@
                         <p>Borgå 12345</p>
                     </div>
                     <div>
-                        <h4>Phone</h4>
-                        <p>040 12345678</p>
+                        <div class="contact-title">
+                            <h4>Phone</h4>
+                        </div>
+                        <div class="contact-content">
+                            <p>040 12345678</p>
+                        </div>
                     </div>
                     <div>
                         <h4>Email</h4>
@@ -195,8 +219,27 @@
     <footer>
         <div class="footer-container max-w format-horizontal format-vertical">
             <div class="footer-info">
-                <h3>Fixinus</h3>
-                <p>Professional computer repair services with a focus on customer satisfaction and quality workmanship.</p>
+                <div class="footer-text">
+                    <h3>Fixinus</h3>
+                    <p>Professional computer repair services with a focus on customer satisfaction and quality workmanship.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="icon-link">
+                        <svg fill="currentColor" width="24" height="24" viewBox="...">
+                            <path
+                                d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <svg fill="currentColor" width="24" height="24" viewBox="...">
+                            <path
+                                d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z" />
+                            <path
+                                d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" />
+                            <circle cx="18.406" cy="5.594" r="1.44" />
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
