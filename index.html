@@ -1,259 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv"> <!-- Swedish by default; JS will update this on switch -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Fixinus</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <title>Fixinus</title>
 </head>
 
 <body>
-    <header>
-        <div class="nav-bar max-w format-horizontal">
-            <div>
-                <h1>Fixinus</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#prices">Prices</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="nav-bar max-w format-horizontal">
+      <nav>
+        <ul>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#prices" data-i18n="nav.prices">Prices</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <section class="hero-section">
-        <div class="hero-section">
-            <div class="hero-container max-w format-horizontal">
-                <div class="hero-text">
-                    <h2>Reliable IT Support & Computer Repairs</h2>
-                    <p>Fixinus has been helping people with computer problems since 2010. Whether your laptop won’t
-                        boot, your
-                        desktop is too slow, or you need help setting up a new device—we’ve got your back. Friendly,
-                        fast, and
-                        affordable.</p>
-                </div>
-                <div class="hero-picture">
-                    <img src="/media/computersvg.svg" alt="Computer and IT support illustration">
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- Theme + Language -->
+      <button id="theme-toggle" class="theme-toggle" aria-pressed="true" aria-label="Toggle color theme">☀️</button>
+      <select id="lang-switcher" class="lang-switcher" aria-label="Change language">
+        <option value="sv">Svenska</option>
+        <option value="fi">Suomi</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
 
-    <section id="about" class="about-section">
-        <div class="about-container max-w format-horizontal format-vertical">
-            <div class="about-head">
-                <h2>About Fixinus</h2>
-                <p>Your trusted partner for all computer repair needs</p>
-            </div>
-            <div class="about-content">
-                <div class="about-picture">
-                    <img src="/media/wrenchsvg.svg" alt="">
-                </div>
-                <div class="about-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id vehicula justo. Donec mollis
-                        libero
-                        blandit felis ultrices, a imperdiet quam laoreet. Vivamus sagittis felis lectus, id pretium sapien
-                        semper viverra. Fusce id tincidunt nisi. Ut in lorem sit amet est ullamcorper blandit. Suspendisse
-                        egestas, lacus vel vestibulum tincidunt, ex nunc fermentum nisl, in vestibulum velit lectus et
-                        lorem.
-                        Etiam pharetra elit urna, eu molestie dui dictum ut. In scelerisque, turpis quis tincidunt tempus,
-                        urna
-                        augue feugiat metus, vel placerat lorem ex a sapien. Donec sit amet dictum nisl, ac tincidunt velit.
-                        Curabitur et dolor metus. Mauris ac finibus purus. </p>
-                </div>
-            </div>
-            
+  <section class="hero-section">
+    <div class="hero-section">
+      <div class="hero-container max-w format-horizontal">
+        <div class="hero-text">
+          <h2 data-i18n="hero.title">Keep your tech running right. We fix, upgrade and support.</h2>
+          <p data-i18n="hero.subtitle">
+            Fixinus is a local computer repair and tech support partner in Porvoo for individuals and small
+            businesses. Desktops, laptops, and everyday electronics—handled with care and clear communication.
+          </p>
         </div>
-    </section>
+        <div class="hero-picture">
+          <img id="logo" src="/media/limpanslogo.png" alt="Fixinus logo" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="service" class="service-section">
-        <div class="service-container max-w format-horizontal format-vertical">
-            <div class="service-head">
-                <h2>Services</h2>
-            </div>
-            <div class="service-content">
-                <div>
-                    <h3>💻 Tietokonehuolto</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
-                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
-                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
-                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
-                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
-                </div>
-                <div>
-                    <h3>🏢 ICT-Palvelut yrityksille</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
-                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
-                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
-                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
-                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
-                </div>
-                <div>
-                    <h3>🚗 Koti- ja yrityskäynnit</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
-                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
-                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
-                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
-                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
-                </div>
-                <div>
-                    <h3>🌐 Etäyhteys</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet sem velit. Mauris interdum viverra
-                        molestie. Maecenas pellentesque nisl felis, in pharetra mi suscipit ut. Fusce interdum, erat quis
-                        pellentesque ultricies, elit dolor tincidunt lorem, eget accumsan turpis leo ac risus. Mauris eros quam,
-                        venenatis ut ipsum id, cursus gravida ligula. In leo urna, aliquam in diam ac, tristique tristique odio. Sed
-                        dignissim commodo mauris, ac fringilla nisl faucibus a.</p>
-                </div>
-            </div>
-            
-        </div>
-    </section>
+  <section id="about" class="about-section">
+    <div class="about-container max-w format-horizontal format-vertical">
+      <div class="about-head">
+        <h2 data-i18n="about.title">About Fixinus</h2>
+        <p data-i18n="about.lead">
+          Fixinus is an IT and digital tech support service based in Porvoo. We help individuals and small
+          businesses keep their tech running smoothly. We can also travel to nearby cities; a small travel fee
+          may apply.
+        </p>
+      </div>
 
-    <section id="prices" class="price-section">
-        <div class="price-container max-w format-horizontal format-vertical">
-            <div class="price-head">
-                <h2>Our Service Pricing</h2>
-                <p>Fair pricing with no extra fees. Choose a service that fits your needs.</p>
-            </div>
-            <div class="price-box-container">
-                <div class="price-box">
-                    <h3>Basic Diagnostics</h3>
-                    <div>
-                        <span>49€</span>
-                        <span>/ one-time</span>
-                    </div>
-                    <button class="show-info-btn">Show more</button>
-                    <div class="info-box">
-                        <p>This plan is perfect for small businesses just starting out. Upgrade anytime!</p>
-                    </div>
-                </div>
-                <div class="price-box">
-                    <h3>Standard Repair</h3>
-                    <div>
-                        <span>129€</span>
-                        <span>/ one-time</span>
-                    </div>
-                    <button class="show-info-btn">Show more</button>
-                    <div class="info-box">
-                        <p>This plan is perfect for medium businesses just starting out. Upgrade anytime!</p>
-                    </div>
-                </div>
-                <div class="price-box">
-                    <h3>Premium Services</h3>
-                    <div>
-                        <span>199€</span>
-                        <span>/ one-time</span>
-                    </div>
-                    <button class="show-info-btn">Show more</button>
-                    <div class="info-box">
-                        <p>This plan is perfect for small businesses just starting out. Upgrade anytime!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="about-content">
+        <div class="about-text">
+          <div class="about-text-top">
+            <div class="about-text-left">
+              <div id="drop-text">
+                <h4 data-i18n="about.drop.title">Drop-off, pickup & on-site</h4>
+                <p data-i18n="about.drop.body">
+                  We don’t have a fixed office (yet). Devices can be dropped off by appointment or we
+                  can pick them up. If it looks like a quick fix—or the job needs to be done where the device is—
+                  We’re happy to come on-site. We’ll agree the time and location by phone or email in advance.
+                </p>
+              </div>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-container max-w format-horizontal format-vertical">
-            <div class="contact-head">
-                <h2>Contact Us</h2>
-                <p>Have a question or need help with your computer? Get in touch with our team today.</p>
+              <div id="exp-text">
+                <h4 data-i18n="about.exp.title">Experience</h4>
+                <p data-i18n="about.exp.body">
+                  Our background includes formal telecommunications education and 15+ years of hands-on
+                  experience. We stay current with industry developments to deliver clear, practical solutions.
+                </p>
+              </div>
             </div>
-            <div class="contact-body">
-                <div class="form-box">
-                    <h3>Send Us A Message</h3>
-                    <form id="contact-form">
-                        <input type="text" name="name" placeholder="Name" required />
-                        <input type="email" name="email" placeholder="Email" required />
-                        <input type="text" name="phone" placeholder="Phone" required />
-                        <label for="service">Service Needed</label>
-                        <select name="service" id="service" required>
-                            <option value=""> Select a service </option>
-                            <option value="diagnostics">Basic Diagnostics</option>
-                            <option value="standard-repair">Standard Repair</option>
-                            <option value="premium">Premium Services</option>
-                            <option value="remote">Remote Support</option>
-                            <option value="onsite">On-Site Visit</option>
-                        </select>
-                        <textarea name="message" placeholder="Message" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div>
-                        <h4>Address</h4>
-                        <p>123 Hurrigatan</p>
-                        <p>Borgå 12345</p>
-                    </div>
-                    <div>
-                        <div class="contact-title">
-                            <h4>Phone</h4>
-                        </div>
-                        <div class="contact-content">
-                            <p>040 12345678</p>
-                        </div>
-                    </div>
-                    <div>
-                        <h4>Email</h4>
-                        <p>info@fixinus.fi</p>
-                    </div>
-                    <div>
-                        <h4>Business Hours</h4>
-                        <p>Monday-Friday: 08:00 - 16:00</p>
-                        <p>Saturday: 09:00 - 15:00</p>
-                        <p>Sunday: Closed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <footer>
-        <div class="footer-container max-w format-horizontal format-vertical">
-            <div class="footer-info">
-                <div class="footer-text">
-                    <h3>Fixinus</h3>
-                    <p>Professional computer repair services with a focus on customer satisfaction and quality workmanship.</p>
-                </div>
-                <div class="footer-socials">
-                    <a href="#" class="icon-link">
-                        <svg fill="currentColor" width="24" height="24" viewBox="...">
-                            <path
-                                d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509   V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073   c0-6.627,5.373-12,12-12S24,5.445,24,12.073z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="icon-link">
-                        <svg fill="currentColor" width="24" height="24" viewBox="...">
-                            <path
-                                d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608   c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608   c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07   c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849   c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311   C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014   C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038   c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072   c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12   c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942   C15.668,0.014,15.259,0,12,0z" />
-                            <path
-                                d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162   C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" />
-                            <circle cx="18.406" cy="5.594" r="1.44" />
-                        </svg>
-                    </a>
-                </div>
+            <div class="about-text-right">
+              <div id="fast-service-text">
+                <h4 data-i18n="about.fast.title">Fast service</h4>
+                <p data-i18n="about.fast.body">
+                  Most standard repairs are finished within 1–3 days, and simple issues are often
+                  handled the same day. If a job is urgent and there’s no other urgent work in progress,
+                  we’ll start on your device as soon as it arrives.
+                </p>
+              </div>
+
+              <div id="payment-text">
+                <h4 data-i18n="about.pay.title">Payment methods</h4>
+                <p data-i18n="about.pay.body">
+                  Cash, all major debit and credit cards, Google Pay, Apple Pay, or invoice (lasku).
+                </p>
+              </div>
             </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="">Abous Us</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-copyright">
-                <p>© 2025 Fixinus. All rights reserved.</p>
-            </div>
+          </div>
+
+          <div class="about-text-bottom">
+            <h4 data-i18n="warranty.title">Workmanship warranty</h4>
+            <p data-i18n="warranty.about">
+              We provide a six-month warranty on our labor. If an issue is caused by our work, we’ll
+              correct it free of charge.
+            </p>
+            <h5 data-i18n="warranty.not.title">What’s not covered:</h5>
+            <ul>
+              <li data-i18n="warranty.not.1">Hardware failures or normal wear-and-tear</li>
+              <li data-i18n="warranty.not.2">Software bugs, viruses/malware, or third-party updates</li>
+              <li data-i18n="warranty.not.3">Accidental damage, misuse, or changes made after our service</li>
+              <li data-i18n="warranty.not.4">Parts (covered by the manufacturer’s warranty, if any)</li>
+            </ul>
+            <p data-i18n="warranty.how">
+              How it works: Bring the device to us (or book a visit) so we can inspect it. The warranty
+              applies to the original device and the work we performed.
+            </p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <section id="service" class="service-section">
+    <div class="service-container max-w format-horizontal format-vertical">
+      <div class="service-head">
+        <h2 data-i18n="services.title">Services</h2>
+      </div>
+
+      <div class="service-content">
+        <!-- PC / Laptop -->
+        <div>
+          <h3 data-i18n="services.pc.title">💻 Desktop & Laptop</h3>
+          <ul>
+            <li data-i18n="services.pc.1">Diagnostics & troubleshooting</li>
+            <li data-i18n="services.pc.2">Hardware repairs & parts (SSD, RAM, GPU, battery, screen, fans)</li>
+            <li data-i18n="services.pc.3">Component replacements & upgrades (for speed, storage, graphics)</li>
+            <li data-i18n="services.pc.4">Custom PC builds (gaming/work): parts advice, assembly & setup</li>
+            <li data-i18n="services.pc.5">Cleaning & thermal service (dust out, fresh paste)</li>
+            <li data-i18n="services.pc.6">Annual service check</li>
+            <li data-i18n="services.pc.7">All brands supported</li>
+            <li data-i18n="services.pc.8">Health report after service (what we did, future recommendations)</li>
+          </ul>
+        </div>
+
+        <!-- Software / OS -->
+        <div>
+          <h3 data-i18n="services.os.title">🏢 Software & Operating System</h3>
+          <ul>
+            <li data-i18n="services.os.1">Reinstall Windows or macOS (keep files when possible)</li>
+            <li data-i18n="services.os.2">New computer setup & file transfer</li>
+            <li data-i18n="services.os.3">Install programs & drivers</li>
+            <li data-i18n="services.os.4">Remove viruses and unwanted apps</li>
+            <li data-i18n="services.os.5">Free up space (clean large & temporary files)</li>
+            <li data-i18n="services.os.6">Set up backups to an external drive or cloud</li>
+            <li data-i18n="services.os.7">Network & internet issues (Wi-Fi/Ethernet not connecting, slow speeds)</li>
+            <li data-i18n="services.os.8">Fix crashes and error messages</li>
+            <li data-i18n="services.os.9">Account & password recovery (Microsoft/Apple, email accounts)</li>
+            <li data-i18n="services.os.10">Set up email and cloud (OneDrive, iCloud, Google)</li>
+          </ul>
+        </div>
+
+        <!-- Phones / Tablets -->
+        <div>
+          <h3 data-i18n="services.mobile.title">🚗 Phones & Tablets (software only)</h3>
+          <ul>
+            <li data-i18n="services.mobile.1">New device setup</li>
+            <li data-i18n="services.mobile.2">Switching phones made easy (move photos, messages, WhatsApp, apps)</li>
+            <li data-i18n="services.mobile.3">Parental controls & safety (Screen Time/Family Link setup)</li>
+            <li data-i18n="services.mobile.4">Email, contacts & calendar sync</li>
+            <li data-i18n="services.mobile.5">App & account help (Apple ID, Google)</li>
+            <li data-i18n="services.mobile.6">iCloud/Google backups & restores</li>
+            <li data-i18n="services.mobile.7">Storage cleanup (free up space safely)</li>
+            <li data-i18n="services.mobile.8">Security check (updates, passcodes, 2-step verification)</li>
+            <li data-i18n="services.mobile.9">Troubleshooting issues (sync, notifications, battery life)</li>
+          </ul>
+        </div>
+
+        <!-- Home Tech -->
+        <div>
+          <h3 data-i18n="services.home.title">🌐 Home Tech Help</h3>
+          <ul>
+            <li data-i18n="services.home.1">Wi-Fi setup & coverage boost (router/mesh)</li>
+            <li data-i18n="services.home.2">TV & streaming setup (smart TVs, Apple TV, Chromecast, etc.)</li>
+            <li data-i18n="services.home.3">Game consoles (repair, setup, online play, family settings)</li>
+            <li data-i18n="services.home.4">Printers & scanners (install, connect, fix common issues)</li>
+            <li data-i18n="services.home.5">Shared storage / NAS (files across devices)</li>
+            <li data-i18n="services.home.6">Smart home devices (lights, cameras, speakers)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" class="price-section">
+    <div class="price-container max-w format-horizontal format-vertical">
+      <div class="price-head">
+        <h2 data-i18n="prices.title">Business Pricing</h2>
+        <p data-i18n="prices.lead">
+          One flat monthly plan. Unlimited support, 1–3 day scheduling. Emergency support may add additional costs.
+        </p>
+      </div>
+
+      <div class="price-box-container">
+        <div class="price-box">
+          <h3 data-i18n="prices.basic">Basic Diagnostics</h3>
+          <div>
+            <span>49€</span>
+            <span data-i18n="prices.onetime">/ one-time</span>
+          </div>
+          <button class="show-info-btn" data-i18n="prices.showmore">Show more</button>
+          <div class="info-box">
+            <p data-i18n="prices.infobox.basic">
+              This plan is perfect for small businesses just starting out. Upgrade anytime!
+            </p>
+          </div>
+        </div>
+
+        <div class="price-box">
+          <h3 data-i18n="prices.standard">Standard Repair</h3>
+          <div>
+            <span>129€</span>
+            <span data-i18n="prices.onetime">/ one-time</span>
+          </div>
+          <button class="show-info-btn" data-i18n="prices.showmore">Show more</button>
+          <div class="info-box">
+            <p data-i18n="prices.infobox.standard">
+              This plan is perfect for medium businesses just starting out. Upgrade anytime!
+            </p>
+          </div>
+        </div>
+
+        <div class="price-box">
+          <h3 data-i18n="prices.premium">Premium Services</h3>
+          <div>
+            <span>199€</span>
+            <span data-i18n="prices.onetime">/ one-time</span>
+          </div>
+          <button class="show-info-btn" data-i18n="prices.showmore">Show more</button>
+          <div class="info-box">
+            <p data-i18n="prices.infobox.premium">
+              This plan is perfect for small businesses just starting out. Upgrade anytime!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="remote-section">
+    <div class="remote-container max-w format-horizontal format-vertical">
+      <div class="remote-head">
+        <h2 data-i18n="remote.title">Remote Help & How it works</h2>
+        <p data-i18n="remote.lead">
+          We use Quick Assist on Windows 10/11 (built in on Windows 11; easy install from the Microsoft Store
+          on Windows 10). On Mac, Linux, or ChromeOS—or if Quick Assist isn’t available—we use Chrome Remote
+          Desktop. If neither option fits, we’ll arrange an on-site visit or drop-off.
+        </p>
+      </div>
+
+      <div class="remote-body">
+        <div class="remote-list">
+          <ol>
+            <li class="remote-text" data-i18n-html="remote.step.1.html">
+              <strong>Call us:</strong> +358 400 664 767 (or email <a href="mailto:info@fixinus.fi">info@fixinus.fi</a>) to confirm remote help suits your case.
+            </li>
+            <li class="remote-text" data-i18n-html="remote.step.2.html">
+              <strong>Download the helper app:</strong> Open or download the helper
+              app: For Quick Assist, press <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd> or
+              <a href="https://remotedesktop.google.com/support">press here</a> and then click the
+              <img id="downloadbtn" src="/media/downloadbutton.png" alt=""> button to download Chrome
+              Remote Desktop. After it has downloaded, allow it to install and allow it to be added to your browser.
+            </li>
+            <li class="remote-text" data-i18n-html="remote.step.3.html">
+              <strong>Allow access:</strong> open the app and grant permission when prompted. You’ll see what we do.
+            </li>
+            <li class="remote-text" data-i18n-html="remote.step.4.html">
+              <strong>Generate the code:</strong> Press
+              <img id="generatebtn" src="/media/generatebtn.png" alt="">
+              to create a ONE-TIME code and tell us what it is. You will see everything we do on your screen, and the
+              code cannot be used again after the session.
+            </li>
+            <li class="remote-text" data-i18n-html="remote.step.5.html">
+              <strong>We fix the issue:</strong> you can watch on your screen and pause/stop any time.
+            </li>
+            <li class="remote-text" data-i18n-html="remote.step.6.html">
+              <strong>All done:</strong> we close the session and confirm next steps (if any).
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-container max-w format-horizontal format-vertical">
+      <div class="contact-head">
+        <h2 data-i18n="contact.title">Contact Us</h2>
+        <p data-i18n="contact.lead">Have a question or need help with your computer? Get in touch with our team today.</p>
+      </div>
+
+      <div class="contact-body">
+        <!-- Form -->
+        <div class="form-box">
+          <h3 data-i18n="form.sendus">Send Us A Message</h3>
+          <form id="contact-form">
+            <input type="text" name="name" data-i18n-attr="placeholder:form.name" placeholder="Name" required />
+            <input type="email" name="email" data-i18n-attr="placeholder:form.email" placeholder="Email" required />
+            <input type="text" name="phone" data-i18n-attr="placeholder:form.phone" placeholder="Phone" required />
+
+            <label for="service" data-i18n="form.service">Service Needed</label>
+            <select name="service" id="service" required>
+              <option value="" data-i18n="form.select">Select a service</option>
+              <option value="diagnostics" data-i18n="form.opt.diagnostics">Basic Diagnostics</option>
+              <option value="standard-repair" data-i18n="form.opt.standard">Standard Repair</option>
+              <option value="premium" data-i18n="form.opt.premium">Premium Services</option>
+              <option value="remote" data-i18n="form.opt.remote">Remote Support</option>
+              <option value="onsite" data-i18n="form.opt.onsite">On-Site Visit</option>
+            </select>
+
+            <textarea name="message" data-i18n-attr="placeholder:form.message" placeholder="Message" required></textarea>
+            <button type="submit" data-i18n="form.send">Send</button>
+          </form>
+        </div>
+
+        <!-- Contact info -->
+        <div class="contact-info">
+          <h3 data-i18n="contact.info">Contact Information</h3>
+          <div>
+            <h4 data-i18n="contact.address.title">Address</h4>
+            <p data-i18n="contact.address.line1">123 Hurrigatan</p>
+            <p data-i18n="contact.address.line2">Borgå 12345</p>
+          </div>
+          <div>
+            <div class="contact-title">
+              <h4 data-i18n="contact.phone.title">Phone</h4>
+            </div>
+            <div class="contact-content">
+              <p data-i18n="contact.phone.value">+358 400 664 767</p>
+            </div>
+          </div>
+          <div>
+            <h4 data-i18n="contact.email.title">Email</h4>
+            <p data-i18n="contact.email.value">info@fixinus.fi</p>
+          </div>
+          <div>
+            <h4 data-i18n="contact.hours.title">Business Hours</h4>
+            <p data-i18n="contact.hours.monfri">Monday-Friday: 09:00 - 17:00</p>
+            <p data-i18n="contact.hours.sat">Saturday: 10:00 - 16:00</p>
+            <p data-i18n="contact.hours.sun">Sunday: Closed</p>
+            <p data-i18n="contact.hours.urgent">Urgent matters 24/7 as extra cost</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container max-w format-horizontal format-vertical">
+      <div class="footer-info">
+        <div class="footer-text">
+          <h3>Fixinus</h3>
+          <p data-i18n="footer.tagline">
+            Professional computer repair services with a focus on customer satisfaction and quality workmanship.
+          </p>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="icon-link" aria-label="Facebook">
+            <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073  c0-6.627,5.373-12,12-12S24,5.445,24,12.073z" />
+            </svg>
+          </a>
+          <a href="#" class="icon-link" aria-label="Instagram">
+            <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608 c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608 c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07 c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849 c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311 C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014 C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038 c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072 c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12 c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942 C15.668,0.014,15.259,0,12,0z" />
+              <path
+                d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162 C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" />
+              <circle cx="18.406" cy="5.594" r="1.44" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3 data-i18n="footer.quick">Quick Links</h3>
+        <ul>
+          <li><a href="#about" data-i18n="footer.links.about">About Us</a></li>
+          <li><a href="#prices" data-i18n="footer.links.pricing">Pricing</a></li>
+          <li><a href="#contact" data-i18n="footer.links.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-copyright">
+        <p data-i18n="footer.copy">© 2025 Fixinus. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
-
 </html>
