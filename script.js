@@ -69,18 +69,18 @@ document.addEventListener('click', function() {
 
 
 /* =========================
-   I18N (Svenska default)
+   I18N (Finska default)
    ========================= */
 (() => {
   const STORAGE_KEY = 'site-lang';
-  const DEFAULT_LANG = 'sv'; // Swedish by default
+  const DEFAULT_LANG = 'fi'; // Finnish by default
 
   // Helper: reuse your <img> / <kbd> snippets inside translations
   const dlBtn = '<img id="downloadbtn" src="/media/downloadbutton.png" alt="">';
   const genBtn = '<img id="generatebtn" src="/media/generatebtn.png" alt="">';
 
   const MESSAGES = {
-    /* ========== SWEDISH (default) ========== */
+    /* ========== SWEDISH ========== */
     sv: {
       // NAV
       'nav.about': 'Om oss',
@@ -444,10 +444,10 @@ document.addEventListener('click', function() {
       'contact.lead': 'Have a question or need help with your computer? Get in touch.',
       'contact.info': 'Contact Information',
       'contact.address.title': 'Address',
-      'contact.address.line1': 'Hurrigatan 123',
-      'contact.address.line2': 'Borgå 12345',
+      'contact.address.line1': 'Yrittäjäntie 11',
+      'contact.address.line2': '06450 Porvoo',
       'contact.phone.title': 'Phone',
-      'contact.phone.value': '+358 400 664 767',
+      'contact.phone.value': '+358 40 066 4767',
       'contact.email.title': 'Email',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Business Hours',
