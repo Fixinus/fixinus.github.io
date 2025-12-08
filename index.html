@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fi"> <!-- Swedish by default; JS will update this on switch -->
+<html lang="fi"> <!-- Finnish by default; JS will update this on switch -->
 
 <head>
   <meta charset="UTF-8" />
@@ -21,23 +21,46 @@
       <nav>
         <ul>
           <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <li><a href="#prices" data-i18n="nav.prices">Prices</a></li>
+          <!-- <li><a href="#prices" data-i18n="nav.prices">Prices</a></li> -->
+          <li><a href="#service" data-i18n="nav.services">Services</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <!-- Theme + Language -->
-      <button id="theme-toggle" class="theme-toggle" aria-pressed="true" aria-label="Toggle color theme">☀️</button>
-      <select id="lang-switcher" class="lang-switcher" aria-label="Change language">
-        <option value="sv">Svenska</option>
-        <option value="fi">Suomi</option>
-        <option value="en">English</option>
-      </select>
-    </div>
+      <!--<button id="theme-toggle" class="theme-toggle" aria-pressed="true" aria-label="Toggle color theme">☀️</button> -->
+
+      <div class="lang-menu" id="lang-menu">
+        <button class="lang-current" type="button" aria-haspopup="true" aria-expanded="false"
+          aria-label="Change language">
+          <span class="flag" data-current-flag>🇫🇮</span>
+        </button>
+
+        <ul class="lang-dropdown" role="menu">
+          <li>
+            <button type="button" class="lang-option" data-lang="fi" role="menuitem">
+              <span class="flag">🇫🇮</span>
+              <span class="lang-label">Suomi</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="lang-option" data-lang="sv" role="menuitem">
+              <span class="flag">🇸🇪</span>
+              <span class="lang-label">Svenska</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="lang-option" data-lang="en" role="menuitem">
+              <span class="flag">🇬🇧</span>
+              <span class="lang-label">English</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
   </header>
 
   <section class="hero-section">
-    <div class="hero-section">
       <div class="hero-container max-w format-horizontal">
         <div class="hero-text">
           <h2 data-i18n="hero.title">Keep your tech running right. We fix, upgrade and support.</h2>
@@ -50,7 +73,6 @@
           <img id="logo" src="/media/limpanslogo.png" alt="Fixinus logo" />
         </div>
       </div>
-    </div>
   </section>
 
   <section id="about" class="about-section">
@@ -104,25 +126,6 @@
               </div>
             </div>
           </div>
-
-          <div class="about-text-bottom">
-            <h4 data-i18n="warranty.title">Workmanship warranty</h4>
-            <p data-i18n="warranty.about">
-              We provide a six-month warranty on our labor. If an issue is caused by our work, we’ll
-              correct it free of charge.
-            </p>
-            <h5 data-i18n="warranty.not.title">What’s not covered:</h5>
-            <ul>
-              <li data-i18n="warranty.not.1">Hardware failures or normal wear-and-tear</li>
-              <li data-i18n="warranty.not.2">Software bugs, viruses/malware, or third-party updates</li>
-              <li data-i18n="warranty.not.3">Accidental damage, misuse, or changes made after our service</li>
-              <li data-i18n="warranty.not.4">Parts (covered by the manufacturer’s warranty, if any)</li>
-            </ul>
-            <p data-i18n="warranty.how">
-              How it works: Bring the device to us (or book a visit) so we can inspect it. The warranty
-              applies to the original device and the work we performed.
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -137,7 +140,7 @@
       <div class="service-content">
         <!-- PC / Laptop -->
         <div>
-          <h3 data-i18n="services.pc.title">💻 Desktop & Laptop</h3>
+          <h3 data-i18n="services.pc.title">Desktop & Laptop</h3>
           <ul>
             <li data-i18n="services.pc.1">Diagnostics & troubleshooting</li>
             <li data-i18n="services.pc.2">Hardware repairs & parts (SSD, RAM, GPU, battery, screen, fans)</li>
@@ -152,7 +155,7 @@
 
         <!-- Software / OS -->
         <div>
-          <h3 data-i18n="services.os.title">🏢 Software & Operating System</h3>
+          <h3 data-i18n="services.os.title">Software & Operating System</h3>
           <ul>
             <li data-i18n="services.os.1">Reinstall Windows or macOS (keep files when possible)</li>
             <li data-i18n="services.os.2">New computer setup & file transfer</li>
@@ -169,7 +172,7 @@
 
         <!-- Phones / Tablets -->
         <div>
-          <h3 data-i18n="services.mobile.title">🚗 Phones & Tablets (software only)</h3>
+          <h3 data-i18n="services.mobile.title">Phones & Tablets (software only)</h3>
           <ul>
             <li data-i18n="services.mobile.1">New device setup</li>
             <li data-i18n="services.mobile.2">Switching phones made easy (move photos, messages, WhatsApp, apps)</li>
@@ -185,7 +188,7 @@
 
         <!-- Home Tech -->
         <div>
-          <h3 data-i18n="services.home.title">🌐 Home Tech Help</h3>
+          <h3 data-i18n="services.home.title">Home Tech Help</h3>
           <ul>
             <li data-i18n="services.home.1">Wi-Fi setup & coverage boost (router/mesh)</li>
             <li data-i18n="services.home.2">TV & streaming setup (smart TVs, Apple TV, Chromecast, etc.)</li>
@@ -324,10 +327,14 @@
               <option value="remote" data-i18n="form.opt.remote">Remote Support</option>
               <option value="onsite" data-i18n="form.opt.onsite">On-Site Visit</option>
             </select>
-
+            <div class="hp-field">
+              <label></label>
+              <input type="text" name="website" autocomplete="off" tabindex="-1" />
+            </div>
             <textarea name="message" data-i18n-attr="placeholder:form.message" placeholder="Message" required></textarea>
             <button type="submit" data-i18n="form.send">Send</button>
           </form>
+          <p id="contact-status" class="contact-status" aria-live="polite"></p>
         </div>
 
         <!-- Contact info -->
@@ -362,6 +369,35 @@
     </div>
   </section>
 
+  <div id="warranty-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="warranty-title">
+    <div class="modal-backdrop"></div>
+
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="warranty-close" aria-label="Close warranty information">
+        ×
+      </button>
+
+      <h2 id="warranty-title" data-i18n="warranty.title">Workmanship warranty</h2>
+      <p data-i18n="warranty.about">
+        We provide a six-month warranty on our labor. If an issue is caused by our work, we’ll
+        correct it free of charge.
+      </p>
+
+      <h3 data-i18n="warranty.not.title">What’s not covered:</h3>
+      <ul>
+        <li data-i18n="warranty.not.1">Hardware failures or normal wear-and-tear</li>
+        <li data-i18n="warranty.not.2">Software bugs, viruses/malware, or third-party updates</li>
+        <li data-i18n="warranty.not.3">Accidental damage, misuse, or changes made after our service</li>
+        <li data-i18n="warranty.not.4">Parts (covered by the manufacturer’s warranty, if any)</li>
+      </ul>
+
+      <p data-i18n="warranty.how">
+        How it works: Bring the device to us (or book a visit) so we can inspect it. The warranty
+        applies to the original device and the work we performed.
+      </p>
+    </div>
+  </div>
+
   <footer>
     <div class="footer-container max-w format-horizontal format-vertical">
       <div class="footer-info">
@@ -394,8 +430,14 @@
         <h3 data-i18n="footer.quick">Quick Links</h3>
         <ul>
           <li><a href="#about" data-i18n="footer.links.about">About Us</a></li>
-          <li><a href="#prices" data-i18n="footer.links.pricing">Pricing</a></li>
+          <!-- <li><a href="#prices" data-i18n="footer.links.pricing">Pricing</a></li> -->
+          <li><a href="#service" data-i18n="footer.links.services">Services</a></li>
           <li><a href="#contact" data-i18n="footer.links.contact">Contact</a></li>
+          <li>
+            <button type="button" id="warranty-trigger" class="footer-link-button" data-i18n="footer.links.warranty">
+              Warranty
+            </button>
+          </li>
         </ul>
       </div>
 

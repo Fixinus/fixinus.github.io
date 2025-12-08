@@ -122,8 +122,9 @@ nav ul li a:hover::after {
 }
 
 img{
-    width: 20rem;
-    height: 20rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 .format-horizontal{
     padding-left: 5rem;
@@ -189,30 +190,22 @@ img{
 }
 
 #logo{
-    width:70%;
-    height: 100%;
+    width: 70%;
+    height: auto;
 }
 /* --- ABOUT SECTION --- */
 
 /* Clean divider between About and Services */
 #about::after {
-  content: "";
+  content: '';
   display: block;
   width: 60%;
   max-width: 20rem;
-  height: 2px;
+  height: 0.25rem;
   background-color: #007bff;  /* your brand blue */
   margin: 3rem auto 0;        /* centers the line */
-  border-radius: 1px;
-  opacity: 0.3;
+  border-radius: 0.125rem;
 }
-
-/* Slightly muted version for dark mode */
-[data-theme="dark"] #about::after {
-  background-color: #38bdf8;  /* soft blue for dark background */
-  opacity: 0.4;
-}
-
 
 .about-section {
     background-color: #f9fafb;
@@ -560,7 +553,7 @@ img{
     width: 8rem;
     height: 2rem;
     vertical-align: middle;
-    border-radius: 3rem ;
+    border-radius: 3rem;
 }
 /* --- CONTACT SECTION --- */
 
@@ -628,7 +621,7 @@ img{
     font-weight: 500;
     margin-top: 1rem;
     display: block;
-    color: #666;
+    color: #ffffff;
 }
   
 
@@ -657,6 +650,29 @@ img{
     background-color: #0056b3;
 }
 
+/* Honeypot field: visually hidden but present in DOM */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Status message under contact form */
+.contact-status {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.contact-status.success {
+  color: #16a34a; /* green */
+}
+
+.contact-status.error {
+  color: #dc2626; /* red */
+}
+
 .contact-info h4 {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -665,7 +681,7 @@ img{
 
 .contact-info p {
     margin: 0 0 1rem;
-    color: #666;
+    color: #c4c3c3;
 }
 
 .contact-icons{
@@ -793,8 +809,8 @@ footer {
   --surface: #0f172a;         /* header / sections */
   --surface-2: #111827;       /* hero / deep surfaces */
   --card: #0f172a;            /* cards/boxes */
-  --primary: #60a5fa;
-  --accent: #38bdf8;
+  --primary: #007bff;
+  --accent: #007bff;
   --divider: #1f2937;
   --grid-dot: rgba(56, 189, 248, 0.10);
   --shadow: rgba(0,0,0,0.35);
@@ -945,5 +961,181 @@ footer a,
   color: #ffffff !important;
 }
 
+.hero-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  width: 380px;      /* fixed width */
+  height: auto;      /* keep aspect ratio */
+  max-width: 100%;   /* allow scaling on mobile */
+  object-fit: contain;
+  flex-shrink: 0;    /* prevents shrinking from long text */
+}
 
 
+/* --- Language flag menu --- */
+
+.lang-menu {
+  position: relative;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/* Button that shows the current language */
+.lang-current {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--divider);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-current .flag {
+  font-size: 1.1rem;
+}
+
+/* Just a hover effect for the button itself */
+.lang-menu.open .lang-current,
+.lang-menu:hover .lang-current {
+  background-color: color-mix(in srgb, var(--text) 10%, transparent);
+}
+
+/* Dropdown list */
+.lang-dropdown {
+  position: absolute;
+  top: 100%;      /* sits directly under the button */
+  right: 0;
+  margin-top: 0;
+  padding: 0.35rem 0;
+  list-style: none;
+  min-width: 8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--divider);
+  background-color: var(--surface);
+  box-shadow: 0 8px 16px var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 200;
+}
+
+/* 🔹 DROPDOWN VISIBLE ONLY WHEN .open IS SET BY JS */
+.lang-menu.open .lang-dropdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dropdown items */
+.lang-option {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  padding: 0.35rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.lang-option .flag {
+  font-size: 1.1rem;
+}
+
+.lang-option .lang-label {
+  white-space: nowrap;
+}
+
+/* Hover + active state */
+.lang-option:hover {
+  background-color: color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.lang-option.is-active {
+  font-weight: 600;
+}
+
+
+/* --- Warranty Modal --- */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;            /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 500;             /* above header/nav */
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65); /* dark translucent backdrop */
+}
+
+.modal-content {
+  position: relative;
+  max-width: 40rem;
+  max-height: 80vh;
+  width: 90%;
+  overflow-y: auto;
+  background: var(--card);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px var(--shadow);
+  z-index: 1;
+}
+
+.modal-content h2,
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content ul {
+  padding-left: 1.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Make the footer "Warranty" button look like a text link */
+.footer-link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: #ccc;
+  cursor: pointer;
+  text-align: left;
+}
+
+.footer-link-button:hover {
+  color: #ffffff;
+}
