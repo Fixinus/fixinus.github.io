@@ -132,6 +132,79 @@ document.addEventListener('click', function ()
       'warranty.not.4': 'Reservdelar (täcks av tillverkarens garanti om sådan finns)',
       'warranty.how': 'Så fungerar det: Lämna in enheten till oss (eller boka ett hembesök) så inspekterar vi den. Garantin gäller den ursprungliga enheten och det arbete vi har utfört.',
 
+      // PRIVACY POLICY (Swedish)
+      'privacy.title':'Dataskyddsbeskrivning',
+
+      'privacy.what_we_collect.title': '1. Registeransvarig',
+      'privacy.what_we_collect.1':'Fixinus (enskild firma)',
+      'privacy.what_we_collect.2':'FO-nummer: 3434370-6',
+      'privacy.what_we_collect.3':'Adress: Puusepänkaarre 15, 06150 Borgå',
+      'privacy.what_we_collect.4':'E-post: info@fixinus.fi',
+
+      'privacy.how_we_use.title':'2. Kontaktperson för dataskyddsfrågor',
+      'privacy.how_we_use':'För dataskyddsfrågor: info@fixinus.fi',
+
+      'privacy.storage.title':'3. Register: kunder & användare',
+      'privacy.storage.body':'Fixinus kund- och användarregister',
+
+      'privacy.sharing.title':'4. Ändamål och rättslig grund för behandling',
+      'privacy.sharing.body.1':'Vi behandlar personuppgifter för:',
+      'privacy.sharing.body.2':'Kundsupport och kommunikation (berättigat intresse)',
+      'privacy.sharing.body.3':'Avtalshantering och tjänsteleverans (avtal)',
+      'privacy.sharing.body.4':'Fakturering och betalningar (avtal och lagstadgad skyldighet)',
+      'privacy.sharing.body.5':'Kontaktformulär och förfrågningar via webbplatsen (berättigat intresse)',
+      'privacy.sharing.body.6':'Fjärrsupport (Quick Assist, TeamViewer) med kundens samtycke',
+
+      'privacy.rights.title':'5. Vilka uppgifter behandlas',
+      'privacy.rights.1':'Vi kan behandla:',
+      'privacy.rights.2':'Namn, e-post, telefon, adress',
+      'privacy.rights.3':'Företagsinformation (om kunden är företag)',
+      'privacy.rights.4':'Avtals- och tjänstehistorik',
+      'privacy.rights.5':'Betalnings- och fakturauppgifter (om tillämpligt)',
+      'privacy.rights.6':'Webbplats-användardata och cookies (om analys aktiveras)',
+
+      'privacy.contact.title':'6. Lagringstid',
+      'privacy.contact.body.1':'Kunddata: minst avtalsperiod + 5 år',
+      'privacy.contact.body.2':'Bokföringsdata: minst 6 år enligt lag',
+      'privacy.contact.body.3':'Eventuella analysdata: max 2 år (om analys används)',
+
+      'privacy.party.title':'7. Delning av uppgifter',
+      'privacy.party.body.1':'Vi delar inte personuppgifter med tredje part utan samtycke eller laglig förpliktelse.',
+      'privacy.party.body.2':'Externa tjänsteleverantörer (hosting, e-post, formulärtjänst) behandlar uppgifter enligt instruktion och avtal.',
+
+      'privacy.transfer.title':'8. Överföring utanför EU',
+      'privacy.transfer.body.1':'Vi överför för närvarande inga personuppgifter utanför EU. Om detta ändras informeras du i förväg.',
+
+      'privacy.data.title':'9. Registrerads rättigheter',
+      'privacy.data.body.1':'Du har rätt att:',
+      'privacy.data.body.2':'begära tillgång till dina uppgifter',
+      'privacy.data.body.3':'begära rättelse av felaktiga uppgifter',
+      'privacy.data.body.4':'begära radering (när det är lagligt möjligt)',
+      'privacy.data.body.5':'begära begränsning av behandling',
+      'privacy.data.body.6':'begära dataportabilitet',
+      'privacy.data.body.7':'invända mot behandling',
+      'privacy.data.body.8':'återkalla samtycke (om tillämpligt)',
+      'privacy.data.body.9':'För att använda dina rättigheter, kontakta info@fixinus.fi',
+
+      'privacy.cookie.title':'10. Cookies och spårning',
+      'privacy.cookie.body.1':'Vi använder endast nödvändiga cookies — ingen extern spårning eller analys just nu.',
+      'privacy.cookie.body.2':'Om analys införs uppdateras denna beskrivning och cookie-inställningar erbjuds.',
+
+      'privacy.changes.title':'11. Ändringar i beskrivningen',
+      'privacy.changes.body.1':'Vi kan uppdatera denna beskrivning vid behov. Större ändringar informeras på webbplatsen.',
+
+      'privacy.auth.title':'12. Tillsynsmyndighet',
+      'privacy.auth.body.1':'Om du anser att dina rättigheter kränkts kan du skicka klagomål till:',
+      'privacy.auth.body.2':'Datainspektionen / Tietosuojavaltuutetun toimisto, PL 800, 00521 Helsingfors — tietosuoja@om.fi',
+
+      "company.title": "Företagsuppgifter",
+      "company.legalForm": "Fixinus - Enskild firma",
+      "company.businessId": "FO-nummer: 3434370-6",
+      "company.heading.contact": "Kontaktuppgifter",
+      "company.address.line1": "Snickarsvängen 15",
+      "company.address.line2": "06150 Borgå",
+      "company.phone": "Telefon: 040 066 4767",
+      "company.email": "E-post: info@fixinus.fi",
 
       // SERVICES
       'services.title': 'Tjänster',
@@ -218,7 +291,7 @@ document.addEventListener('click', function ()
       'contact.address.line1': 'Snickarsvängen 15',
       'contact.address.line2': '06150 Borgå ',
       'contact.phone.title': 'Telefon',
-      'contact.phone.value': '+358 40 066 4767',
+      'contact.phone.value': '040 066 4767',
       'contact.email.title': 'E-post',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Öppettider',
@@ -258,7 +331,9 @@ document.addEventListener('click', function ()
       'footer.links.services': 'Tjänster',
       'footer.links.contact': 'Kontakt',
       'footer.links.warranty': 'Garanti',
-      'footer.copy': '© 2025 Fixinus. Alla rättigheter förbehållna.'
+      'footer.links.privacy': 'Dataskyddsbeskrivning',
+      'footer.links.company': 'Företagsuppgifter',
+      'footer.copy': '© 2025 Fixinus. FO-nummer: 3434370-6.'
     },
 
     /* ========== FINNISH ========== */
@@ -302,6 +377,83 @@ document.addEventListener('click', function ()
       'warranty.not.4': 'Varaosat (valmistajan takuun piirissä, jos sellainen on)',
       'warranty.how':
         'Näin se toimii: Toimita laite meille (tai varaa kotikäynti), jotta voimme tarkistaa sen. Takuu koskee alkuperäistä laitetta ja työtä, jonka olemme suorittaneet.',
+
+      // PRIVACY POLICY (Finnish)
+      'privacy.title':'Tietosuojaseloste',
+
+      'privacy.what_we_collect.title': '1. Rekisterinpitäjä',
+      'privacy.what_we_collect.1':'Fixinus (toiminimi)',
+      'privacy.what_we_collect.2':'Y-tunnus: 3434370-6',
+      'privacy.what_we_collect.3':'Osoite: Puusepänkaarre 15, 06150 Porvoo',
+      'privacy.what_we_collect.4':'Sähköposti: info@fixinus.fi',
+
+      'privacy.how_we_use.title':'2. Yhteyshenkilö tietosuoja-asioissa',
+      'privacy.how_we_use':'Tietosuoja-asioissa voit ottaa yhteyttä osoitteeseen info@fixinus.fi',
+
+      'privacy.storage.title':'3. Rekisterin nimi',
+      'privacy.storage.body':'Fixinus asiakas- ja käyttäjärekisteri',
+
+      'privacy.sharing.title':'4. Käsittelyn tarkoitus ja oikeusperuste',
+      'privacy.sharing.body.1':'Henkilötietoja käsitellään seuraaviin tarkoituksiin:',
+      'privacy.sharing.body.2':'Asiakaspalvelu ja yhteydenpito (oikeutettu etu)',
+      'privacy.sharing.body.3':'Sopimusten hallinnointi ja palveluiden toteutus (sopimus)',
+      'privacy.sharing.body.4':'Laskutukseen ja maksuihin liittyvät tiedot (sopimus ja lakisääteinen velvoite)',
+      'privacy.sharing.body.5':'Yhteydenottolomakkeen ja palvelupyyntöjen käsittely verkkosivun kautta (oikeutettu etu)',
+      'privacy.sharing.body.6':'Etätuki (Quick Assist, TeamViewer) asiakkaan luvalla',
+
+      'privacy.rights.title':'5. Käsiteltävät henkilötiedot',
+      'privacy.rights.1':'Mahdollisia tietoja, joita voimme käsitellä:',
+      'privacy.rights.2':'Nimi, sähköpostiosoite, puhelinnumero, osoite',
+      'privacy.rights.3':'Yrityksen tiedot (jos asiakas on yritys)',
+      'privacy.rights.4':'Sopimus- ja palveluhistoria',
+      'privacy.rights.5':'Maksu- ja laskutustiedot (jos sovellettavissa)',
+      'privacy.rights.6':'Verkkosivuston käyttötiedot ja evästeet (jos analytiikka otetaan käyttöön)',
+
+      'privacy.contact.title':'6. Tietojen säilytysaika',
+      'privacy.contact.body.1':'Asiakastiedot: vähintään sopimuksen voimassaoloaika + 5 vuotta',
+      'privacy.contact.body.2':'Kirjanpitoon liittyvät tiedot: vähintään 6 vuotta (lakisääteinen vaatimus)',
+      'privacy.contact.body.3':'Verkkosivuanalytiikka: enintään 2 vuotta (jos analytiikka otetaan käyttöön)',
+
+      'privacy.party.title':'7. Tietojen luovuttaminen',
+      'privacy.party.body.1':'Henkilötietoja ei luovuteta kolmansille osapuolille ilman suostumusta tai lakisääteistä velvoitetta.',
+      'privacy.party.body.2':'Ulkopuoliset palveluntarjoajat (hosting, sähköposti, lomakepalvelu) käsittelevät tietoja ainoastaan ohjeidemme mukaisesti ja tietosuojasopimusten puitteissa.',
+
+      'privacy.transfer.title':'8. Tietojen siirto EU:n ulkopuolelle',
+      'privacy.transfer.body.1':'Tällä hetkellä emme siirrä tietoja EU:n ulkopuolelle. Mikäli tämä muuttuu, päivitämme selosteen ja tiedotamme käyttäjiä.',
+
+      'privacy.data.title':'9. Rekisteröidyn oikeudet',
+      'privacy.data.body.1':'Sinulla on oikeus:',
+      'privacy.data.body.2':'tarkastaa omat tietosi',
+      'privacy.data.body.3':'pyytää virheellisten tietojen korjaamista',
+      'privacy.data.body.4':'pyytää tietojen poistamista (lain sallimissa rajoissa)',
+      'privacy.data.body.5':'pyytää käsittelyn rajoittamista',
+      'privacy.data.body.6':'pyytää tietojen siirrettävyyttä',
+      'privacy.data.body.7':'vastustaa henkilötietojen käsittelyä',
+      'privacy.data.body.8':'peruuttaa suostumus (jos sovellettavissa)',
+      'privacy.data.body.9':'Oikeuksien käyttämiseksi ota yhteyttä: info@fixinus.fi',
+
+      'privacy.cookie.title':'10. Evästeet ja verkkosivuston seuranta',
+      'privacy.cookie.body.1':'Käytämme tällä hetkellä vain teknisesti välttämättömiä evästeitä — ei kolmannen osapuolen seurantaa tai analytiikkaa.',
+      'privacy.cookie.body.2':'Jos analytiikka lisätään myöhemmin, päivitämme tämän selosteen ja tarjoamme evästehallinnan.',
+
+      'privacy.changes.title':'11. Muutokset tietosuojaselosteeseen',
+      'privacy.changes.body.1':'Päivitämme selostetta tarvittaessa. Merkittävistä muutoksista ilmoitetaan verkkosivuilla.',
+
+      'privacy.auth.title':'12. Valvontaviranomainen',
+      'privacy.auth.body.1':'Jos katsot, että tietosuojaoikeuksiasi on rikottu, voit tehdä valituksen:',
+      'privacy.auth.body.2':'Tietosuojavaltuutetun toimisto, PL 800, 00521 Helsinki — tietosuoja@om.fi',
+
+      
+
+      // --- Yritystiedot modal ---
+      "company.title": "Yritystiedot",
+      "company.legalForm": "Fixinus - Toiminimi",
+      "company.businessId": "Y-tunnus: 3434370-6",
+      "company.heading.contact": "Yhteystiedot",
+      "company.address.line1": "Puusepänkaarre 15",
+      "company.address.line2": "06150 Porvoo",
+      "company.phone": "Puhelin: 040 066 4767",
+      "company.email": "Sähköposti: info@fixinus.fi",
 
       // SERVICES
       'services.title': 'Palvelut',
@@ -393,13 +545,13 @@ document.addEventListener('click', function ()
       'contact.address.line1': 'Puusepänkaarre 15',
       'contact.address.line2': '06150 Porvoo',
       'contact.phone.title': 'Puhelin',
-      'contact.phone.value': '+358 40 066 4767',
+      'contact.phone.value': '040 066 4767',
       'contact.email.title': 'Sähköposti',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Aukioloajat',
       'contact.hours.monfri': 'Ma–Pe: 09:00 – 17:00',
-      'contact.hours.sat': 'La: 10:00 – 16:00',
-      'contact.hours.sun': 'Su: Suljettu',
+      'contact.hours.sat': 'La: 10:00 – 17:00',
+      'contact.hours.sun': 'Su: 12:00-17:00',
       'contact.hours.urgent':
         'Kiireelliset asiat 24/7. Jos emme vastaa heti, yritä soittaa uudelleen. Ei-kiireellisissä asioissa jätä viesti.',
 
@@ -434,7 +586,9 @@ document.addEventListener('click', function ()
       'footer.links.services': 'Palvelut',
       'footer.links.contact': 'Yhteystiedot',
       'footer.links.warranty': 'Takuuehdot',
-      'footer.copy': '© 2025 Fixinus. Kaikki oikeudet pidätetään.'
+      'footer.links.privacy': 'Tietosuojaseloste',
+      "footer.links.company": "Yritystiedot",
+      'footer.copy': '© 2025 Fixinus. Y-tunnus: 3434370-6.'
     },
 
 
@@ -479,6 +633,69 @@ document.addEventListener('click', function ()
       'warranty.not.4': 'Parts (covered by the manufacturer’s warranty, if applicable)',
       'warranty.how':
         'How it works: Bring the device to us (or book a visit) so we can inspect it. The warranty applies to the original device and the work we performed.',
+
+
+      // PRIVACY POLICY
+      'privacy.title':'Privacy Policy',
+      'privacy.what_we_collect.title': '1. Data Controller',
+      'privacy.what_we_collect.1':'Fixinus (sole trader)',
+      'privacy.what_we_collect.2':'Business ID: 3434370-6',
+      'privacy.what_we_collect.3':'Address: Puusepänkaarre 15, 06150 Porvoo, Finland',
+      'privacy.what_we_collect.4':'Email: info@fixinus.fi',
+      'privacy.how_we_use.title':'2. Contact for Data Protection Matters',
+      'privacy.how_we_use':'If you have questions about data protection, contact info@fixinus.fi',
+      'privacy.storage.title':'3. Name of the Register',
+      'privacy.storage.body':'Fixinus Customer and User Register',
+      'privacy.sharing.title':'4. Purpose of Processing & Legal Basis',
+      'privacy.sharing.body.1':'We process personal data for the following purposes:',
+      'privacy.sharing.body.2':'Customer support and communications (legitimate interest)',
+      'privacy.sharing.body.3':'Management and fulfilment of service agreements (contract)',
+      'privacy.sharing.body.4':'Invoicing and payment processing (contract and statutory obligation)',
+      'privacy.sharing.body.5':'Handling contact form submissions and service requests via website (legitimate interest)',
+      'privacy.sharing.body.6':'Remote support (Quick Assist, TeamViewer) with customer consent',
+      'privacy.rights.title':'5. What Personal Data We Process',
+      'privacy.rights.1':'We may process:',
+      'privacy.rights.2':'Name, e-mail address, phone number, address',
+      'privacy.rights.3':'Business / company data (if customer is a company)',
+      'privacy.rights.4':'Service and contract history',
+      'privacy.rights.5':'Billing and payment data (if applicable)',
+      'privacy.rights.6':'Website usage data and cookies (if analytics are activated)',
+      'privacy.contact.title':'6. Data Retention Period',
+      'privacy.contact.body.1':'Customer data: at least for the duration of the contract + 5 years',
+      'privacy.contact.body.2':'Accounting data: minimum 6 years (statutory requirement)',
+      'privacy.contact.body.3':'Website analytics data: maximum 2 years (if analytics are used)',
+      'privacy.party.title':'7. Data Sharing & Third Parties',
+      'privacy.party.body.1':'We will not share personal data with third parties without your consent or legal obligation.',
+      'privacy.party.body.2':'External service providers (hosting, email service, form backend) process data only under our instructions and applicable agreements.',
+      'privacy.transfer.title':'8. Transfer Outside EU',
+      'privacy.transfer.body.1':'Currently we do not transfer personal or customer data outside the EU. Should this change, we will update this policy and inform users.',
+      'privacy.data.title':'9. Data Subject Rights',
+      'privacy.data.body.1':'You have the right to:',
+      'privacy.data.body.2':'request access to your data',
+      'privacy.data.body.3':'request correction of inaccurate data',
+      'privacy.data.body.4':'request deletion of your data (where legally possible)',
+      'privacy.data.body.5':'request restriction of processing',
+      'privacy.data.body.6':'request data portability',
+      'privacy.data.body.7':'object to data processing',
+      'privacy.data.body.8':'withdraw consent (if applicable)',
+      'privacy.data.body.9':'To exercise these rights, contact info@fixinus.fi',
+      'privacy.cookie.title':'10. Cookies & Website Tracking',
+      'privacy.cookie.body.1':'At present, we do not use third-party analytics, cookies or tracking tools — only strictly necessary cookies are used, which do not require consent.',
+      'privacy.cookie.body.2':'If we later adopt analytics or tracking tools, we will update this policy and provide a cookie consent mechanism.',
+      'privacy.changes.title':'11. Changes to the Privacy Policy',
+      'privacy.changes.body.1':'We reserve the right to update this policy. Any significant changes will be communicated via our website.',
+      'privacy.auth.title':'12. Supervisory Authority',
+      'privacy.auth.body.1':'If you believe that your rights under GDPR have been violated, you have the right to lodge a complaint with the supervisory authority:',
+      'privacy.auth.body.2':'Data Protection Ombudsman (Tietosuojavaltuutetun toimisto), PO Box 800, 00521 Helsinki, Finland — tietosuoja@om.fi',
+      
+      "company.title": "Company details",
+      "company.legalForm": "Fixinus - Sole trader",
+      "company.businessId": "Business ID: 3434370-6",
+      "company.heading.contact": "Contact details",
+      "company.address.line1": "Puusepänkaarre 15",
+      "company.address.line2": "06150 Porvoo, Finland",
+      "company.phone": "Phone: 040 066 4767",
+      "company.email": "Email: info@fixinus.fi",
 
       // SERVICES
       'services.title': 'Services',
@@ -573,13 +790,13 @@ document.addEventListener('click', function ()
       'contact.address.line1': 'Puusepänkaarre 15',
       'contact.address.line2': '06150 Porvoo',
       'contact.phone.title': 'Phone',
-      'contact.phone.value': '+358 40 066 4767',
+      'contact.phone.value': '040 066 4767',
       'contact.email.title': 'Email',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Hours',
       'contact.hours.monfri': 'Monday–Friday: 09:00 – 17:00',
-      'contact.hours.sat': 'Saturday: 10:00 – 16:00',
-      'contact.hours.sun': 'Sunday: Closed',
+      'contact.hours.sat': 'Saturday: 10:00 – 17:00',
+      'contact.hours.sun': 'Sunday: 12:00-17:00',
       'contact.hours.urgent':
         'Urgent matters 24/7. If we don’t answer right away, please call again. For non-urgent matters, leave a message.',
       
@@ -613,7 +830,9 @@ document.addEventListener('click', function ()
       'footer.links.services': 'Services',
       'footer.links.contact': 'Contact',
       'footer.links.warranty': 'Warranty',
-      'footer.copy': '© 2025 Fixinus. All rights reserved.'
+      'footer.links.privacy': 'Privacy Policy',
+      "footer.links.company": "Company details",
+      'footer.copy': '© 2025 Fixinus. Business ID: 3434370-6.'
     }
 
   };
@@ -766,6 +985,8 @@ document.addEventListener('click', function ()
 })();
 
 
+// WARRANTY FUNCTION
+
 (function () {
   const modal = document.getElementById('warranty-modal');
   const openBtn = document.getElementById('warranty-trigger');
@@ -803,6 +1024,85 @@ document.addEventListener('click', function ()
   });
 })();
 
+
+// PRIVACY POLICY FUNCTION
+
+(function () {
+  const modal = document.getElementById('privacy-modal');
+  const openBtn = document.getElementById('privacy-trigger');
+  const closeBtn = document.getElementById('privacy-close');
+
+  if (!modal || !openBtn || !closeBtn) return;
+
+  function openModal() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  openBtn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-backdrop')) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+})();
+
+// COMPANY DETAILS FUNCTION
+
+(function () {
+  const modal = document.getElementById('company-modal');      // modal wrapper
+  const openBtn = document.getElementById('company-trigger');   // footer button
+  const closeBtn = document.getElementById('company-close');    // X button
+
+  if (!modal || !openBtn || !closeBtn) return;
+
+  function openModal() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // lock page scroll
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; // restore scroll
+  }
+
+  // Open when clicking footer link
+  openBtn.addEventListener('click', openModal);
+
+  // Close when pressing the X
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close when clicking outside the modal content
+  modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-backdrop')) {
+      closeModal();
+    }
+  });
+
+  // Close with ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+})();
 
 // FORM FUNCTIONALITY
 

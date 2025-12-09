@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js?v=7" defer></script>
+  <script src="script.js?v=8" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -396,6 +396,114 @@
     </div>
   </div>
 
+  <div id="privacy-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="privacy-title">
+    <div class="modal-backdrop"></div>
+  
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="privacy-close" aria-label="Close privacy policy">
+        ×
+      </button>
+  
+      <h2 id="privacy-title" data-i18n="privacy.title">Privacy Policy</h2>
+
+      <h4 data-i18n="privacy.what_we_collect.title">1. Data Controller</h4>
+      <ul>
+        <li data-i18n="privacy.what_we_collect.1">Fixinus (sole trader)</li>
+        <li data-i18n="privacy.what_we_collect.2">Business ID: 3434370-6</li>
+        <li data-i18n="privacy.what_we_collect.3">Address: Yrittäjäntie 11, 06450 Porvoo, Finland</li>
+        <li data-i18n="privacy.what_we_collect.4">Address: Yrittäjäntie 11, 06450 Porvoo, Finland</li>
+      </ul>
+  
+      <h4 data-i18n="privacy.how_we_use.title">2. Contact for Data Protection Matters</h4>
+      <p data-i18n="privacy.how_we_use">If you have questions about data protection, contact info@fixinus.fi</p>
+  
+      <h4 data-i18n="privacy.storage.title">3. Name of the Register</h4>
+      <p data-i18n="privacy.storage.body">
+        Fixinus Customer and User Register
+      </p>
+  
+      <h4 data-i18n="privacy.sharing.title">4. Purpose of Processing & Legal Basis</h4>
+      <p data-i18n="privacy.sharing.body.1">We process personal data for the following purposes:</p>
+      <ul>
+        <li data-i18n="privacy.sharing.body.2">Customer support and communications (legitimate interest)</li>
+        <li data-i18n="privacy.sharing.body.3">Management and fulfilment of service agreements (contract)</li>
+        <li data-i18n="privacy.sharing.body.4">Invoicing and payment processing (contract and statutory obligation)</li>
+        <li data-i18n="privacy.sharing.body.5">Handling contact form submissions and service requests via website (legitimate interest)</li>
+        <li data-i18n="privacy.sharing.body.6">Remote support (Quick Assist, TeamViewer) with customer consent</li>
+      </ul>
+      
+  
+      <h4 data-i18n="privacy.rights.title">5. What Personal Data We Process</h4>
+      <p data-i18n="privacy.rights.1">We may process:</p>
+      <ul>
+        <li data-i18n="privacy.rights.2">Name, e-mail address, phone number, address</li>
+        <li data-i18n="privacy.rights.3">Business / company data (if customer is a company)</li>
+        <li data-i18n="privacy.rights.4">Service and contract history</li>
+        <li data-i18n="privacy.rights.5">Billing and payment data (if applicable)</li>
+        <li data-i18n="privacy.rights.6">Website usage data and cookies (if analytics are activated)</li>
+      </ul>
+      
+  
+      <h4 data-i18n="privacy.contact.title">6. Data Retention Period</h4>
+      <p data-i18n="privacy.contact.body.1">Customer data: at least for the duration of the contract + 5 years</p>
+      <p data-i18n="privacy.contact.body.2">Accounting data: minimum 6 years (statutory requirement)</p>
+      <p data-i18n="privacy.contact.body.3">Website analytics data: maximum 2 years (if analytics are used)</p>
+
+      <h4 data-i18n="privacy.party.title">7. Data Sharing & Third Parties</h4>
+      <p data-i18n="privacy.party.body.1">We will not share personal data with third parties without your consent or legal obligation.</p>
+      <p data-i18n="privacy.party.body.2">External service providers (hosting, email service, form backend) process data only under our instructions and applicable agreements.</p>
+
+      <h4 data-i18n="privacy.transfer.title">8. Transfer Outside EU</h4>
+      <p data-i18n="privacy.transfer.body.1">Currently we do not transfer personal or customer data outside the EU. Should this change, we will update this policy and inform users.</p>
+
+      <h4 data-i18n="privacy.data.title">9. Data Subject Rights</h4>
+      <p data-i18n="privacy.data.body.1">You have the right to:</p>
+      <ul>
+        <li data-i18n="privacy.data.body.2">request access to your data</li>
+        <li data-i18n="privacy.data.body.3">request correction of inaccurate data</li>
+        <li data-i18n="privacy.data.body.4">request deletion of your data (where legally possible)</li>
+        <li data-i18n="privacy.data.body.5">request restriction of processing</li>
+        <li data-i18n="privacy.data.body.6">request data portability</li>
+        <li data-i18n="privacy.data.body.7">object to data processing</li>
+        <li data-i18n="privacy.data.body.8">withdraw consent (if applicable)</li>
+      </ul>
+      <p data-i18n="privacy.data.body.9">To exercise these rights, contact info@fixinus.fi</p>
+
+      <h4 data-i18n="privacy.cookie.title">10. Cookies & Website Tracking</h4>
+      <p data-i18n="privacy.cookie.body.1">At present, we do not use third-party analytics, cookies or tracking tools — only strictly necessary cookies are used, which do not require consent.</p>
+      <p data-i18n="privacy.cookie.body.2">If we later adopt analytics or tracking tools, we will update this policy and provide a cookie consent mechanism.</p>
+
+      <h4 data-i18n="privacy.changes.title">11. Changes to the Privacy Policy</h4>
+      <p data-i18n="privacy.changes.body.1">We reserve the right to update this policy. Any significant changes will be communicated via our website.</p>
+
+      <h4 data-i18n="privacy.auth.title">12. Supervisory Authority</h4>
+      <p data-i18n="privacy.auth.body.1">If you believe that your rights under GDPR have been violated, you have the right to lodge a complaint with the supervisory authority:</p>
+      <p data-i18n="privacy.auth.body.2">Data Protection Ombudsman (Tietosuojavaltuutetun toimisto), PO Box 800, 00521 Helsinki, Finland — tietosuoja@om.fi</p>
+    </div>
+  </div>
+
+  <div id="company-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="company-title">
+    <div class="modal-backdrop"></div>
+  
+    <div class="modal-content">
+      <button type="button" class="modal-close" id="company-close" aria-label="Close company information">
+        ×
+      </button>
+  
+      <h2 id="company-title" data-i18n="company.title">Yritystiedot</h2>
+
+      <p data-i18n="company.legalForm">Fixinus - Toiminimi</p>
+      <p data-i18n="company.businessId">Y-tunnus: 3434370-6</p>
+
+      <h3 data-i18n="company.heading.contact">Yhteystiedot</h3>
+      <p data-i18n="company.address.line1">Puusepänkaarre 15</p>
+      <p data-i18n="company.address.line2">06150 Porvoo</p>
+      <p data-i18n="company.phone">Puhelin: 040 066 4767</p>
+      <p data-i18n="company.email">Sähköposti: info@fixinus.fi</p>
+    </div>
+  </div>
+
+
   <footer>
     <div class="footer-container max-w format-horizontal format-vertical">
       <div class="footer-info">
@@ -406,7 +514,7 @@
           </p>
         </div>
         <div class="footer-socials">
-          <a href="#" class="icon-link" aria-label="Facebook">
+          <a href="https://www.facebook.com/people/Fixinus/61582467222948/" class="icon-link" aria-label="Facebook">
             <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
               <path
                 d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073  c0-6.627,5.373-12,12-12S24,5.445,24,12.073z" />
@@ -436,6 +544,22 @@
               Warranty
             </button>
           </li>
+          <li>
+            <button
+              type="button"
+              id="privacy-trigger"
+              class="footer-link-button"
+              data-i18n="footer.links.privacy"
+            >
+              Privacy Policy
+            </button>
+          </li>
+          <li>
+            <button type="button" id="company-trigger" class="footer-link-button" data-i18n='footer.links.company'>
+              Company Details
+            </button>
+          </li>
+
         </ul>
       </div>
 
