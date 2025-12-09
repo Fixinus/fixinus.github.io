@@ -11,7 +11,13 @@ section {
     scroll-margin-top: 5rem; /* match your header height */
 }
 
-
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;     /* 🔹 prevents sideways scrolling */
+}
 
 /* --- Global Font Setup --- */
 
@@ -23,6 +29,10 @@ body {
     background-color: #fdfdfd;
     margin: 0;
     padding: 0;
+}
+
+body.nav-open {
+  overflow: hidden;       /* no scroll when sidebar is open */
 }
 
 
@@ -69,6 +79,14 @@ header {
    /* must be higher than the overlay (250) so the sidebar is on top */
     z-index: 400;
   }
+
+  /* Respect safe area on phones with a notch */
+@supports (padding-top: env(safe-area-inset-top)) {
+  header {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
 .nav-bar {
     display: flex;
     justify-content: flex-end;
