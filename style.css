@@ -66,7 +66,8 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
-    z-index: 100;
+   /* must be higher than the overlay (250) so the sidebar is on top */
+    z-index: 400;
   }
 .nav-bar {
     display: flex;
@@ -80,6 +81,15 @@ header {
     font-weight: 700;
     color: #0f172a;
     margin: 0;
+}
+
+/* Desktop: no hamburger */
+.nav-toggle {
+  display: none;
+}
+
+.mobile-lang-select {
+  display: none;
 }
 
 nav ul {
@@ -137,6 +147,9 @@ img{
     padding-bottom: 4rem;
 }
 
+.link{
+    color: rgb(74, 177, 247);
+}
 
 .lang-switcher {
   appearance: none;
@@ -193,6 +206,38 @@ img{
     width: 70%;
     height: auto;
 }
+
+
+/* ================================
+   HERO STACKING FOR TABLETS + PHONES
+   ================================ */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;      /* stack vertically */
+    align-items: center;         /* center items horizontally */
+    text-align: center;          /* center hero text */
+  }
+
+  /* Logo comes FIRST */
+  .hero-picture {
+    order: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Text comes AFTER logo */
+  .hero-text {
+    order: 2;
+  }
+
+  /* Make logo a bit smaller on small screens */
+  #logo {
+    width: 65vw;        /* responsive width */
+    max-width: 320px;   /* don’t get too huge */
+  }
+}
+
+
+
 /* --- ABOUT SECTION --- */
 
 /* Clean divider between About and Services */
@@ -271,82 +316,103 @@ img{
     line-height: 1.8;
 }
 
+/* --- ABOUT LAYOUT (no overlap) --- */
+
 .about-text-top {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
-  column-gap: 4rem; 
+  column-gap: 4rem;
   row-gap: 3rem;
   position: relative;
   align-items: start;
 }
 
-.about-text-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  text-align: center; 
-  margin-top: 3rem;
-}
-
-/* keep the list readable and aligned under centered text */
-.about-text-bottom ul {
-  text-align: left;       /* keep bullet points left-aligned */
-  display: inline-block;  /* centers the list as a block */
-  margin: 1rem auto;      /* centers list horizontally */
-  padding-left: 1.5rem;   /* ensures bullets have space */
-}
-
-/* optional: spacing between list items */
-.about-text-bottom li {
-  margin-bottom: 0.5rem;
-}
-
-/* Allow the inner containers to behave like grid items */
 .about-text-left,
 .about-text-right {
-  display: contents; /* lets inner divs become actual grid items */
+  display: contents; /* let inner blocks be grid items */
 }
 
-/* Assign exact grid positions for clarity */
+/* exact grid positions */
 #drop-text { grid-column: 1; grid-row: 1; }
 #fast-service-text { grid-column: 2; grid-row: 1; }
 #exp-text { grid-column: 1; grid-row: 2; }
 #payment-text { grid-column: 2; grid-row: 2; }
 
-/* --- vertical divider --- */
+/* vertical divider between the two columns */
 .about-text-top::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 50%; /* centered in the grid */
+  left: 50%;
   width: 1px;
-  background-color: #dcdcdc; /* subtle gray line */
+  background-color: var(--divider);
   transform: translateX(-50%);
   pointer-events: none;
 }
 
-/* keep text left-aligned */
-.about-text-top h4,
-.about-text-top p {
-  text-align: left;
+/* optional: bottom part of about section if you add it later */
+.about-text-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
 }
 
-/* responsive stacking for small screens */
-@media (max-width: 768px) {
+.about-text-bottom ul {
+  text-align: left;
+  display: inline-block;
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+}
+
+.about-text-bottom li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- RESPONSIVE: stack columns on tablet/phone ---------- */
+@media (max-width: 900px) {
   .about-text-top {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;   /* single column */
     row-gap: 2rem;
   }
 
   .about-text-top::before {
-    display: none; /* hide divider when stacked */
+    display: none;               /* hide vertical divider */
   }
+
+    /* ===== ABOUT SECTION: phones & tablets ===== */
+
+  .about-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .about-text-top {
+    display: flex;            /* stop using grid on small screens */
+    flex-direction: column;
+    gap: 2rem;
+    position: static;         /* so the old ::before line doesn't matter */
+  }
+
+  .about-text-top::before {
+    display: none;            /* hide the vertical divider on small screens */
+  }
+
+  /* let items flow naturally, not in fixed grid cells */
+  #drop-text,
+  #fast-service-text,
+  #exp-text,
+  #payment-text {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
 }
 
 
-  
 /* --- SERVICE SECTION --- */
 
 
@@ -385,7 +451,7 @@ img{
 
 .service-content h3 {
     font-size: 1.5rem;
-    color: #007bff;
+    color: rgb(74, 177, 247);
     margin-bottom: 1rem;
 }
 
@@ -521,7 +587,11 @@ img{
 }
 
 /* --- REMOTE SECTION --- */
-
+.remote-section {
+  background: #163b6133; /* LIGHT BLUE — easy to read */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 .remote-head{
     display: flex;
     flex-direction: column;
@@ -543,18 +613,6 @@ img{
     padding-bottom: 0.5rem ;
 }
 
-#downloadbtn{
-    width: 1.5rem;
-    height: 1.5rem;
-    vertical-align: middle;
-}
-
-#generatebtn{
-    width: 8rem;
-    height: 2rem;
-    vertical-align: middle;
-    border-radius: 3rem;
-}
 /* --- CONTACT SECTION --- */
 
 
@@ -861,7 +919,7 @@ nav ul li a::after { background-color: var(--accent); }
 /* Services / Cards */
 .service-section { background: var(--surface-2); }
 .service-content div { background: var(--card); box-shadow: 0 6px 16px var(--shadow); }
-.service-content h3 { color: var(--primary); }
+/* .service-content h3 { color: var(--primary); } */
 .service-content p { color: var(--text); }
 
 /* Prices */
@@ -1139,3 +1197,150 @@ footer a,
 .footer-link-button:hover {
   color: #ffffff;
 }
+
+
+
+
+/* ================================
+   PHONES & TABLETS (≤ 900px)
+   ================================ */
+@media (max-width: 900px) {
+  /* Reduce horizontal padding a bit */
+  .format-horizontal {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Header layout: only burger visible, aligned to the right */
+  .nav-bar {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Off-canvas nav panel */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    max-width: 80%;
+    background: var(--surface);
+    box-shadow: -12px 0 24px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4rem 1.75rem 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);      /* hidden off-screen to the right */
+    transition: transform 0.25s ease;
+    z-index: 300;
+  }
+
+  /* When JS adds .is-open, panel slides in */
+  .main-nav.is-open {
+    transform: translateX(0);
+  }
+
+  /* Nav list becomes vertical inside panel */
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+
+  .main-nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.35rem 0;
+  }
+
+  /* Language button sits INSIDE the sliding panel */
+  .main-nav .lang-menu {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  /* MOBILE HAMBURGER BUTTON */
+
+  .nav-toggle {
+    display: inline-flex;            /* now visible on mobile */
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;                  /* hit area width */
+    height: 2.75rem;                 /* hit area height */
+    border-radius: 0.5rem;
+    border: 1px solid var(--divider);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    padding: 0;                      /* icon centered in full area */
+    z-index: 350;                    /* above overlay */
+  }
+
+  /* Make the whole button clickable, not just the image */
+  .nav-toggle img#menubtn {
+    width: 1.6rem;
+    height: 1.6rem;
+    display: block;
+    pointer-events: none;            /* clicks go to the button, not the img */
+  }
+
+  /* If you only want the image (no bars), hide the bars */
+  .nav-toggle-bar {
+    display: none;
+  }
+
+  /* Dark overlay behind the panel when open */
+  body.nav-open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 250;
+  }
+    /* Force hamburger icon to appear white */
+  #menubtn {
+      filter: brightness(0) invert(1);
+  }
+
+  /* Flag buttons inside sidebar */
+  .mobile-lang-select {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .mobile-lang:hover {
+    background-color: color-mix(in srgb, var(--text) 12%, transparent);
+  }
+
+  #lang-menu {
+      display: none !important;
+  }
+  .mobile-lang {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 2rem;       /* adjust to preferred size */
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;  
+  }
+
+  /* Remove the default blue focus outline (Safari/Chrome) */
+  .mobile-lang:focus,
+  .mobile-lang:focus-visible,
+  .mobile-lang:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+

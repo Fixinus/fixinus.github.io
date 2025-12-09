@@ -193,11 +193,11 @@ document.addEventListener('click', function ()
       'remote.title': 'Fjärrhjälp – så här fungerar det',
       'remote.lead': 'På Windows 10/11 använder vi Snabbhjälp (Quick Assist). Har du inget Microsoft-konto eller fungerar Snabbhjälp inte? Då använder vi TeamViewer QuickSupport. På Mac och Linux använder vi också TeamViewer. Passar inget av alternativen? Då ordnar vi hembesök eller inlämning.',
 
-      'remote.step.1.html': '<strong>Kontakta oss:</strong> Ring +358 400 664 767 eller mejla <a href="mailto:info@fixinus.fi">info@fixinus.fi</a> så bekräftar vi att fjärrhjälp passar ditt ärende.',
+      'remote.step.1.html': '<strong>Kontakta oss:</strong> Ring +358 400 664 767 eller mejla <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> så bekräftar vi att fjärrhjälp passar ditt ärende.',
 
       'remote.step.2.html': `<strong>Ladda ned rätt app:</strong><br>
         • <u>Windows 10/11:</u> Öppna Snabbhjälp genom att trycka <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
-        • <u>Om Snabbhjälp inte fungerar eller du saknar Microsoft-konto:</u> Ladda ned TeamViewer QuickSupport: <a href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
+        • <u>Om Snabbhjälp inte fungerar eller du saknar Microsoft-konto:</u> Ladda ned TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
         • <u>Mac eller Linux:</u> Ladda ned TeamViewer QuickSupport från länken ovan.`,
 
       'remote.step.3.html': '<strong>Ge åtkomst:</strong> Öppna appen och godkänn anslutningen när du blir tillfrågad. Du ser allt vi gör hela tiden.',
@@ -370,10 +370,10 @@ document.addEventListener('click', function ()
       'remote.lead':
         'Windows 10/11 -laitteissa käytämme Quick Assist -toimintoa. Jos sinulla ei ole Microsoft-tiliä tai Quick Assist ei toimi, käytämme TeamViewer QuickSupportia. Mac- ja Linux-laitteissa käytämme myös TeamVieweria. Jos mikään vaihtoehto ei sovi, järjestämme kotikäynnin tai laitteen tuonnin.',
       'remote.step.1.html':
-        '<strong>Ota yhteyttä:</strong> Soita +358 40 066 4767 tai lähetä sähköpostia <a href="mailto:info@fixinus.fi">info@fixinus.fi</a>, niin varmistamme että etätuki sopii tilanteeseesi.',
+        '<strong>Ota yhteyttä:</strong> Soita +358 40 066 4767 tai lähetä sähköpostia <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a>, niin varmistamme että etätuki sopii tilanteeseesi.',
       'remote.step.2.html': `<strong>Lataa oikea sovellus:</strong><br>
         • <u>Windows 10/11:</u> Avaa Quick Assist painamalla <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
-        • <u>Ei Microsoft-tiliä tai Quick Assist ei toimi?</u> Lataa TeamViewer QuickSupport: <a href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
+        • <u>Ei Microsoft-tiliä tai Quick Assist ei toimi?</u> Lataa TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
         • <u>Mac tai Linux:</u> Lataa TeamViewer QuickSupport yllä olevasta linkistä.`,
       'remote.step.3.html':
         '<strong>Salli yhteys:</strong> Avaa sovellus ja hyväksy yhteyspyyntö. Näet kaiken mitä teemme.',
@@ -550,10 +550,10 @@ document.addEventListener('click', function ()
       'remote.lead':
         'On Windows 10/11 we use Quick Assist. If you don’t have a Microsoft account or Quick Assist isn’t available, we use TeamViewer QuickSupport instead. On Mac and Linux, we also use TeamViewer. If neither option fits, we arrange a home visit or drop-off.',
       'remote.step.1.html':
-        '<strong>Contact us:</strong> Call +358 40 066 4767 or email <a href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.',
+        '<strong>Contact us:</strong> Call +358 40 066 4767 or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.',
       'remote.step.2.html': `<strong>Download the right app:</strong><br>
         • <u>Windows 10/11:</u> Open Quick Assist by pressing <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
-        • <u>No Microsoft account or Quick Assist not working?</u> Download TeamViewer QuickSupport: <a href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
+        • <u>No Microsoft account or Quick Assist not working?</u> Download TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
         • <u>Mac or Linux:</u> Download TeamViewer QuickSupport from the link above.`,
       'remote.step.3.html':
         '<strong>Allow access:</strong> Open the app and approve the connection when prompted. You can see everything we do.',
@@ -654,7 +654,7 @@ document.addEventListener('click', function ()
     document.documentElement.setAttribute('lang', lang);
   }
 
-    // --- Language menu helpers ---
+
 
     // --- Language menu helpers ---
 
@@ -692,6 +692,8 @@ document.addEventListener('click', function ()
     updateLangMenu(safeLang);                // update flag & active option
     document.documentElement.setAttribute('lang', safeLang);
   }
+  // expose for the mobile flag buttons at the bottom of script.js
+  window.setLang = setLang;
 
   function initLang() {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -741,6 +743,19 @@ document.addEventListener('click', function ()
         });
       });
     }
+        // --- Mobile sidebar flags (phones/tablets) ---
+    document.querySelectorAll('.mobile-lang').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        setLang(lang); // reuse the same function
+
+        // Close sidebar when language is chosen
+        document.body.classList.remove('nav-open');
+        const nav = document.getElementById('main-nav');
+        if (nav) nav.classList.remove('is-open');
+      });
+    });
+
   }
 
   if (document.readyState === 'loading') {
@@ -749,7 +764,6 @@ document.addEventListener('click', function ()
     initLang();
   }
 })();
-
 
 
 (function () {
@@ -964,6 +978,69 @@ document.addEventListener('click', function ()
         submitBtn.disabled = false;
         submitBtn.textContent = originalBtnText;
       }
+    }
+  });
+})();
+
+
+// PHONE AND TABLET
+
+// MOBILE NAV: slide-in panel
+(function () {
+  const nav = document.getElementById('main-nav');
+  const toggle = document.getElementById('nav-toggle');
+
+  if (!nav || !toggle) return;
+
+  function isMobile() {
+    return window.matchMedia('(max-width: 900px)').matches;
+  }
+
+  function openNav() {
+    nav.classList.add('is-open');
+    document.body.classList.add('nav-open');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeNav() {
+    nav.classList.remove('is-open');
+    document.body.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleNav() {
+    if (!isMobile()) return; // desktop: do nothing
+    if (nav.classList.contains('is-open')) {
+      closeNav();
+    } else {
+      openNav();
+    }
+  }
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleNav();
+  });
+
+  // Close when clicking a link (mobile only)
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMobile()) closeNav();
+    });
+  });
+
+  // Close when clicking outside the panel (mobile only)
+  document.addEventListener('click', (e) => {
+    if (!isMobile()) return;
+    if (!nav.contains(e.target) && e.target !== toggle && nav.classList.contains('is-open')) {
+      closeNav();
+    }
+  });
+
+  // If window resized to desktop, make sure nav is reset
+  window.addEventListener('resize', () => {
+    if (!isMobile()) {
+      closeNav();
     }
   });
 })();

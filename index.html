@@ -17,24 +17,27 @@
 <body>
   <header>
     <div class="nav-bar max-w format-horizontal">
-      <nav>
+      <nav id="main-nav" class="main-nav">
         <ul>
           <li><a href="#about" data-i18n="nav.about">About</a></li>
           <!-- <li><a href="#prices" data-i18n="nav.prices">Prices</a></li> -->
           <li><a href="#service" data-i18n="nav.services">Services</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
+        <!-- Theme + Language -->
+        <!--<button id="theme-toggle" class="theme-toggle" aria-pressed="true" aria-label="Toggle color theme">☀️</button> -->
+    
+        <div class="mobile-lang-select">
+          <button class="mobile-lang" data-lang="fi">🇫🇮</button>
+          <button class="mobile-lang" data-lang="sv">🇸🇪</button>
+          <button class="mobile-lang" data-lang="en">🇬🇧</button>
+        </div>
       </nav>
-
-      <!-- Theme + Language -->
-      <!--<button id="theme-toggle" class="theme-toggle" aria-pressed="true" aria-label="Toggle color theme">☀️</button> -->
-
       <div class="lang-menu" id="lang-menu">
-        <button class="lang-current" type="button" aria-haspopup="true" aria-expanded="false"
-          aria-label="Change language">
+        <button class="lang-current" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
           <span class="flag" data-current-flag>🇫🇮</span>
         </button>
-
+    
         <ul class="lang-dropdown" role="menu">
           <li>
             <button type="button" class="lang-option" data-lang="fi" role="menuitem">
@@ -57,6 +60,11 @@
         </ul>
       </div>
 
+      <!-- HAMBURGER (shown only on tablet/phone via CSS) -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <img id="menubtn" src="./media/menu.svg" alt="">
+      </button>
+    </div>
   </header>
 
   <section class="hero-section">
@@ -151,7 +159,35 @@
             <li data-i18n="services.pc.8">Health report after service (what we did, future recommendations)</li>
           </ul>
         </div>
-
+        <!-- Home Tech -->
+        <div>
+          <h3 data-i18n="services.home.title">Home Tech Help</h3>
+          <ul>
+            <li data-i18n="services.home.1">Wi-Fi setup & coverage boost (router/mesh)</li>
+            <li data-i18n="services.home.2">TV & streaming setup (smart TVs, Apple TV, Chromecast, etc.)</li>
+            <li data-i18n="services.home.3">Game consoles (repair, setup, online play, family settings)</li>
+            <li data-i18n="services.home.4">Printers & scanners (install, connect, fix common issues)</li>
+            <li data-i18n="services.home.5">Shared storage / NAS (files across devices)</li>
+            <li data-i18n="services.home.6">Smart home devices (lights, cameras, speakers)</li>
+          </ul>
+        </div>
+      
+      
+        <!-- Phones / Tablets -->
+        <div>
+          <h3 data-i18n="services.mobile.title">Phones & Tablets (software only)</h3>
+          <ul>
+            <li data-i18n="services.mobile.1">New device setup</li>
+            <li data-i18n="services.mobile.2">Switching phones made easy (move photos, messages, WhatsApp, apps)</li>
+            <li data-i18n="services.mobile.3">Parental controls & safety (Screen Time/Family Link setup)</li>
+            <li data-i18n="services.mobile.4">Email, contacts & calendar sync</li>
+            <li data-i18n="services.mobile.5">App & account help (Apple ID, Google)</li>
+            <li data-i18n="services.mobile.6">iCloud/Google backups & restores</li>
+            <li data-i18n="services.mobile.7">Storage cleanup (free up space safely)</li>
+            <li data-i18n="services.mobile.8">Security check (updates, passcodes, 2-step verification)</li>
+            <li data-i18n="services.mobile.9">Troubleshooting issues (sync, notifications, battery life)</li>
+          </ul>
+        </div>
         <!-- Software / OS -->
         <div>
           <h3 data-i18n="services.os.title">Software & Operating System</h3>
@@ -168,37 +204,9 @@
             <li data-i18n="services.os.10">Set up email and cloud (OneDrive, iCloud, Google)</li>
           </ul>
         </div>
-
-        <!-- Phones / Tablets -->
-        <div>
-          <h3 data-i18n="services.mobile.title">Phones & Tablets (software only)</h3>
-          <ul>
-            <li data-i18n="services.mobile.1">New device setup</li>
-            <li data-i18n="services.mobile.2">Switching phones made easy (move photos, messages, WhatsApp, apps)</li>
-            <li data-i18n="services.mobile.3">Parental controls & safety (Screen Time/Family Link setup)</li>
-            <li data-i18n="services.mobile.4">Email, contacts & calendar sync</li>
-            <li data-i18n="services.mobile.5">App & account help (Apple ID, Google)</li>
-            <li data-i18n="services.mobile.6">iCloud/Google backups & restores</li>
-            <li data-i18n="services.mobile.7">Storage cleanup (free up space safely)</li>
-            <li data-i18n="services.mobile.8">Security check (updates, passcodes, 2-step verification)</li>
-            <li data-i18n="services.mobile.9">Troubleshooting issues (sync, notifications, battery life)</li>
-          </ul>
-        </div>
-
-        <!-- Home Tech -->
-        <div>
-          <h3 data-i18n="services.home.title">Home Tech Help</h3>
-          <ul>
-            <li data-i18n="services.home.1">Wi-Fi setup & coverage boost (router/mesh)</li>
-            <li data-i18n="services.home.2">TV & streaming setup (smart TVs, Apple TV, Chromecast, etc.)</li>
-            <li data-i18n="services.home.3">Game consoles (repair, setup, online play, family settings)</li>
-            <li data-i18n="services.home.4">Printers & scanners (install, connect, fix common issues)</li>
-            <li data-i18n="services.home.5">Shared storage / NAS (files across devices)</li>
-            <li data-i18n="services.home.6">Smart home devices (lights, cameras, speakers)</li>
-          </ul>
-        </div>
+      
       </div>
-    </div>
+      </div>
   </section>
 <!--
   <section id="prices" class="price-section">
@@ -259,11 +267,9 @@
   <section class="remote-section">
     <div class="remote-container max-w format-horizontal format-vertical">
       <div class="remote-head">
-        <h2 data-i18n="remote.title">Remote Help & How it works</h2>
+        <h2 data-i18n="remote.title">Remote Help – How It Works</h2>
         <p data-i18n="remote.lead">
-          We use Quick Assist on Windows 10/11 (built in on Windows 11; easy install from the Microsoft Store
-          on Windows 10). On Mac, Linux, or ChromeOS—or if Quick Assist isn’t available—we use Chrome Remote
-          Desktop. If neither option fits, we’ll arrange an on-site visit or drop-off.
+          On Windows 10/11 we use Quick Assist. If you don’t have a Microsoft account or Quick Assist isn’t available, we use TeamViewer QuickSupport instead. On Mac and Linux, we also use TeamViewer. If neither option fits, we arrange a home visit or drop-off.
         </p>
       </div>
 
@@ -271,26 +277,19 @@
         <div class="remote-list">
           <ol>
             <li class="remote-text" data-i18n-html="remote.step.1.html">
-              <strong>Call us:</strong> +358 400 664 767 (or email <a href="mailto:info@fixinus.fi">info@fixinus.fi</a>) to confirm remote help suits your case.
+              <strong>Contact us:</strong> Call +358 40 066 4767 or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.
             </li>
             <li class="remote-text" data-i18n-html="remote.step.2.html">
-              <strong>Download the helper app:</strong> Open or download the helper
-              app: For Quick Assist, press <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd> or
-              <a href="https://remotedesktop.google.com/support">press here</a> and then click the
-              <img id="downloadbtn" src="/media/downloadbutton.png" alt=""> button to download Chrome
-              Remote Desktop. After it has downloaded, allow it to install and allow it to be added to your browser.
+              <strong>Download the right app:</strong><br>• <u>Windows 10/11:</u> Open Quick Assist by pressing <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>• <u>No Microsoft account or Quick Assist not working?</u> Download TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>• <u>Mac or Linux:</u> Download TeamViewer QuickSupport from the link above.
             </li>
             <li class="remote-text" data-i18n-html="remote.step.3.html">
-              <strong>Allow access:</strong> open the app and grant permission when prompted. You’ll see what we do.
+              <strong>Allow access:</strong> Open the app and approve the connection when prompted. You can see everything we do.
             </li>
             <li class="remote-text" data-i18n-html="remote.step.4.html">
-              <strong>Generate the code:</strong> Press
-              <img id="generatebtn" src="/media/generatebtn.png" alt="">
-              to create a ONE-TIME code and tell us what it is. You will see everything we do on your screen, and the
-              code cannot be used again after the session.
+              <strong>Share the code:</strong> The app will show a one-time code. Tell us the code so we can connect. It cannot be reused.
             </li>
             <li class="remote-text" data-i18n-html="remote.step.5.html">
-              <strong>We fix the issue:</strong> you can watch on your screen and pause/stop any time.
+              <strong>We fix the issue:</strong> You can watch everything on your screen and pause or stop the session at any time.
             </li>
             <li class="remote-text" data-i18n-html="remote.step.6.html">
               <strong>All done:</strong> we close the session and confirm next steps (if any).
