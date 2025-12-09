@@ -240,17 +240,20 @@ img{
   .hero-picture {
     order: 1;
     margin-bottom: 1.5rem;
+    justify-content: center;
   }
 
   /* Text comes AFTER logo */
   .hero-text {
     order: 2;
+    max-width: 32rem;  
   }
 
   /* Make logo a bit smaller on small screens */
   #logo {
     width: 65vw;        /* responsive width */
     max-width: 320px;   /* don’t get too huge */
+    margin: 0 auto 1.5rem;
   }
 }
 
@@ -1041,14 +1044,6 @@ footer a,
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#logo {
-  width: 380px;      /* fixed width */
-  height: auto;      /* keep aspect ratio */
-  max-width: 100%;   /* allow scaling on mobile */
-  object-fit: contain;
-  flex-shrink: 0;    /* prevents shrinking from long text */
 }
 
 
