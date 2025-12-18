@@ -551,7 +551,7 @@ document.addEventListener('click', function ()
       'contact.hours.title': 'Aukioloajat',
       'contact.hours.monfri': 'Ma–Pe: 09:00 – 22:00',
       'contact.hours.sat': 'La: 10:00 – 22:00',
-      'contact.hours.sun': 'Su: 12:00-22:00',
+      'contact.hours.sun': 'Su: 12:00 - 22:00',
       'contact.hours.urgent':
         'Kiireelliset asiat 24/7. Jos emme vastaa heti, yritä soittaa uudelleen. Ei-kiireellisissä asioissa jätä viesti.',
 
@@ -796,7 +796,7 @@ document.addEventListener('click', function ()
       'contact.hours.title': 'Hours',
       'contact.hours.monfri': 'Monday–Friday: 09:00 – 22:00',
       'contact.hours.sat': 'Saturday: 10:00 – 22:00',
-      'contact.hours.sun': 'Sunday: 12:00-22:00',
+      'contact.hours.sun': 'Sunday: 12:00 - 22:00',
       'contact.hours.urgent':
         'Urgent matters 24/7. If we don’t answer right away, please call again. For non-urgent matters, leave a message.',
       
