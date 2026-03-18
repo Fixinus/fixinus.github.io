@@ -927,35 +927,40 @@ document.addEventListener('click', function ()
       const currentBtn = menu.querySelector('.lang-current');
 
       let hideTimeout;
+      const canHover = window.matchMedia('(hover: hover)').matches;
 
-      // 🔹 Open dropdown on hover (and keep it open while inside menu)
-      menu.addEventListener('mouseenter', () => {
-        clearTimeout(hideTimeout);
-        menu.classList.add('open');
-        if (currentBtn) {
-          currentBtn.setAttribute('aria-expanded', 'true');
-        }
-      });
-
-      // 🔹 Close dropdown shortly after leaving (desktop hover behaviour)
-      menu.addEventListener('mouseleave', () => {
-        hideTimeout = setTimeout(() => {
-          menu.classList.remove('open');
+      // 🔹 Desktop: open dropdown on hover (and keep it open while inside menu)
+      //      (Touch devices generally don't support hover cleanly, so we avoid it.)
+      if (canHover) {
+        menu.addEventListener('mouseenter', () => {
+          clearTimeout(hideTimeout);
+          menu.classList.add('open');
           if (currentBtn) {
-            currentBtn.setAttribute('aria-expanded', 'false');
+            currentBtn.setAttribute('aria-expanded', 'true');
           }
-        }, 120); // small delay so tiny mouse gaps don’t instantly close
-      });
+        });
+
+        // 🔹 Close dropdown shortly after leaving (desktop hover behaviour)
+        menu.addEventListener('mouseleave', () => {
+          hideTimeout = setTimeout(() => {
+            menu.classList.remove('open');
+            if (currentBtn) {
+              currentBtn.setAttribute('aria-expanded', 'false');
+            }
+          }, 120); // small delay so tiny mouse gaps don’t instantly close
+        });
+      }
 
       // 🔹 Toggle dropdown on click (touch-friendly)
       currentBtn?.addEventListener('click', (e) => {
         e.stopPropagation();
+        clearTimeout(hideTimeout);
+
         const isOpen = menu.classList.contains('open');
         if (isOpen) {
           menu.classList.remove('open');
           currentBtn.setAttribute('aria-expanded', 'false');
         } else {
-          clearTimeout(hideTimeout);
           menu.classList.add('open');
           currentBtn.setAttribute('aria-expanded', 'true');
         }
