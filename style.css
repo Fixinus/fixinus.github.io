@@ -1085,8 +1085,8 @@ footer a,
 
 /* Flag images */
 .flag-img {
-  width: 1.1rem;
-  height: auto;
+  height: 1rem;
+  width: auto;
   vertical-align: middle;
 }
 

@@ -886,9 +886,9 @@ document.addEventListener('click', function ()
 
     // Map language → flag image
     const flagMap = {
-      fi: 'media/finland.png',
-      sv: 'media/sweden.png',
-      en: 'media/united-kingdom.png'
+      fi: 'media/finland(scaled).png',
+      sv: 'media/sweden(scaled).png',
+      en: 'media/united-kingdom(scaled).png'
     };
 
     if (currentFlagEl) {
