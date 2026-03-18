@@ -937,7 +937,7 @@ document.addEventListener('click', function ()
         }
       });
 
-      // 🔹 Close dropdown shortly after leaving
+      // 🔹 Close dropdown shortly after leaving (desktop hover behaviour)
       menu.addEventListener('mouseleave', () => {
         hideTimeout = setTimeout(() => {
           menu.classList.remove('open');
@@ -947,7 +947,32 @@ document.addEventListener('click', function ()
         }, 120); // small delay so tiny mouse gaps don’t instantly close
       });
 
+      // 🔹 Toggle dropdown on click (touch-friendly)
+      currentBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.contains('open');
+        if (isOpen) {
+          menu.classList.remove('open');
+          currentBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          clearTimeout(hideTimeout);
+          menu.classList.add('open');
+          currentBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // 🔹 Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target)) {
+          menu.classList.remove('open');
+          if (currentBtn) {
+            currentBtn.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+
       // 🔹 Click behaviour: change language + close dropdown immediately
+      // (also close mobile sidebar if it's open)
       options.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -958,6 +983,12 @@ document.addEventListener('click', function ()
           menu.classList.remove('open');
           if (currentBtn) {
             currentBtn.setAttribute('aria-expanded', 'false');
+          }
+
+          const nav = document.getElementById('main-nav');
+          if (nav && nav.classList.contains('is-open')) {
+            nav.classList.remove('is-open');
+            document.body.classList.remove('nav-open');
           }
         });
       });
