@@ -884,16 +884,17 @@ document.addEventListener('click', function ()
     const currentBtn = menu.querySelector('.lang-current');
     const currentFlagEl = currentBtn?.querySelector('[data-current-flag]');
 
-    // Map language → flag
+    // Map language → flag image
     const flagMap = {
-      fi: '🇫🇮',
-      sv: '🇸🇪',
-      en: '🇬🇧'
+      fi: 'media/finland.png',
+      sv: 'media/sweden.png',
+      en: 'media/united-kingdom.png'
     };
 
     if (currentFlagEl) {
-      currentFlagEl.textContent = flagMap[lang] || '🌐';
+      currentFlagEl.innerHTML = `<img src="${flagMap[lang] || 'media/finland.png'}" alt="${lang.toUpperCase()}" class="flag-img">`;
     }
+
 
     // Mark active item
     menu.querySelectorAll('.lang-option').forEach(btn => {
