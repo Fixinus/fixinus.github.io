@@ -1332,9 +1332,10 @@ footer a,
   }
 
   /* Flag buttons inside sidebar */
+  /* Hide sidebar language buttons on mobile; use the header language menu instead */
   .mobile-lang-select {
     margin-top: 2rem;
-    display: flex;
+    display: none !important;
     gap: 1rem;
   }
 
@@ -1342,9 +1343,11 @@ footer a,
     background-color: color-mix(in srgb, var(--text) 12%, transparent);
   }
 
+  /* Show the header language menu on mobile (instead of hiding it) */
   #lang-menu {
-      display: none !important;
+    display: inline-block !important;
   }
+
   .mobile-lang {
     border: none;
     outline: none;
