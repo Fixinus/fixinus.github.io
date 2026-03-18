@@ -954,7 +954,7 @@ document.addEventListener('click', function ()
 
       // 🔹 Toggle dropdown on click (touch-friendly)
       //     Use mousedown instead of click for faster response on touch
-      currentBtn?.addEventListener('mousedown', (e) => {
+      currentBtn?.addEventListener('click', (e) => {
         e.stopPropagation();
         clearTimeout(hideTimeout);
 
