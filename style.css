@@ -1083,6 +1083,15 @@ footer a,
   font-size: 1.1rem;
 }
 
+/* Flag images */
+.flag-img {
+  width: 1.1rem;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Language text next to flag in button */
+
 /* Just a hover effect for the button itself */
 .lang-menu.open .lang-current,
 .lang-menu:hover .lang-current {
@@ -1132,6 +1141,13 @@ footer a,
 
 .lang-option .flag {
   font-size: 1.1rem;
+}
+
+/* Flag images in dropdown */
+.lang-option .flag-img {
+  width: 1.1rem;
+  height: auto;
+  vertical-align: middle;
 }
 
 .lang-option .lang-label {
