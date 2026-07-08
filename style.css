@@ -1051,9 +1051,14 @@ footer a,
   color: #ffffff !important;
 }
 
-.hero-text h2,
+.hero-text h1,
 .hero-text p {
   color: #ffffff !important;
+}
+
+/* Hero heading is an h1 for SEO but keeps the h2 visual size */
+.hero-text h1 {
+  font-size: 2.5rem;
 }
 
 .hero-picture {

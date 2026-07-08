@@ -101,6 +101,8 @@ document.addEventListener('click', function ()
     /* ========== SWEDISH ========== */
     sv: {
       // NAV
+      'meta.title': 'Fixinus – Datorservice och IT-support i Borgå',
+      'meta.description': 'Reparation, service och uppgradering av datorer samt IT-support i Borgå för privatpersoner och småföretag. Fjärrsupport, upphämtning och platsbesök enligt överenskommelse.',
       'nav.about': 'Om oss',
       'nav.prices': 'Priser',
       'nav.services':'Tjänster',
@@ -342,6 +344,8 @@ document.addEventListener('click', function ()
     /* ========== FINNISH ========== */
     fi: {
       // NAV
+      'meta.title': 'Fixinus – Tietokonehuolto ja IT-tuki Porvoo',
+      'meta.description': 'Tietokoneiden korjaus, huolto ja päivitykset sekä IT-tuki Porvoossa yksityisille ja pienyrityksille. Etätuki, nouto ja käynnit paikan päällä sopimuksen mukaan.',
       'nav.about': 'Tietoa meistä',
       'nav.prices': 'Hinnat',
       'nav.services':'Palvelut',
@@ -601,6 +605,8 @@ document.addEventListener('click', function ()
     /* ========== ENGLISH ========== */
     en: {
       // NAV
+      'meta.title': 'Fixinus – Computer Repair & IT Support in Porvoo',
+      'meta.description': 'Computer repair, maintenance and upgrades plus IT support in Porvoo for individuals and small businesses. Remote support, pickup and on-site visits by arrangement.',
       'nav.about': 'About',
       'nav.prices': 'Prices',
       'nav.services':'Services',
@@ -883,6 +889,11 @@ document.addEventListener('click', function ()
 
     // HTML lang attribute
     document.documentElement.setAttribute('lang', lang);
+
+    // Page title + meta description follow the language
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
   }
 
 
