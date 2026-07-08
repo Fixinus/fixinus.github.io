@@ -218,6 +218,40 @@ img{
     color:white;
 }
 
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+}
+
+.hero-cta a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.hero-cta .btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.hero-cta .btn-primary:hover {
+    background: color-mix(in srgb, var(--primary) 80%, #000 20%);
+}
+
+.hero-cta .btn-outline {
+    border: 2px solid var(--primary);
+    color: #fff;
+}
+
+.hero-cta .btn-outline:hover {
+    background: color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
 .hero-picture{
     display: flex;
     justify-content: center;
@@ -336,6 +370,11 @@ img{
     max-width: 18.75rem;
     width: 100%;
     height: auto;
+}
+
+/* Sub-headings are h3 for document outline but keep the former h4 size */
+.about-text h3 {
+    font-size: 1.5rem;
 }
 
 .about-text {
@@ -1212,9 +1251,13 @@ footer a,
   z-index: 1;
 }
 
-.modal-content h2,
-.modal-content h3 {
+.modal-content h2 {
   margin-top: 0;
+}
+
+/* Modal sub-headings are h3 for document outline but keep the former h4 size */
+.modal-content h3 {
+  font-size: 1.5rem;
 }
 
 .modal-content ul {
