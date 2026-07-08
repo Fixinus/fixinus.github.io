@@ -699,16 +699,21 @@ img{
 }
 
 .form-box select {
-    background-color: white;
     appearance: none;
+    -webkit-appearance: none;
     cursor: pointer;
+    padding-right: 2.5rem;
+    background-image: var(--select-arrow);
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-size: 12px 8px;
 }
   
 .form-box label {
     font-weight: 500;
     margin-top: 1rem;
     display: block;
-    color: #ffffff;
+    color: var(--text);
 }
   
 
@@ -717,7 +722,8 @@ img{
 }
 
 .form-box input:focus,
-.form-box textarea:focus {
+.form-box textarea:focus,
+.form-box select:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
@@ -901,6 +907,7 @@ footer {
   --divider: #1f2937;
   --grid-dot: rgba(56, 189, 248, 0.10);
   --shadow: rgba(0,0,0,0.35);
+  --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23e5e7eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 /* Light theme overrides */
@@ -916,6 +923,7 @@ footer {
   --divider: #e5e7eb;
   --grid-dot: rgba(56, 189, 248, 0.10);
   --shadow: rgba(0,0,0,0.08);
+  --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 /* Smoothen theme switch */
@@ -967,7 +975,7 @@ nav ul li a::after { background-color: var(--accent); }
 .form-box { background: color-mix(in srgb, var(--primary) 5%, var(--surface)); box-shadow: 0 8px 16px var(--shadow); }
 .form-box input,
 .form-box textarea,
-.form-box select { background: var(--surface); color: var(--text); }
+.form-box select { background-color: var(--surface); color: var(--text); }
 .form-box button { background: var(--primary); }
 .form-box button:hover { background: color-mix(in srgb, var(--primary) 80%, #000 20%); }
 

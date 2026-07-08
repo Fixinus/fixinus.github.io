@@ -307,11 +307,14 @@ document.addEventListener('click', function ()
       'form.phone': 'Telefon',
       'form.service': 'Önskad tjänst',
       'form.select': 'Välj en tjänst',
-      'form.opt.diagnostics': 'Grundläggande diagnostik',
-      'form.opt.standard': 'Standardreparation',
-      'form.opt.premium': 'Premiumtjänster',
+      'form.opt.computer': 'Datorreparation eller uppgradering',
+      'form.opt.build': 'Skräddarsydd dator (spel/arbete)',
+      'form.opt.hometech': 'Hemmateknik (Wi-Fi, TV, skrivare…)',
+      'form.opt.phone': 'Hjälp med telefon eller surfplatta',
+      'form.opt.software': 'Programvara & operativsystem',
       'form.opt.remote': 'Fjärrsupport',
       'form.opt.onsite': 'Platsbesök',
+      'form.opt.other': 'Annat / osäker',
       'form.message': 'Meddelande',
       'form.send': 'Skicka',
       'form.status.cooldown': 'Vänta {sec} sekunder innan du skickar ett nytt meddelande.',
@@ -333,7 +336,7 @@ document.addEventListener('click', function ()
       'footer.links.warranty': 'Garanti',
       'footer.links.privacy': 'Dataskyddsbeskrivning',
       'footer.links.company': 'Företagsuppgifter',
-      'footer.copy': '© 2025 Fixinus. FO-nummer: 3434370-6.'
+      'footer.copy': '© {year} Fixinus. FO-nummer: 3434370-6.'
     },
 
     /* ========== FINNISH ========== */
@@ -562,11 +565,14 @@ document.addEventListener('click', function ()
       'form.phone': 'Puhelin',
       'form.service': 'Tarvittava palvelu',
       'form.select': 'Valitse palvelu',
-      'form.opt.diagnostics': 'Perusdiagnostiikka',
-      'form.opt.standard': 'Vakiokorjaus',
-      'form.opt.premium': 'Premium-palvelut',
+      'form.opt.computer': 'Tietokoneen korjaus tai päivitys',
+      'form.opt.build': 'Tietokoneen kokoaminen (peli-/työkone)',
+      'form.opt.hometech': 'Kotitekniikka (Wi-Fi, TV, tulostin…)',
+      'form.opt.phone': 'Puhelin- tai tablettiapu',
+      'form.opt.software': 'Ohjelmisto & käyttöjärjestelmä',
       'form.opt.remote': 'Etätuki',
-      'form.opt.onsite': 'Paikan päällä',
+      'form.opt.onsite': 'Käynti paikan päällä',
+      'form.opt.other': 'Muu / en ole varma',
       'form.message': 'Viesti',
       'form.send': 'Lähetä',
       'form.status.cooldown': 'Odota {sec} sekuntia ennen uuden viestin lähettämistä.',
@@ -588,7 +594,7 @@ document.addEventListener('click', function ()
       'footer.links.warranty': 'Takuuehdot',
       'footer.links.privacy': 'Tietosuojaseloste',
       "footer.links.company": "Yritystiedot",
-      'footer.copy': '© 2025 Fixinus. Y-tunnus: 3434370-6.'
+      'footer.copy': '© {year} Fixinus. Y-tunnus: 3434370-6.'
     },
 
 
@@ -808,11 +814,14 @@ document.addEventListener('click', function ()
       'form.phone': 'Phone',
       'form.service': 'Service Needed',
       'form.select': 'Select a service',
-      'form.opt.diagnostics': 'Basic Diagnostics',
-      'form.opt.standard': 'Standard Repair',
-      'form.opt.premium': 'Premium Services',
-      'form.opt.remote': 'Remote Support',
-      'form.opt.onsite': 'On-Site Visit',
+      'form.opt.computer': 'Computer repair or upgrade',
+      'form.opt.build': 'Custom PC build (gaming/work)',
+      'form.opt.hometech': 'Home tech help (Wi-Fi, TV, printer…)',
+      'form.opt.phone': 'Phone or tablet help',
+      'form.opt.software': 'Software & operating system',
+      'form.opt.remote': 'Remote support',
+      'form.opt.onsite': 'On-site visit',
+      'form.opt.other': 'Other / not sure',
       'form.message': 'Message',
       'form.send': 'Send',
       'form.status.cooldown': 'Please wait {sec} second(s) before sending another message.',
@@ -832,7 +841,7 @@ document.addEventListener('click', function ()
       'footer.links.warranty': 'Warranty',
       'footer.links.privacy': 'Privacy Policy',
       "footer.links.company": "Company details",
-      'footer.copy': '© 2025 Fixinus. Business ID: 3434370-6.'
+      'footer.copy': '© {year} Fixinus. Business ID: 3434370-6.'
     }
 
   };
@@ -844,18 +853,21 @@ document.addEventListener('click', function ()
   {
     const dict = MESSAGES[lang] || MESSAGES[DEFAULT_LANG];
 
+    // Replace tokens like {year} so strings never go stale
+    const fill = s => s.replace('{year}', new Date().getFullYear());
+
     // Simple text nodes
     $$('[data-i18n]').forEach(el =>
     {
       const key = el.getAttribute('data-i18n');
-      if (dict[key]) el.textContent = dict[key];
+      if (dict[key]) el.textContent = fill(dict[key]);
     });
 
     // InnerHTML content (allows <a>, <kbd>, <img> etc.)
     $$('[data-i18n-html]').forEach(el =>
     {
       const key = el.getAttribute('data-i18n-html');
-      if (dict[key]) el.innerHTML = dict[key];
+      if (dict[key]) el.innerHTML = fill(dict[key]);
     });
 
     // Attribute mappings, e.g., data-i18n-attr="placeholder:form.name|value:form.opt..."
@@ -1159,6 +1171,7 @@ document.addEventListener('click', function ()
   // Small, self-contained translation table JUST for form status messages
   const FORM_MESSAGES = {
     fi: {
+      sending: 'Lähetetään...',
       cooldown: 'Odota {sec} sekuntia ennen uuden viestin lähettämistä.',
       success: 'Kiitos! Viestisi on lähetetty.',
       error_general: 'Jotain meni pieleen. Yritä myöhemmin uudelleen.',
@@ -1168,6 +1181,7 @@ document.addEventListener('click', function ()
       error_phone: 'Syötä kelvollinen puhelinnumero.'
     },
     en: {
+      sending: 'Sending...',
       cooldown: 'Please wait {sec} second(s) before sending another message.',
       success: 'Thank you! Your message has been sent.',
       error_general: 'Something went wrong. Please try again later.',
@@ -1177,6 +1191,7 @@ document.addEventListener('click', function ()
       error_phone: 'Please enter a valid phone number.'
     },
     sv: {
+      sending: 'Skickar...',
       cooldown: 'Vänta {sec} sekunder innan du skickar ett nytt meddelande.',
       success: 'Tack! Ditt meddelande har skickats.',
       error_general: 'Något gick fel. Försök igen senare.',
@@ -1288,7 +1303,7 @@ document.addEventListener('click', function ()
     try {
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...'; // you can localize this too if you want
+        submitBtn.textContent = translate('sending');
       }
       showStatus('', null);
 
