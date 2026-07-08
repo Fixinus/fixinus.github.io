@@ -119,7 +119,7 @@ document.addEventListener('click', function ()
       'reviews.lead': '5,0 stjärnor – 17 recensioner på Google',
       'reviews.q1.text': 'Min rekommendation 👍🏼 Utmärkt, snabb och pålitlig service. Datorn stängdes plötsligt av och startade inte längre. Felet hittades snabbt i ett trasigt nätaggregat. Linus beställde och installerade en ny del och datorn fungerar igen. Kommunikationen fungerade hela tiden och jag fick veta var vi stod och vad det skulle kosta. Tack! ☺️',
       'reviews.q2.text': 'Riktigt vänlig och yrkeskunnig service! Vi fick genast hjälp och en lösning när grafikkortet i vår sons dator gick sönder. Allt sköttes smidigt, ärligt och med bra kommunikation från början till slut. 😊 Vi är mer än nöjda och rekommenderar varmt!',
-      'reviews.q3.text': 'Utmärkt kundservice och alltid tillgänglig. Fick service på svenska och datorn är som ny.',
+      'reviews.q3.text': 'Min dator hade problem med att komma igång, Fixinus tog emot arbetet under samma dag som jag tog kontakt och jag fick datorn tillbaka följande dag fungerande. Jag är väldigt nöjd, rekommenderar Fixinus!',
       'reviews.source': 'Google-recension',
       'reviews.all': 'Läs alla recensioner på Google',
 
@@ -374,7 +374,7 @@ document.addEventListener('click', function ()
       'reviews.lead': '5,0 tähteä – 17 arvostelua Googlessa',
       'reviews.q1.text': 'Suositteluni 👍🏼 Erinomainen, nopea ja luotettava palvelu. Pöytäkone sammui ihan yhtäkkiä eikä enää käynnistynyt. Vika löytyi nopeasti rikkoutuneesta virtalähteestä. Linus tilasi ja asensi uuden osan ja kone toimii taas. Koko ajan kommunikaatio pelasi ja sain tietää missä mennään ja paljonko tulee kustantamaan. Kiitos! ☺️',
       'reviews.q2.text': 'Todella ystävällistä ja ammattitaitoista palvelua! Saimme heti apua ja ratkaisun tilanteeseen, kun pojan tietokoneen näytönohjain meni rikki. Kaikki hoitui joustavasti, rehellisesti ja hyvällä viestinnällä alusta loppuun. 😊 Olemme enemmän kuin tyytyväisiä ja suosittelemme lämpimästi!',
-      'reviews.q3.text': 'Erinomaista asiakaspalvelua ja aina tavoitettavissa. Sain palvelua ruotsiksi ja tietokone on kuin uusi.',
+      'reviews.q3.text': 'Tietokoneellani oli käynnistysongelmia. Fixinus otti työn vastaan samana päivänä kun otin yhteyttä, ja sain koneen takaisin toimivana seuraavana päivänä. Olen erittäin tyytyväinen, suosittelen Fixinusta!',
       'reviews.source': 'Google-arvostelu',
       'reviews.all': 'Lue kaikki arvostelut Googlessa',
 
@@ -646,7 +646,7 @@ document.addEventListener('click', function ()
       'reviews.lead': '5.0 stars — 17 reviews on Google',
       'reviews.q1.text': 'My recommendation 👍🏼 Excellent, fast and reliable service. My desktop suddenly shut down and would not start again. The fault was quickly traced to a broken power supply. Linus ordered and installed a new part and the computer works again. I was kept informed the whole time about progress and cost. Thank you! ☺️',
       'reviews.q2.text': 'Really friendly and professional service! We got help right away and a solution when the graphics card in our son\'s computer broke. Everything was handled flexibly, honestly and with good communication from start to finish. 😊 We are more than satisfied and warmly recommend!',
-      'reviews.q3.text': 'Excellent customer service and always reachable. I got service in Swedish and the computer is like new.',
+      'reviews.q3.text': 'My computer had trouble starting up. Fixinus took the job in the same day I got in touch, and I got the computer back working the next day. I am very satisfied — I recommend Fixinus!',
       'reviews.source': 'Review on Google',
       'reviews.all': 'Read all reviews on Google',
 
