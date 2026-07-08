@@ -114,6 +114,15 @@ document.addEventListener('click', function ()
       'hero.cta.call': 'Ring 040 066 4767',
       'hero.cta.contact': 'Skicka meddelande',
 
+      // REVIEWS
+      'reviews.title': 'Vad våra kunder säger',
+      'reviews.lead': '5,0 stjärnor – 17 recensioner på Google',
+      'reviews.q1.text': 'Min rekommendation 👍🏼 Utmärkt, snabb och pålitlig service. Datorn stängdes plötsligt av och startade inte längre. Felet hittades snabbt i ett trasigt nätaggregat. Linus beställde och installerade en ny del och datorn fungerar igen. Kommunikationen fungerade hela tiden och jag fick veta var vi stod och vad det skulle kosta. Tack! ☺️',
+      'reviews.q2.text': 'Riktigt vänlig och yrkeskunnig service! Vi fick genast hjälp och en lösning när grafikkortet i vår sons dator gick sönder. Allt sköttes smidigt, ärligt och med bra kommunikation från början till slut. 😊 Vi är mer än nöjda och rekommenderar varmt!',
+      'reviews.q3.text': 'Utmärkt kundservice och alltid tillgänglig. Fick service på svenska och datorn är som ny.',
+      'reviews.source': 'Google-recension',
+      'reviews.all': 'Läs alla recensioner på Google',
+
       // ABOUT
       'about.title': 'Om Fixinus',
       'about.lead': 'Fixinus är en lokal IT- och teknikhjälp i Borgå. Vi ser till att din teknik fungerar smidigt, oavsett om du är privatperson eller driver ett litet företag. Vi kan också komma till grannstäder om det behövs; reseersättning tillkommer.',
@@ -359,6 +368,15 @@ document.addEventListener('click', function ()
         'Fixinus on paikallinen kumppani tietokonehuoltoon ja tekniseen tukeen Porvoossa – sekä yksityisille että pienyrityksille. Pöytäkoneet, kannettavat ja arkielektroniikka hoidetaan huolellisesti ja selkeällä viestinnällä.',
       'hero.cta.call': 'Soita 040 066 4767',
       'hero.cta.contact': 'Lähetä viesti',
+
+      // REVIEWS
+      'reviews.title': 'Mitä asiakkaamme sanovat',
+      'reviews.lead': '5,0 tähteä – 17 arvostelua Googlessa',
+      'reviews.q1.text': 'Suositteluni 👍🏼 Erinomainen, nopea ja luotettava palvelu. Pöytäkone sammui ihan yhtäkkiä eikä enää käynnistynyt. Vika löytyi nopeasti rikkoutuneesta virtalähteestä. Linus tilasi ja asensi uuden osan ja kone toimii taas. Koko ajan kommunikaatio pelasi ja sain tietää missä mennään ja paljonko tulee kustantamaan. Kiitos! ☺️',
+      'reviews.q2.text': 'Todella ystävällistä ja ammattitaitoista palvelua! Saimme heti apua ja ratkaisun tilanteeseen, kun pojan tietokoneen näytönohjain meni rikki. Kaikki hoitui joustavasti, rehellisesti ja hyvällä viestinnällä alusta loppuun. 😊 Olemme enemmän kuin tyytyväisiä ja suosittelemme lämpimästi!',
+      'reviews.q3.text': 'Erinomaista asiakaspalvelua ja aina tavoitettavissa. Sain palvelua ruotsiksi ja tietokone on kuin uusi.',
+      'reviews.source': 'Google-arvostelu',
+      'reviews.all': 'Lue kaikki arvostelut Googlessa',
 
       // ABOUT
       'about.title': 'Tietoa Fixinuksesta',
@@ -622,6 +640,15 @@ document.addEventListener('click', function ()
         'Fixinus is your local partner for computer repairs and tech support in Porvoo — for individuals and small businesses. Desktops, laptops and everyday electronics, handled with care and clear communication.',
       'hero.cta.call': 'Call 040 066 4767',
       'hero.cta.contact': 'Send a message',
+
+      // REVIEWS
+      'reviews.title': 'What our customers say',
+      'reviews.lead': '5.0 stars — 17 reviews on Google',
+      'reviews.q1.text': 'My recommendation 👍🏼 Excellent, fast and reliable service. My desktop suddenly shut down and would not start again. The fault was quickly traced to a broken power supply. Linus ordered and installed a new part and the computer works again. I was kept informed the whole time about progress and cost. Thank you! ☺️',
+      'reviews.q2.text': 'Really friendly and professional service! We got help right away and a solution when the graphics card in our son\'s computer broke. Everything was handled flexibly, honestly and with good communication from start to finish. 😊 We are more than satisfied and warmly recommend!',
+      'reviews.q3.text': 'Excellent customer service and always reachable. I got service in Swedish and the computer is like new.',
+      'reviews.source': 'Review on Google',
+      'reviews.all': 'Read all reviews on Google',
 
       // ABOUT
       'about.title': 'About Fixinus',
