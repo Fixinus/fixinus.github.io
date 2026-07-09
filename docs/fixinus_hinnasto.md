@@ -7,18 +7,33 @@ Kaikki hinnat sisältävät arvonlisäveron 25,5 %. Varaosat veloitetaan eriksee
 | Palvelu | Hinta |
 |---|---|
 | Vianmääritys (enintään 150 €) | 50 €/h |
-| Windowsin asennus puhtaalta pöydältä, päivitykset ja ajurit | 70 € |
+| Windowsin tai macOS:n asennus puhtaalta pöydältä, päivitykset ja ajurit | 70 € |
 | Tiedostojen siirto tai palautus asennuksen yhteydessä | alk. 40 € |
 | Huolto ja haittaohjelmien poisto | 50–100 € |
+| Puhdistus ja pölynpoisto | 50 € |
+| Lämpötahnan vaihto | alk. 50 € |
+| Vuosihuolto (puhdistus, päivitykset ja kuntoraportti) | 90 € |
 | Kannettavan akunvaihto (ei Apple) | alk. 60 € + osat |
 | Akunvaihto, MacBook | alk. 150 € + osat |
 | Akunvaihto, liimattu akku | alk. 250 € + osat |
 | Kannettavan näytönvaihto | alk. 100 € + osat |
 | SSD-päivitys ja tiedonsiirto | alk. 80 € + osat |
+| RAM-muistin päivitys | alk. 40 € + osat |
 | Pöytäkoneen kokoonpano, sis. käyttöjärjestelmän asennuksen | alk. 150 € |
 | Muu huolto- ja asennustyö | 70 €/h |
 
 Windowsin asennus tehdään koneen omalla lisenssillä, joka useimmissa koneissa siirtyy uuteen asennukseen automaattisesti. Jos kone tarvitsee uuden lisenssin, kerromme siitä ja sovimme hankinnasta erikseen.
+
+## Etätuki ja käynnit
+
+| Palvelu | Hinta |
+|---|---|
+| Etätuki | 20 € / 30 min |
+| Käynti paikan päällä (esim. Wi-Fi-verkot ja tulostimet) | 20 € + 70 €/h |
+| Matkakulut (paluumatkaa ei veloiteta) | 2 €/km |
+| Laitteen nouto ja palautus 10 km säteellä Porvoon torilta | maksuton |
+
+Kiireelliset työt aukioloaikojen ulkopuolella: lisähinta +50 % (ma–pe), +75 % (la) ja +100 % (su).
 
 ## Tietojen palautus
 
@@ -36,6 +51,11 @@ Alkukartoitus ja hinta-arvio ovat maksuttomia, ja veloitamme vain onnistuneesta 
 | PS5 puhdistus ja nestemetallin vaihto | alk. 150 € |
 
 ## Muut työt
+
+| Palvelu | Hinta |
+|---|---|
+| Uuden puhelimen käyttöönotto ja tiedonsiirto | alk. 50 € |
+| Varmuuskopioinnin käyttöönotto (ulkoinen levy tai pilvipalvelu) | alk. 40 € |
 
 Teemme myös muita elektroniikka- ja laitekorjauksia tapauskohtaisesti. Kysy rohkeasti, vaikka laitettasi ei löytyisi listalta.
 

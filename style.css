@@ -1549,8 +1549,7 @@ footer a,
     box-shadow: 0 6px 16px var(--shadow);
 }
 
-.pricing-group:first-child,
-.pricing-group:last-child {
+.pricing-group:first-child {
     grid-column: 1 / -1;
 }
 
