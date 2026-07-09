@@ -85,11 +85,6 @@
           <li><a href="#service" data-i18n="nav.services">Services</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
-        <div class="mobile-lang-select">
-          <button class="mobile-lang" data-lang="fi">🇫🇮</button>
-          <button class="mobile-lang" data-lang="sv">🇸🇪</button>
-          <button class="mobile-lang" data-lang="en">🇬🇧</button>
-        </div>
       </nav>
         <div class="lang-menu" id="lang-menu">
         <button class="lang-current" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
@@ -371,8 +366,8 @@
             <input type="email" name="email" data-i18n-attr="placeholder:form.email" placeholder="Email" required />
             <input type="text" name="phone" data-i18n-attr="placeholder:form.phone" placeholder="Phone" required />
 
-            <label for="service" data-i18n="form.service">Service Needed</label>
-            <select name="service" id="service" required>
+            <label for="service-select" data-i18n="form.service">Service Needed</label>
+            <select name="service" id="service-select" required>
               <option value="" data-i18n="form.select">Select a service</option>
               <option value="computer-repair" data-i18n="form.opt.computer">Computer repair or upgrade</option>
               <option value="custom-build" data-i18n="form.opt.build">Custom PC build (gaming/work)</option>

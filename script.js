@@ -1056,18 +1056,6 @@ document.addEventListener('click', function ()
         });
       });
     }
-        // --- Mobile sidebar flags (phones/tablets) ---
-    document.querySelectorAll('.mobile-lang').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        setLang(lang); // reuse the same function
-
-        // Close sidebar when language is chosen
-        document.body.classList.remove('nav-open');
-        const nav = document.getElementById('main-nav');
-        if (nav) nav.classList.remove('is-open');
-      });
-    });
 
   }
 

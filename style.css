@@ -114,9 +114,6 @@ header {
   display: none;
 }
 
-.mobile-lang-select {
-  display: none;
-}
 
 nav ul {
     display: flex;
@@ -294,8 +291,8 @@ img{
   /* Make logo a bit smaller on small screens */
   #logo {
     width: 65vw;        /* responsive width */
-    max-width: 320px;   /* don’t get too huge */
-    margin: 0 auto 1.5rem;
+    max-width: 280px;   /* don’t get too huge */
+    margin: 0 auto;     /* .hero-picture already provides bottom spacing */
   }
 }
 
@@ -1403,39 +1400,9 @@ footer a,
       filter: brightness(0) invert(1);
   }
 
-  /* Flag buttons inside sidebar */
-  /* Hide sidebar language buttons on mobile; use the header language menu instead */
-  .mobile-lang-select {
-    margin-top: 2rem;
-    display: none !important;
-    gap: 1rem;
-  }
-
-  .mobile-lang:hover {
-    background-color: color-mix(in srgb, var(--text) 12%, transparent);
-  }
-
   /* Show the header language menu on mobile (instead of hiding it) */
   #lang-menu {
     display: inline-block !important;
-  }
-
-  .mobile-lang {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 2rem;       /* adjust to preferred size */
-    cursor: pointer;
-    padding: 0.25rem 0.5rem;  
-  }
-
-  /* Remove the default blue focus outline (Safari/Chrome) */
-  .mobile-lang:focus,
-  .mobile-lang:focus-visible,
-  .mobile-lang:active {
-    outline: none !important;
-    border: none !important;
-    box-shadow: none !important;
   }
 }
 
@@ -1519,5 +1486,36 @@ footer a,
 @media (max-width: 900px) {
     .reviews-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* --- MOBILE TYPOGRAPHY --- */
+
+@media (max-width: 900px) {
+    .hero-cta {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    h2,
+    .about-head h2,
+    .service-head h2,
+    .remote-head h2,
+    .reviews-head h2 {
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text h3,
+    .modal-content h3 {
+        font-size: 1.25rem;
     }
 }
