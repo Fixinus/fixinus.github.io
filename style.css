@@ -1578,7 +1578,7 @@ footer a,
     white-space: nowrap;
     padding-left: 1rem;
     font-weight: 600;
-    color: var(--primary);
+    color: rgb(74, 177, 247); /* same cyan as .link and service card headings */
 }
 
 .pricing-note {
