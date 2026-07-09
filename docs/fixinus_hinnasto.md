@@ -9,7 +9,7 @@ Kaikki hinnat sisältävät arvonlisäveron 25,5 %. Varaosat veloitetaan eriksee
 | Vianmääritys (enintään 150 €) | 50 €/h |
 | Windowsin tai macOS:n asennus puhtaalta pöydältä, päivitykset ja ajurit | 70 € |
 | Tiedostojen siirto tai palautus asennuksen yhteydessä | alk. 40 € |
-| Huolto ja haittaohjelmien poisto | 50–100 € |
+| Ohjelmallinen huolto ja haittaohjelmien poisto | 50–100 € |
 | Puhdistus ja pölynpoisto | 50 € |
 | Lämpötahnan vaihto | alk. 50 € |
 | Vuosihuolto (puhdistus, päivitykset ja kuntoraportti) | 90 € |
@@ -23,12 +23,14 @@ Kaikki hinnat sisältävät arvonlisäveron 25,5 %. Varaosat veloitetaan eriksee
 
 Windowsin asennus tehdään koneen omalla lisenssillä, joka useimmissa koneissa siirtyy uuteen asennukseen automaattisesti. Jos kone tarvitsee uuden lisenssin, kerromme siitä ja sovimme hankinnasta erikseen.
 
+Vianmääritystä tehdään enintään kolme tuntia ilman erillistä sopimista. Jos vika vaatii tätä laajempaa selvitystä, ilmoitamme siitä ja sovimme jatkosta aina ennen työn jatkamista.
+
 ## Etätuki ja käynnit
 
 | Palvelu | Hinta |
 |---|---|
 | Etätuki | 20 € / 30 min |
-| Käynti paikan päällä (esim. Wi-Fi-verkot ja tulostimet) | 20 € + 70 €/h |
+| Käynti paikan päällä (esim. Wi-Fi, TV ja tulostimet) | 20 € + 70 €/h |
 | Matkakulut (paluumatkaa ei veloiteta) | 2 €/km |
 | Laitteen nouto ja palautus 10 km säteellä Porvoon torilta | maksuton |
 
@@ -57,5 +59,3 @@ Alkukartoitus ja hinta-arvio ovat maksuttomia, ja veloitamme vain onnistuneesta 
 | Varmuuskopioinnin käyttöönotto (ulkoinen levy tai pilvipalvelu) | alk. 40 € |
 
 Teemme myös muita elektroniikka- ja laitekorjauksia tapauskohtaisesti. Kysy rohkeasti, vaikka laitettasi ei löytyisi listalta.
-
-Vianmääritystä tehdään enintään kolme tuntia ilman erillistä sopimista. Jos vika vaatii tätä laajempaa selvitystä, ilmoitamme siitä ja sovimme jatkosta aina ennen työn jatkamista.
