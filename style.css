@@ -1553,6 +1553,13 @@ footer a,
     grid-column: 1 / -1;
 }
 
+/* Columns stack their cards directly under each other (no cross-column row gaps) */
+.pricing-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .pricing-group h3 {
     margin-top: 0;
     font-size: 1.5rem;
