@@ -14,13 +14,12 @@ Kaikki hinnat sisältävät arvonlisäveron 25,5 %. Varaosat veloitetaan eriksee
 | Lämpötahnan vaihto | alk. 50 € |
 | Vuosihuolto (puhdistus, päivitykset ja kuntoraportti) | 90 € |
 | Kannettavan akunvaihto (ei Apple) | alk. 60 € + osat |
-| Akunvaihto, MacBook | alk. 150 € + osat |
-| Akunvaihto, liimattu akku | alk. 250 € + osat |
+| Kannettavan akunvaihto, MacBook | alk. 150 € + osat |
 | Kannettavan näytönvaihto | alk. 100 € + osat |
 | SSD-päivitys ja tiedonsiirto | alk. 80 € + osat |
 | RAM-muistin päivitys | alk. 40 € + osat |
 | Pöytäkoneen kokoonpano, sis. käyttöjärjestelmän asennuksen | alk. 150 € |
-| Muu huolto- ja asennustyö | 70 €/h |
+| Muu huolto- ja asennustyö | 60 €/h |
 
 Windowsin asennus tehdään koneen omalla lisenssillä, joka useimmissa koneissa siirtyy uuteen asennukseen automaattisesti. Jos kone tarvitsee uuden lisenssin, kerromme siitä ja sovimme hankinnasta erikseen.
 
