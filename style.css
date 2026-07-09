@@ -114,9 +114,6 @@ header {
   display: none;
 }
 
-.mobile-lang-select {
-  display: none;
-}
 
 nav ul {
     display: flex;
@@ -218,6 +215,40 @@ img{
     color:white;
 }
 
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+}
+
+.hero-cta a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.hero-cta .btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.hero-cta .btn-primary:hover {
+    background: color-mix(in srgb, var(--primary) 80%, #000 20%);
+}
+
+.hero-cta .btn-outline {
+    border: 2px solid var(--primary);
+    color: #fff;
+}
+
+.hero-cta .btn-outline:hover {
+    background: color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
 .hero-picture{
     display: flex;
     justify-content: center;
@@ -260,8 +291,8 @@ img{
   /* Make logo a bit smaller on small screens */
   #logo {
     width: 65vw;        /* responsive width */
-    max-width: 320px;   /* don’t get too huge */
-    margin: 0 auto 1.5rem;
+    max-width: 280px;   /* don’t get too huge */
+    margin: 0 auto;     /* .hero-picture already provides bottom spacing */
   }
 }
 
@@ -336,6 +367,11 @@ img{
     max-width: 18.75rem;
     width: 100%;
     height: auto;
+}
+
+/* Sub-headings are h3 for document outline but keep the former h4 size */
+.about-text h3 {
+    font-size: 1.5rem;
 }
 
 .about-text {
@@ -699,16 +735,21 @@ img{
 }
 
 .form-box select {
-    background-color: white;
     appearance: none;
+    -webkit-appearance: none;
     cursor: pointer;
+    padding-right: 2.5rem;
+    background-image: var(--select-arrow);
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-size: 12px 8px;
 }
   
 .form-box label {
     font-weight: 500;
     margin-top: 1rem;
     display: block;
-    color: #ffffff;
+    color: var(--text);
 }
   
 
@@ -717,7 +758,8 @@ img{
 }
 
 .form-box input:focus,
-.form-box textarea:focus {
+.form-box textarea:focus,
+.form-box select:focus {
     border-color: #007bff;
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
@@ -901,6 +943,7 @@ footer {
   --divider: #1f2937;
   --grid-dot: rgba(56, 189, 248, 0.10);
   --shadow: rgba(0,0,0,0.35);
+  --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23e5e7eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 /* Light theme overrides */
@@ -916,6 +959,7 @@ footer {
   --divider: #e5e7eb;
   --grid-dot: rgba(56, 189, 248, 0.10);
   --shadow: rgba(0,0,0,0.08);
+  --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 /* Smoothen theme switch */
@@ -967,7 +1011,7 @@ nav ul li a::after { background-color: var(--accent); }
 .form-box { background: color-mix(in srgb, var(--primary) 5%, var(--surface)); box-shadow: 0 8px 16px var(--shadow); }
 .form-box input,
 .form-box textarea,
-.form-box select { background: var(--surface); color: var(--text); }
+.form-box select { background-color: var(--surface); color: var(--text); }
 .form-box button { background: var(--primary); }
 .form-box button:hover { background: color-mix(in srgb, var(--primary) 80%, #000 20%); }
 
@@ -1043,9 +1087,14 @@ footer a,
   color: #ffffff !important;
 }
 
-.hero-text h2,
+.hero-text h1,
 .hero-text p {
   color: #ffffff !important;
+}
+
+/* Hero heading is an h1 for SEO but keeps the h2 visual size */
+.hero-text h1 {
+  font-size: 2.5rem;
 }
 
 .hero-picture {
@@ -1199,9 +1248,13 @@ footer a,
   z-index: 1;
 }
 
-.modal-content h2,
-.modal-content h3 {
+.modal-content h2 {
   margin-top: 0;
+}
+
+/* Modal sub-headings are h3 for document outline but keep the former h4 size */
+.modal-content h3 {
+  font-size: 1.5rem;
 }
 
 .modal-content ul {
@@ -1347,39 +1400,122 @@ footer a,
       filter: brightness(0) invert(1);
   }
 
-  /* Flag buttons inside sidebar */
-  /* Hide sidebar language buttons on mobile; use the header language menu instead */
-  .mobile-lang-select {
-    margin-top: 2rem;
-    display: none !important;
-    gap: 1rem;
-  }
-
-  .mobile-lang:hover {
-    background-color: color-mix(in srgb, var(--text) 12%, transparent);
-  }
-
   /* Show the header language menu on mobile (instead of hiding it) */
   #lang-menu {
     display: inline-block !important;
   }
-
-  .mobile-lang {
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 2rem;       /* adjust to preferred size */
-    cursor: pointer;
-    padding: 0.25rem 0.5rem;  
-  }
-
-  /* Remove the default blue focus outline (Safari/Chrome) */
-  .mobile-lang:focus,
-  .mobile-lang:focus-visible,
-  .mobile-lang:active {
-    outline: none !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
 }
 
+
+/* --- REVIEWS SECTION --- */
+
+.reviews-section {
+    background: var(--surface-2);
+}
+
+.reviews-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.reviews-head h2 {
+    font-size: 2.5rem;
+}
+
+.reviews-head p {
+    color: var(--muted);
+}
+
+.reviews-stars {
+    color: #fbbf24;
+    letter-spacing: 0.15em;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.review-card {
+    margin: 0;
+    background: var(--card);
+    border-radius: 1rem;
+    padding: 1.75rem;
+    box-shadow: 0 6px 16px var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card blockquote {
+    margin: 0.75rem 0 1rem;
+    flex: 1;
+}
+
+.review-card figcaption {
+    font-weight: 600;
+}
+
+.review-card .review-source {
+    display: block;
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.reviews-link {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.reviews-link a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.reviews-link a:hover {
+    background: color-mix(in srgb, var(--primary) 80%, #000 20%);
+}
+
+@media (max-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- MOBILE TYPOGRAPHY --- */
+
+@media (max-width: 900px) {
+    .hero-cta {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    h2,
+    .about-head h2,
+    .service-head h2,
+    .remote-head h2,
+    .reviews-head h2 {
+        font-size: 1.9rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text h3,
+    .modal-content h3 {
+        font-size: 1.25rem;
+    }
+}

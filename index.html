@@ -3,16 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixinus – Tietokonehuolto ja IT-tuki Porvoo</title>
+  <meta name="description" content="Tietokoneiden korjaus, huolto ja päivitykset sekä IT-tuki Porvoossa yksityisille ja pienyrityksille. Etätuki, nouto ja käynnit paikan päällä sopimuksen mukaan." />
+  <link rel="canonical" href="https://fixinus.fi/" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Social sharing (Open Graph + Twitter) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fixinus" />
+  <meta property="og:title" content="Fixinus – Tietokonehuolto ja IT-tuki Porvoo" />
+  <meta property="og:description" content="Tietokoneiden korjaus, huolto ja päivitykset sekä IT-tuki Porvoossa yksityisille ja pienyrityksille. Etätuki, nouto ja käynnit paikan päällä sopimuksen mukaan." />
+  <meta property="og:url" content="https://fixinus.fi/" />
+  <meta property="og:image" content="https://fixinus.fi/media/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="fi_FI" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js?v=17" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
-  <title>Fixinus</title>
+  <script src="script.js?v=18" defer></script>
+  <link rel="icon" href="media/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="media/favicon-180.png">
+
+  <!-- Structured data for Google local search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fixinus",
+    "description": "Tietokoneiden korjaus, huolto ja päivitykset sekä IT-tuki Porvoossa yksityisille ja pienyrityksille.",
+    "url": "https://fixinus.fi/",
+    "logo": "https://fixinus.fi/media/favicon-180.png",
+    "image": "https://fixinus.fi/media/og-image.png",
+    "telephone": "+358400664767",
+    "email": "info@fixinus.fi",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Puusepänkaarre 15",
+      "postalCode": "06150",
+      "addressLocality": "Porvoo",
+      "addressCountry": "FI"
+    },
+    "areaServed": "Porvoo",
+    "priceRange": "€€",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "22:00"
+      }
+    ],
+    "paymentAccepted": "Cash, Debit Card, Credit Card, Google Pay, Apple Pay, Invoice",
+    "sameAs": [
+      "https://www.facebook.com/people/Fixinus/61582467222948/",
+      "https://share.google/FEQK4mIGkOlO7sZPO",
+      "https://www.google.com/search?kgmid=/g/11yl66t_4s&q=Fixinus"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -21,18 +82,9 @@
       <nav id="main-nav" class="main-nav">
         <ul>
           <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <!-- <li><a href="#prices" data-i18n="nav.prices">Prices</a></li> -->
           <li><a href="#service" data-i18n="nav.services">Services</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
-        <!-- Theme + Language -->
-        <!--<button id="theme-toggle" class="theme-toggle" aria-pressed="true" aria-label="Toggle color theme">☀️</button> -->
-    
-        <div class="mobile-lang-select">
-          <button class="mobile-lang" data-lang="fi">🇫🇮</button>
-          <button class="mobile-lang" data-lang="sv">🇸🇪</button>
-          <button class="mobile-lang" data-lang="en">🇬🇧</button>
-        </div>
       </nav>
         <div class="lang-menu" id="lang-menu">
         <button class="lang-current" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
@@ -71,14 +123,18 @@
   <section class="hero-section">
       <div class="hero-container max-w format-horizontal">
         <div class="hero-text">
-          <h2 data-i18n="hero.title">Keep your tech running right. We fix, upgrade and support.</h2>
+          <h1 data-i18n="hero.title">Keep your tech running right. We fix, upgrade and support.</h1>
           <p data-i18n="hero.subtitle">
             Fixinus is a local computer repair and tech support partner in Porvoo for individuals and small
             businesses. Desktops, laptops, and everyday electronics—handled with care and clear communication.
           </p>
+          <div class="hero-cta">
+            <a class="btn-primary" href="tel:+358400664767" data-i18n="hero.cta.call">Call 040 066 4767</a>
+            <a class="btn-outline" href="#contact" data-i18n="hero.cta.contact">Send a message</a>
+          </div>
         </div>
         <div class="hero-picture">
-          <img id="logo" src="/media/limpanslogo.png" alt="Fixinus logo" />
+          <img id="logo" src="/media/logo-optimized.webp" alt="Fixinus logo" width="900" height="516" />
         </div>
       </div>
   </section>
@@ -99,7 +155,7 @@
           <div class="about-text-top">
             <div class="about-text-left">
               <div id="drop-text">
-                <h4 data-i18n="about.drop.title">Drop-off, pickup & on-site</h4>
+                <h3 data-i18n="about.drop.title">Drop-off, pickup & on-site</h3>
                 <p data-i18n="about.drop.body">
                   We don’t have a fixed office (yet). Devices can be dropped off by appointment or we
                   can pick them up. If it looks like a quick fix—or the job needs to be done where the device is—
@@ -108,7 +164,7 @@
               </div>
 
               <div id="exp-text">
-                <h4 data-i18n="about.exp.title">Experience</h4>
+                <h3 data-i18n="about.exp.title">Experience</h3>
                 <p data-i18n="about.exp.body">
                   Our background includes formal telecommunications education and 15+ years of hands-on
                   experience. We stay current with industry developments to deliver clear, practical solutions.
@@ -118,7 +174,7 @@
 
             <div class="about-text-right">
               <div id="fast-service-text">
-                <h4 data-i18n="about.fast.title">Fast service</h4>
+                <h3 data-i18n="about.fast.title">Fast service</h3>
                 <p data-i18n="about.fast.body">
                   Most standard repairs are finished within 1–3 days, and simple issues are often
                   handled the same day. If a job is urgent and there’s no other urgent work in progress,
@@ -127,7 +183,7 @@
               </div>
 
               <div id="payment-text">
-                <h4 data-i18n="about.pay.title">Payment methods</h4>
+                <h3 data-i18n="about.pay.title">Payment methods</h3>
                 <p data-i18n="about.pay.body">
                   Cash, all major debit and credit cards, Google Pay, Apple Pay, or invoice (lasku).
                 </p>
@@ -209,62 +265,7 @@
       </div>
       </div>
   </section>
-<!--
-  <section id="prices" class="price-section">
-    <div class="price-container max-w format-horizontal format-vertical">
-      <div class="price-head">
-        <h2 data-i18n="prices.title">Business Pricing</h2>
-        <p data-i18n="prices.lead">
-          One flat monthly plan. Unlimited support, 1–3 day scheduling. Emergency support may add additional costs.
-        </p>
-      </div>
 
-      <div class="price-box-container">
-        <div class="price-box">
-          <h3 data-i18n="prices.basic">Basic Diagnostics</h3>
-          <div>
-            <span>49€</span>
-            <span data-i18n="prices.onetime">/ one-time</span>
-          </div>
-          <button class="show-info-btn" data-i18n="prices.showmore">Show more</button>
-          <div class="info-box">
-            <p data-i18n="prices.infobox.basic">
-              This plan is perfect for small businesses just starting out. Upgrade anytime!
-            </p>
-          </div>
-        </div>
-
-        <div class="price-box">
-          <h3 data-i18n="prices.standard">Standard Repair</h3>
-          <div>
-            <span>129€</span>
-            <span data-i18n="prices.onetime">/ one-time</span>
-          </div>
-          <button class="show-info-btn" data-i18n="prices.showmore">Show more</button>
-          <div class="info-box">
-            <p data-i18n="prices.infobox.standard">
-              This plan is perfect for medium businesses just starting out. Upgrade anytime!
-            </p>
-          </div>
-        </div>
-
-        <div class="price-box">
-          <h3 data-i18n="prices.premium">Premium Services</h3>
-          <div>
-            <span>199€</span>
-            <span data-i18n="prices.onetime">/ one-time</span>
-          </div>
-          <button class="show-info-btn" data-i18n="prices.showmore">Show more</button>
-          <div class="info-box">
-            <p data-i18n="prices.infobox.premium">
-              This plan is perfect for small businesses just starting out. Upgrade anytime!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
--->
   <section class="remote-section">
     <div class="remote-container max-w format-horizontal format-vertical">
       <div class="remote-head">
@@ -278,7 +279,7 @@
         <div class="remote-list">
           <ol>
             <li class="remote-text" data-i18n-html="remote.step.1.html">
-              <strong>Contact us:</strong> Call +358 40 066 4767 or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.
+              <strong>Contact us:</strong> Call <a class="link" href="tel:+358400664767">+358 40 066 4767</a> or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.
             </li>
             <li class="remote-text" data-i18n-html="remote.step.2.html">
               <strong>Download the right app:</strong><br>• <u>Windows 10/11:</u> Open Quick Assist by pressing <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>• <u>No Microsoft account or Quick Assist not working?</u> Download TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>• <u>Mac or Linux:</u> Download TeamViewer QuickSupport from the link above.
@@ -301,6 +302,54 @@
     </div>
   </section>
 
+  <section id="reviews" class="reviews-section">
+    <div class="reviews-container max-w format-horizontal format-vertical">
+      <div class="reviews-head">
+        <h2 data-i18n="reviews.title">What our customers say</h2>
+        <p><span class="reviews-stars" aria-hidden="true">★★★★★</span> <span data-i18n="reviews.lead">5.0 stars — 17 reviews on Google</span></p>
+      </div>
+
+      <div class="reviews-grid">
+        <figure class="review-card">
+          <div class="reviews-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="reviews.q1.text">
+            My recommendation 👍🏼 Excellent, fast and reliable service. My desktop suddenly shut down and would not start again. The fault was quickly traced to a broken power supply. Linus ordered and installed a new part and the computer works again. I was kept informed the whole time about progress and cost. Thank you! ☺️
+          </blockquote>
+          <figcaption>
+            Marja Peltonen
+            <span class="review-source" data-i18n="reviews.source">Review on Google</span>
+          </figcaption>
+        </figure>
+
+        <figure class="review-card">
+          <div class="reviews-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="reviews.q2.text">
+            Really friendly and professional service! We got help right away and a solution when the graphics card in our son's computer broke. Everything was handled flexibly, honestly and with good communication from start to finish. 😊 We are more than satisfied and warmly recommend!
+          </blockquote>
+          <figcaption>
+            Kati Haapanen
+            <span class="review-source" data-i18n="reviews.source">Review on Google</span>
+          </figcaption>
+        </figure>
+
+        <figure class="review-card">
+          <div class="reviews-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="reviews.q3.text">
+            I got fast, highly professional and friendly service resetting my printer counter! The printer was picked up, the counter was reset, and the printer was brought back home and connected to my laptop — the service was reliable, fair and very professional throughout! I warmly recommend Fixinus and will spread the good word! Thank you Fixinus!
+          </blockquote>
+          <figcaption>
+            Eija Vainio
+            <span class="review-source" data-i18n="reviews.source">Review on Google</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="reviews-link">
+        <a href="https://share.google/FEQK4mIGkOlO7sZPO" target="_blank" rel="noopener" data-i18n="reviews.all">Read all reviews on Google</a>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="contact-section">
     <div class="contact-container max-w format-horizontal format-vertical">
       <div class="contact-head">
@@ -317,14 +366,17 @@
             <input type="email" name="email" data-i18n-attr="placeholder:form.email" placeholder="Email" required />
             <input type="text" name="phone" data-i18n-attr="placeholder:form.phone" placeholder="Phone" required />
 
-            <label for="service" data-i18n="form.service">Service Needed</label>
-            <select name="service" id="service" required>
+            <label for="service-select" data-i18n="form.service">Service Needed</label>
+            <select name="service" id="service-select" required>
               <option value="" data-i18n="form.select">Select a service</option>
-              <option value="diagnostics" data-i18n="form.opt.diagnostics">Basic Diagnostics</option>
-              <option value="standard-repair" data-i18n="form.opt.standard">Standard Repair</option>
-              <option value="premium" data-i18n="form.opt.premium">Premium Services</option>
-              <option value="remote" data-i18n="form.opt.remote">Remote Support</option>
-              <option value="onsite" data-i18n="form.opt.onsite">On-Site Visit</option>
+              <option value="computer-repair" data-i18n="form.opt.computer">Computer repair or upgrade</option>
+              <option value="custom-build" data-i18n="form.opt.build">Custom PC build (gaming/work)</option>
+              <option value="home-tech" data-i18n="form.opt.hometech">Home tech help (Wi-Fi, TV, printer…)</option>
+              <option value="phone-tablet" data-i18n="form.opt.phone">Phone or tablet help</option>
+              <option value="software" data-i18n="form.opt.software">Software & operating system</option>
+              <option value="remote" data-i18n="form.opt.remote">Remote support</option>
+              <option value="onsite" data-i18n="form.opt.onsite">On-site visit</option>
+              <option value="other" data-i18n="form.opt.other">Other / not sure</option>
             </select>
             <div class="hp-field">
               <label></label>
@@ -349,12 +401,12 @@
               <h4 data-i18n="contact.phone.title">Phone</h4>
             </div>
             <div class="contact-content">
-              <p data-i18n="contact.phone.value">+358 40 066 4767</p>
+              <p><a class="link" href="tel:+358400664767" data-i18n="contact.phone.value">+358 40 066 4767</a></p>
             </div>
           </div>
           <div>
             <h4 data-i18n="contact.email.title">Email</h4>
-            <p data-i18n="contact.email.value">info@fixinus.fi</p>
+            <p><a class="link" href="mailto:info@fixinus.fi" data-i18n="contact.email.value">info@fixinus.fi</a></p>
           </div>
           <div>
             <h4 data-i18n="contact.hours.title">Business Hours</h4>
@@ -407,23 +459,23 @@
   
       <h2 id="privacy-title" data-i18n="privacy.title">Privacy Policy</h2>
 
-      <h4 data-i18n="privacy.what_we_collect.title">1. Data Controller</h4>
+      <h3 data-i18n="privacy.what_we_collect.title">1. Data Controller</h3>
       <ul>
         <li data-i18n="privacy.what_we_collect.1">Fixinus (sole trader)</li>
         <li data-i18n="privacy.what_we_collect.2">Business ID: 3434370-6</li>
-        <li data-i18n="privacy.what_we_collect.3">Address: Yrittäjäntie 11, 06450 Porvoo, Finland</li>
-        <li data-i18n="privacy.what_we_collect.4">Address: Yrittäjäntie 11, 06450 Porvoo, Finland</li>
+        <li data-i18n="privacy.what_we_collect.3">Address: Puusepänkaarre 15, 06150 Porvoo, Finland</li>
+        <li data-i18n="privacy.what_we_collect.4">Email: info@fixinus.fi</li>
       </ul>
   
-      <h4 data-i18n="privacy.how_we_use.title">2. Contact for Data Protection Matters</h4>
+      <h3 data-i18n="privacy.how_we_use.title">2. Contact for Data Protection Matters</h3>
       <p data-i18n="privacy.how_we_use">If you have questions about data protection, contact info@fixinus.fi</p>
   
-      <h4 data-i18n="privacy.storage.title">3. Name of the Register</h4>
+      <h3 data-i18n="privacy.storage.title">3. Name of the Register</h3>
       <p data-i18n="privacy.storage.body">
         Fixinus Customer and User Register
       </p>
   
-      <h4 data-i18n="privacy.sharing.title">4. Purpose of Processing & Legal Basis</h4>
+      <h3 data-i18n="privacy.sharing.title">4. Purpose of Processing & Legal Basis</h3>
       <p data-i18n="privacy.sharing.body.1">We process personal data for the following purposes:</p>
       <ul>
         <li data-i18n="privacy.sharing.body.2">Customer support and communications (legitimate interest)</li>
@@ -434,7 +486,7 @@
       </ul>
       
   
-      <h4 data-i18n="privacy.rights.title">5. What Personal Data We Process</h4>
+      <h3 data-i18n="privacy.rights.title">5. What Personal Data We Process</h3>
       <p data-i18n="privacy.rights.1">We may process:</p>
       <ul>
         <li data-i18n="privacy.rights.2">Name, e-mail address, phone number, address</li>
@@ -445,19 +497,19 @@
       </ul>
       
   
-      <h4 data-i18n="privacy.contact.title">6. Data Retention Period</h4>
+      <h3 data-i18n="privacy.contact.title">6. Data Retention Period</h3>
       <p data-i18n="privacy.contact.body.1">Customer data: at least for the duration of the contract + 5 years</p>
       <p data-i18n="privacy.contact.body.2">Accounting data: minimum 6 years (statutory requirement)</p>
       <p data-i18n="privacy.contact.body.3">Website analytics data: maximum 2 years (if analytics are used)</p>
 
-      <h4 data-i18n="privacy.party.title">7. Data Sharing & Third Parties</h4>
+      <h3 data-i18n="privacy.party.title">7. Data Sharing & Third Parties</h3>
       <p data-i18n="privacy.party.body.1">We will not share personal data with third parties without your consent or legal obligation.</p>
       <p data-i18n="privacy.party.body.2">External service providers (hosting, email service, form backend) process data only under our instructions and applicable agreements.</p>
 
-      <h4 data-i18n="privacy.transfer.title">8. Transfer Outside EU</h4>
+      <h3 data-i18n="privacy.transfer.title">8. Transfer Outside EU</h3>
       <p data-i18n="privacy.transfer.body.1">Currently we do not transfer personal or customer data outside the EU. Should this change, we will update this policy and inform users.</p>
 
-      <h4 data-i18n="privacy.data.title">9. Data Subject Rights</h4>
+      <h3 data-i18n="privacy.data.title">9. Data Subject Rights</h3>
       <p data-i18n="privacy.data.body.1">You have the right to:</p>
       <ul>
         <li data-i18n="privacy.data.body.2">request access to your data</li>
@@ -470,14 +522,14 @@
       </ul>
       <p data-i18n="privacy.data.body.9">To exercise these rights, contact info@fixinus.fi</p>
 
-      <h4 data-i18n="privacy.cookie.title">10. Cookies & Website Tracking</h4>
+      <h3 data-i18n="privacy.cookie.title">10. Cookies & Website Tracking</h3>
       <p data-i18n="privacy.cookie.body.1">At present, we do not use third-party analytics, cookies or tracking tools — only strictly necessary cookies are used, which do not require consent.</p>
       <p data-i18n="privacy.cookie.body.2">If we later adopt analytics or tracking tools, we will update this policy and provide a cookie consent mechanism.</p>
 
-      <h4 data-i18n="privacy.changes.title">11. Changes to the Privacy Policy</h4>
+      <h3 data-i18n="privacy.changes.title">11. Changes to the Privacy Policy</h3>
       <p data-i18n="privacy.changes.body.1">We reserve the right to update this policy. Any significant changes will be communicated via our website.</p>
 
-      <h4 data-i18n="privacy.auth.title">12. Supervisory Authority</h4>
+      <h3 data-i18n="privacy.auth.title">12. Supervisory Authority</h3>
       <p data-i18n="privacy.auth.body.1">If you believe that your rights under GDPR have been violated, you have the right to lodge a complaint with the supervisory authority:</p>
       <p data-i18n="privacy.auth.body.2">Data Protection Ombudsman (Tietosuojavaltuutetun toimisto), PO Box 800, 00521 Helsinki, Finland — tietosuoja@om.fi</p>
     </div>
@@ -521,15 +573,6 @@
                 d="M24,12.073c0,5.989-4.394,10.954-10.13,11.855v-8.363h2.789l0.531-3.46H13.87V9.86c0-0.947,0.464-1.869,1.95-1.869h1.509V5.045c0,0-1.37-0.234-2.679-0.234c-2.734,0-4.52,1.657-4.52,4.656v2.637H7.091v3.46h3.039v8.363C4.395,23.025,0,18.061,0,12.073  c0-6.627,5.373-12,12-12S24,5.445,24,12.073z" />
             </svg>
           </a>
-          <a href="#" class="icon-link" aria-label="Instagram">
-            <svg fill="currentColor" width="24" height="24" viewBox="0 0 24 24">
-              <path
-                d="M12,2.162c3.204,0,3.584,0.012,4.849,0.07c1.308,0.06,2.655,0.358,3.608,1.311c0.962,0.962,1.251,2.296,1.311,3.608 c0.058,1.265,0.07,1.645,0.07,4.849c0,3.204-0.012,3.584-0.07,4.849c-0.059,1.301-0.364,2.661-1.311,3.608 c-0.962,0.962-2.295,1.251-3.608,1.311c-1.265,0.058-1.645,0.07-4.849,0.07s-3.584-0.012-4.849-0.07 c-1.291-0.059-2.669-0.371-3.608-1.311c-0.957-0.957-1.251-2.304-1.311-3.608c-0.058-1.265-0.07-1.645-0.07-4.849 c0-3.204,0.012-3.584,0.07-4.849c0.059-1.296,0.367-2.664,1.311-3.608c0.96-0.96,2.299-1.251,3.608-1.311 C8.416,2.174,8.796,2.162,12,2.162 M12,0C8.741,0,8.332,0.014,7.052,0.072C5.197,0.157,3.355,0.673,2.014,2.014 C0.668,3.36,0.157,5.198,0.072,7.052C0.014,8.332,0,8.741,0,12c0,3.259,0.014,3.668,0.072,4.948c0.085,1.853,0.603,3.7,1.942,5.038 c1.345,1.345,3.186,1.857,5.038,1.942C8.332,23.986,8.741,24,12,24c3.259,0,3.668-0.014,4.948-0.072 c1.854-0.085,3.698-0.602,5.038-1.942c1.347-1.347,1.857-3.184,1.942-5.038C23.986,15.668,24,15.259,24,12 c0-3.259-0.014-3.668-0.072-4.948c-0.085-1.855-0.602-3.698-1.942-5.038c-1.343-1.343-3.189-1.858-5.038-1.942 C15.668,0.014,15.259,0,12,0z" />
-              <path
-                d="M12,5.838c-3.403,0-6.162,2.759-6.162,6.162c0,3.403,2.759,6.162,6.162,6.162s6.162-2.759,6.162-6.162 C18.162,8.597,15.403,5.838,12,5.838z M12,16c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S14.209,16,12,16z" />
-              <circle cx="18.406" cy="5.594" r="1.44" />
-            </svg>
-          </a>
         </div>
       </div>
 
@@ -537,7 +580,6 @@
         <h3 data-i18n="footer.quick">Quick Links</h3>
         <ul>
           <li><a href="#about" data-i18n="footer.links.about">About Us</a></li>
-          <!-- <li><a href="#prices" data-i18n="footer.links.pricing">Pricing</a></li> -->
           <li><a href="#service" data-i18n="footer.links.services">Services</a></li>
           <li><a href="#contact" data-i18n="footer.links.contact">Contact</a></li>
           <li>
@@ -565,7 +607,7 @@
       </div>
 
       <div class="footer-copyright">
-        <p data-i18n="footer.copy">© 2025 Fixinus. All rights reserved.</p>
+        <p data-i18n="footer.copy">© 2026 Fixinus. All rights reserved.</p>
       </div>
     </div>
   </footer>

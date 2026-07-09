@@ -101,6 +101,8 @@ document.addEventListener('click', function ()
     /* ========== SWEDISH ========== */
     sv: {
       // NAV
+      'meta.title': 'Fixinus – Datorservice och IT-support i Borgå',
+      'meta.description': 'Reparation, service och uppgradering av datorer samt IT-support i Borgå för privatpersoner och småföretag. Fjärrsupport, upphämtning och platsbesök enligt överenskommelse.',
       'nav.about': 'Om oss',
       'nav.prices': 'Priser',
       'nav.services':'Tjänster',
@@ -109,6 +111,17 @@ document.addEventListener('click', function ()
       // HERO
       'hero.title': 'Håll din teknik i skick. Vi reparerar, uppgraderar och hjälper dig.',
       'hero.subtitle': 'Fixinus är din lokala partner för datorservice och tekniksupport i Borgå – för både privatpersoner och småföretag. Stationära datorer, bärbara datorer och vardagselektronik hanteras med omsorg och tydlig kommunikation.',
+      'hero.cta.call': 'Ring 040 066 4767',
+      'hero.cta.contact': 'Skicka meddelande',
+
+      // REVIEWS
+      'reviews.title': 'Vad våra kunder säger',
+      'reviews.lead': '5,0 stjärnor – 17 recensioner på Google',
+      'reviews.q1.text': 'Min rekommendation 👍🏼 Utmärkt, snabb och pålitlig service. Datorn stängdes plötsligt av och startade inte längre. Felet hittades snabbt i ett trasigt nätaggregat. Linus beställde och installerade en ny del och datorn fungerar igen. Kommunikationen fungerade hela tiden och jag fick veta var vi stod och vad det skulle kosta. Tack! ☺️',
+      'reviews.q2.text': 'Riktigt vänlig och yrkeskunnig service! Vi fick genast hjälp och en lösning när grafikkortet i vår sons dator gick sönder. Allt sköttes smidigt, ärligt och med bra kommunikation från början till slut. 😊 Vi är mer än nöjda och rekommenderar varmt!',
+      'reviews.q3.text': 'Jag fick snabb, mycket yrkeskunnig och vänlig service med att nollställa skrivarens räknare! Skrivaren hämtades, räknaren nollställdes och skrivaren levererades hem och kopplades till min bärbara dator – servicen var pålitlig, ärlig och mycket professionell hela tiden! Jag rekommenderar varmt Fixinus och för det glada budskapet vidare! Tack Fixinus!',
+      'reviews.source': 'Google-recension',
+      'reviews.all': 'Läs alla recensioner på Google',
 
       // ABOUT
       'about.title': 'Om Fixinus',
@@ -266,7 +279,7 @@ document.addEventListener('click', function ()
       'remote.title': 'Fjärrhjälp – så här fungerar det',
       'remote.lead': 'På Windows 10/11 använder vi Snabbhjälp (Quick Assist). Har du inget Microsoft-konto eller fungerar Snabbhjälp inte? Då använder vi TeamViewer QuickSupport. På Mac och Linux använder vi också TeamViewer. Passar inget av alternativen? Då ordnar vi hembesök eller inlämning.',
 
-      'remote.step.1.html': '<strong>Kontakta oss:</strong> Ring +358 400 664 767 eller mejla <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> så bekräftar vi att fjärrhjälp passar ditt ärende.',
+      'remote.step.1.html': '<strong>Kontakta oss:</strong> Ring <a class="link" href="tel:+358400664767">+358 40 066 4767</a> eller mejla <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> så bekräftar vi att fjärrhjälp passar ditt ärende.',
 
       'remote.step.2.html': `<strong>Ladda ned rätt app:</strong><br>
         • <u>Windows 10/11:</u> Öppna Snabbhjälp genom att trycka <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
@@ -307,11 +320,14 @@ document.addEventListener('click', function ()
       'form.phone': 'Telefon',
       'form.service': 'Önskad tjänst',
       'form.select': 'Välj en tjänst',
-      'form.opt.diagnostics': 'Grundläggande diagnostik',
-      'form.opt.standard': 'Standardreparation',
-      'form.opt.premium': 'Premiumtjänster',
+      'form.opt.computer': 'Datorreparation eller uppgradering',
+      'form.opt.build': 'Skräddarsydd dator (spel/arbete)',
+      'form.opt.hometech': 'Hemmateknik (Wi-Fi, TV, skrivare…)',
+      'form.opt.phone': 'Hjälp med telefon eller surfplatta',
+      'form.opt.software': 'Programvara & operativsystem',
       'form.opt.remote': 'Fjärrsupport',
       'form.opt.onsite': 'Platsbesök',
+      'form.opt.other': 'Annat / osäker',
       'form.message': 'Meddelande',
       'form.send': 'Skicka',
       'form.status.cooldown': 'Vänta {sec} sekunder innan du skickar ett nytt meddelande.',
@@ -333,12 +349,14 @@ document.addEventListener('click', function ()
       'footer.links.warranty': 'Garanti',
       'footer.links.privacy': 'Dataskyddsbeskrivning',
       'footer.links.company': 'Företagsuppgifter',
-      'footer.copy': '© 2025 Fixinus. FO-nummer: 3434370-6.'
+      'footer.copy': '© {year} Fixinus. FO-nummer: 3434370-6.'
     },
 
     /* ========== FINNISH ========== */
     fi: {
       // NAV
+      'meta.title': 'Fixinus – Tietokonehuolto ja IT-tuki Porvoo',
+      'meta.description': 'Tietokoneiden korjaus, huolto ja päivitykset sekä IT-tuki Porvoossa yksityisille ja pienyrityksille. Etätuki, nouto ja käynnit paikan päällä sopimuksen mukaan.',
       'nav.about': 'Tietoa meistä',
       'nav.prices': 'Hinnat',
       'nav.services':'Palvelut',
@@ -348,6 +366,17 @@ document.addEventListener('click', function ()
       'hero.title': 'Pidä tekniikka kunnossa. Korjaamme, päivitämme ja autamme.',
       'hero.subtitle':
         'Fixinus on paikallinen kumppani tietokonehuoltoon ja tekniseen tukeen Porvoossa – sekä yksityisille että pienyrityksille. Pöytäkoneet, kannettavat ja arkielektroniikka hoidetaan huolellisesti ja selkeällä viestinnällä.',
+      'hero.cta.call': 'Soita 040 066 4767',
+      'hero.cta.contact': 'Lähetä viesti',
+
+      // REVIEWS
+      'reviews.title': 'Mitä asiakkaamme sanovat',
+      'reviews.lead': '5,0 tähteä – 17 arvostelua Googlessa',
+      'reviews.q1.text': 'Suositteluni 👍🏼 Erinomainen, nopea ja luotettava palvelu. Pöytäkone sammui ihan yhtäkkiä eikä enää käynnistynyt. Vika löytyi nopeasti rikkoutuneesta virtalähteestä. Linus tilasi ja asensi uuden osan ja kone toimii taas. Koko ajan kommunikaatio pelasi ja sain tietää missä mennään ja paljonko tulee kustantamaan. Kiitos! ☺️',
+      'reviews.q2.text': 'Todella ystävällistä ja ammattitaitoista palvelua! Saimme heti apua ja ratkaisun tilanteeseen, kun pojan tietokoneen näytönohjain meni rikki. Kaikki hoitui joustavasti, rehellisesti ja hyvällä viestinnällä alusta loppuun. 😊 Olemme enemmän kuin tyytyväisiä ja suosittelemme lämpimästi!',
+      'reviews.q3.text': 'Sain nopeaa, erittäin ammattitaitoista ja ystävällistä palvelua tulostimen laskurin nollaamisessa! Printteri haettiin, laskuri nollattiin ja tulostin tuotiin kotiin ja yhdistettiin läppäriin – palvelu oli koko ajan luotettavaa, reilua ja erittäin ammattitaitoista! Suosittelen lämpimästi Fixinusta ja vien tätä ilosanomaa eteenpäin! Kiitos Fixinus!',
+      'reviews.source': 'Google-arvostelu',
+      'reviews.all': 'Lue kaikki arvostelut Googlessa',
 
       // ABOUT
       'about.title': 'Tietoa Fixinuksesta',
@@ -522,7 +551,7 @@ document.addEventListener('click', function ()
       'remote.lead':
         'Windows 10/11 -laitteissa käytämme Quick Assist -toimintoa. Jos sinulla ei ole Microsoft-tiliä tai Quick Assist ei toimi, käytämme TeamViewer QuickSupportia. Mac- ja Linux-laitteissa käytämme myös TeamVieweria. Jos mikään vaihtoehto ei sovi, järjestämme kotikäynnin tai laitteen tuonnin.',
       'remote.step.1.html':
-        '<strong>Ota yhteyttä:</strong> Soita +358 40 066 4767 tai lähetä sähköpostia <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a>, niin varmistamme että etätuki sopii tilanteeseesi.',
+        '<strong>Ota yhteyttä:</strong> Soita <a class="link" href="tel:+358400664767">+358 40 066 4767</a> tai lähetä sähköpostia <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a>, niin varmistamme että etätuki sopii tilanteeseesi.',
       'remote.step.2.html': `<strong>Lataa oikea sovellus:</strong><br>
         • <u>Windows 10/11:</u> Avaa Quick Assist painamalla <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
         • <u>Ei Microsoft-tiliä tai Quick Assist ei toimi?</u> Lataa TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
@@ -562,11 +591,14 @@ document.addEventListener('click', function ()
       'form.phone': 'Puhelin',
       'form.service': 'Tarvittava palvelu',
       'form.select': 'Valitse palvelu',
-      'form.opt.diagnostics': 'Perusdiagnostiikka',
-      'form.opt.standard': 'Vakiokorjaus',
-      'form.opt.premium': 'Premium-palvelut',
+      'form.opt.computer': 'Tietokoneen korjaus tai päivitys',
+      'form.opt.build': 'Tietokoneen kokoaminen (peli-/työkone)',
+      'form.opt.hometech': 'Kotitekniikka (Wi-Fi, TV, tulostin…)',
+      'form.opt.phone': 'Puhelin- tai tablettiapu',
+      'form.opt.software': 'Ohjelmisto & käyttöjärjestelmä',
       'form.opt.remote': 'Etätuki',
-      'form.opt.onsite': 'Paikan päällä',
+      'form.opt.onsite': 'Käynti paikan päällä',
+      'form.opt.other': 'Muu / en ole varma',
       'form.message': 'Viesti',
       'form.send': 'Lähetä',
       'form.status.cooldown': 'Odota {sec} sekuntia ennen uuden viestin lähettämistä.',
@@ -588,13 +620,15 @@ document.addEventListener('click', function ()
       'footer.links.warranty': 'Takuuehdot',
       'footer.links.privacy': 'Tietosuojaseloste',
       "footer.links.company": "Yritystiedot",
-      'footer.copy': '© 2025 Fixinus. Y-tunnus: 3434370-6.'
+      'footer.copy': '© {year} Fixinus. Y-tunnus: 3434370-6.'
     },
 
 
     /* ========== ENGLISH ========== */
     en: {
       // NAV
+      'meta.title': 'Fixinus – Computer Repair & IT Support in Porvoo',
+      'meta.description': 'Computer repair, maintenance and upgrades plus IT support in Porvoo for individuals and small businesses. Remote support, pickup and on-site visits by arrangement.',
       'nav.about': 'About',
       'nav.prices': 'Prices',
       'nav.services':'Services',
@@ -604,6 +638,17 @@ document.addEventListener('click', function ()
       'hero.title': 'Keep your tech running right. We fix, upgrade and support.',
       'hero.subtitle':
         'Fixinus is your local partner for computer repairs and tech support in Porvoo — for individuals and small businesses. Desktops, laptops and everyday electronics, handled with care and clear communication.',
+      'hero.cta.call': 'Call 040 066 4767',
+      'hero.cta.contact': 'Send a message',
+
+      // REVIEWS
+      'reviews.title': 'What our customers say',
+      'reviews.lead': '5.0 stars — 17 reviews on Google',
+      'reviews.q1.text': 'My recommendation 👍🏼 Excellent, fast and reliable service. My desktop suddenly shut down and would not start again. The fault was quickly traced to a broken power supply. Linus ordered and installed a new part and the computer works again. I was kept informed the whole time about progress and cost. Thank you! ☺️',
+      'reviews.q2.text': 'Really friendly and professional service! We got help right away and a solution when the graphics card in our son\'s computer broke. Everything was handled flexibly, honestly and with good communication from start to finish. 😊 We are more than satisfied and warmly recommend!',
+      'reviews.q3.text': 'I got fast, highly professional and friendly service resetting my printer counter! The printer was picked up, the counter was reset, and the printer was brought back home and connected to my laptop — the service was reliable, fair and very professional throughout! I warmly recommend Fixinus and will spread the good word! Thank you Fixinus!',
+      'reviews.source': 'Review on Google',
+      'reviews.all': 'Read all reviews on Google',
 
       // ABOUT
       'about.title': 'About Fixinus',
@@ -767,7 +812,7 @@ document.addEventListener('click', function ()
       'remote.lead':
         'On Windows 10/11 we use Quick Assist. If you don’t have a Microsoft account or Quick Assist isn’t available, we use TeamViewer QuickSupport instead. On Mac and Linux, we also use TeamViewer. If neither option fits, we arrange a home visit or drop-off.',
       'remote.step.1.html':
-        '<strong>Contact us:</strong> Call +358 40 066 4767 or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.',
+        '<strong>Contact us:</strong> Call <a class="link" href="tel:+358400664767">+358 40 066 4767</a> or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.',
       'remote.step.2.html': `<strong>Download the right app:</strong><br>
         • <u>Windows 10/11:</u> Open Quick Assist by pressing <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
         • <u>No Microsoft account or Quick Assist not working?</u> Download TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
@@ -808,11 +853,14 @@ document.addEventListener('click', function ()
       'form.phone': 'Phone',
       'form.service': 'Service Needed',
       'form.select': 'Select a service',
-      'form.opt.diagnostics': 'Basic Diagnostics',
-      'form.opt.standard': 'Standard Repair',
-      'form.opt.premium': 'Premium Services',
-      'form.opt.remote': 'Remote Support',
-      'form.opt.onsite': 'On-Site Visit',
+      'form.opt.computer': 'Computer repair or upgrade',
+      'form.opt.build': 'Custom PC build (gaming/work)',
+      'form.opt.hometech': 'Home tech help (Wi-Fi, TV, printer…)',
+      'form.opt.phone': 'Phone or tablet help',
+      'form.opt.software': 'Software & operating system',
+      'form.opt.remote': 'Remote support',
+      'form.opt.onsite': 'On-site visit',
+      'form.opt.other': 'Other / not sure',
       'form.message': 'Message',
       'form.send': 'Send',
       'form.status.cooldown': 'Please wait {sec} second(s) before sending another message.',
@@ -832,7 +880,7 @@ document.addEventListener('click', function ()
       'footer.links.warranty': 'Warranty',
       'footer.links.privacy': 'Privacy Policy',
       "footer.links.company": "Company details",
-      'footer.copy': '© 2025 Fixinus. Business ID: 3434370-6.'
+      'footer.copy': '© {year} Fixinus. Business ID: 3434370-6.'
     }
 
   };
@@ -844,18 +892,21 @@ document.addEventListener('click', function ()
   {
     const dict = MESSAGES[lang] || MESSAGES[DEFAULT_LANG];
 
+    // Replace tokens like {year} so strings never go stale
+    const fill = s => s.replace('{year}', new Date().getFullYear());
+
     // Simple text nodes
     $$('[data-i18n]').forEach(el =>
     {
       const key = el.getAttribute('data-i18n');
-      if (dict[key]) el.textContent = dict[key];
+      if (dict[key]) el.textContent = fill(dict[key]);
     });
 
     // InnerHTML content (allows <a>, <kbd>, <img> etc.)
     $$('[data-i18n-html]').forEach(el =>
     {
       const key = el.getAttribute('data-i18n-html');
-      if (dict[key]) el.innerHTML = dict[key];
+      if (dict[key]) el.innerHTML = fill(dict[key]);
     });
 
     // Attribute mappings, e.g., data-i18n-attr="placeholder:form.name|value:form.opt..."
@@ -871,6 +922,11 @@ document.addEventListener('click', function ()
 
     // HTML lang attribute
     document.documentElement.setAttribute('lang', lang);
+
+    // Page title + meta description follow the language
+    if (dict['meta.title']) document.title = dict['meta.title'];
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && dict['meta.description']) metaDesc.setAttribute('content', dict['meta.description']);
   }
 
 
@@ -1000,18 +1056,6 @@ document.addEventListener('click', function ()
         });
       });
     }
-        // --- Mobile sidebar flags (phones/tablets) ---
-    document.querySelectorAll('.mobile-lang').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        setLang(lang); // reuse the same function
-
-        // Close sidebar when language is chosen
-        document.body.classList.remove('nav-open');
-        const nav = document.getElementById('main-nav');
-        if (nav) nav.classList.remove('is-open');
-      });
-    });
 
   }
 
@@ -1159,6 +1203,7 @@ document.addEventListener('click', function ()
   // Small, self-contained translation table JUST for form status messages
   const FORM_MESSAGES = {
     fi: {
+      sending: 'Lähetetään...',
       cooldown: 'Odota {sec} sekuntia ennen uuden viestin lähettämistä.',
       success: 'Kiitos! Viestisi on lähetetty.',
       error_general: 'Jotain meni pieleen. Yritä myöhemmin uudelleen.',
@@ -1168,6 +1213,7 @@ document.addEventListener('click', function ()
       error_phone: 'Syötä kelvollinen puhelinnumero.'
     },
     en: {
+      sending: 'Sending...',
       cooldown: 'Please wait {sec} second(s) before sending another message.',
       success: 'Thank you! Your message has been sent.',
       error_general: 'Something went wrong. Please try again later.',
@@ -1177,6 +1223,7 @@ document.addEventListener('click', function ()
       error_phone: 'Please enter a valid phone number.'
     },
     sv: {
+      sending: 'Skickar...',
       cooldown: 'Vänta {sec} sekunder innan du skickar ett nytt meddelande.',
       success: 'Tack! Ditt meddelande har skickats.',
       error_general: 'Något gick fel. Försök igen senare.',
@@ -1288,7 +1335,7 @@ document.addEventListener('click', function ()
     try {
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...'; // you can localize this too if you want
+        submitBtn.textContent = translate('sending');
       }
       showStatus('', null);
 
