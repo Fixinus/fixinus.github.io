@@ -46,7 +46,7 @@ Alkukartoitus ja hinta-arvio ovat maksuttomia, ja veloitamme vain onnistuneesta 
 
 | Palvelu | Hinta |
 |---|---|
-| Puhdistus, pölynpoisto ja lämpötahnan vaihto | 100 € |
+| Puhdistus, pölynpoisto ja lämpötahnan vaihto (Ei PS5) | 100 € |
 | PS5 puhdistus ja nestemetallin vaihto | alk. 150 € |
 
 ## Muut työt
