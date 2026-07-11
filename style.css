@@ -1751,17 +1751,9 @@ textarea:focus-visible {
 /* --- COMPACT MOBILE SPACING (less scrolling, same text size) --- */
 
 @media (max-width: 600px) {
-    .format-vertical {
-        padding-top: 2.25rem;
-        padding-bottom: 2.25rem;
-    }
-
+    .format-vertical,
     .about-section,
-    .service-section {
-        padding-top: 2.25rem;
-        padding-bottom: 2.25rem;
-    }
-
+    .service-section,
     .remote-section {
         padding-top: 2.25rem;
         padding-bottom: 2.25rem;
