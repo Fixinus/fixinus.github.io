@@ -7,17 +7,17 @@ Kaikki hinnat sisältävät arvonlisäveron 25,5 %. Varaosat veloitetaan eriksee
 | Palvelu | Hinta |
 |---|---|
 | Vianmääritys (enintään 150 €) | 50 €/h |
+| Ohjelmallinen huolto ja haittaohjelmien poisto | 50–100 € |
 | Windowsin tai macOS:n asennus puhtaalta pöydältä, päivitykset ja ajurit | 70 € |
 | Tiedostojen siirto tai palautus asennuksen yhteydessä | alk. 40 € |
-| Ohjelmallinen huolto ja haittaohjelmien poisto | 50–100 € |
 | Puhdistus ja pölynpoisto | 50 € |
 | Lämpötahnan vaihto | alk. 50 € |
 | Vuosihuolto (puhdistus, päivitykset ja kuntoraportti) | 90 € |
 | Kannettavan akunvaihto (ei Apple) | alk. 60 € + osat |
-| Kannettavan akunvaihto, MacBook | alk. 150 € + osat |
 | Kannettavan näytönvaihto | alk. 100 € + osat |
 | SSD-päivitys ja tiedonsiirto | alk. 80 € + osat |
 | RAM-muistin päivitys | alk. 40 € + osat |
+| Kannettavan akunvaihto, MacBook | alk. 150 € + osat |
 | Pöytäkoneen kokoonpano, sis. käyttöjärjestelmän asennuksen | alk. 150 € |
 | Muu huolto- ja asennustyö | 60 €/h |
 

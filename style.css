@@ -748,6 +748,13 @@ img{
     resize: vertical;
 }
 
+/* Darker placeholders (browser default grey is too faint on light theme) */
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+    color: var(--muted);
+    opacity: 1;
+}
+
 .form-box input:focus,
 .form-box textarea:focus,
 .form-box select:focus {
@@ -803,7 +810,7 @@ img{
 
 .contact-info p {
     margin: 0 0 1rem;
-    color: #c4c3c3;
+    color: var(--text);
 }
 
 .contact-icons{
