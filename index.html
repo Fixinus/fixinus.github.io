@@ -6,7 +6,7 @@
   <title>Fixinus – Tietokonehuolto ja IT-tuki Porvoo</title>
   <meta name="description" content="Tietokoneiden korjaus, huolto ja päivitykset sekä IT-tuki Porvoossa yksityisille ja pienyrityksille. Etätuki, nouto ja käynnit paikan päällä sopimuksen mukaan." />
   <link rel="canonical" href="https://fixinus.fi/" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#f5f9fe" />
 
   <!-- Social sharing (Open Graph + Twitter) -->
   <meta property="og:type" content="website" />
@@ -20,8 +20,8 @@
   <meta property="og:locale" content="fi_FI" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js?v=18" defer></script>
+  <link rel="stylesheet" href="style.css?v=19" />
+  <script src="script.js?v=19" defer></script>
   <link rel="icon" href="media/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="media/favicon-180.png">
 
@@ -113,6 +113,14 @@
           </li>
         </ul>
       </div>
+
+      <!-- THEME TOGGLE (moon/sun + label; CSS shows the right pair per theme) -->
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <span class="label-dark" data-i18n="theme.dark">Dark mode</span>
+        <span class="label-light" data-i18n="theme.light">Light mode</span>
+      </button>
 
       <!-- HAMBURGER (shown only on tablet/phone via CSS) -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
@@ -210,12 +218,17 @@
             <li data-i18n="services.pc.1">Diagnostics & troubleshooting</li>
             <li data-i18n="services.pc.2">Hardware repairs & parts (SSD, RAM, GPU, battery, screen, fans)</li>
             <li data-i18n="services.pc.3">Component replacements & upgrades (for speed, storage, graphics)</li>
-            <li data-i18n="services.pc.4">Custom PC builds (gaming/work): parts advice, assembly & setup</li>
-            <li data-i18n="services.pc.5">Cleaning & thermal service (dust out, fresh paste)</li>
-            <li data-i18n="services.pc.6">Annual service check</li>
-            <li data-i18n="services.pc.7">All brands supported</li>
-            <li data-i18n="services.pc.8">Health report after service (what we did, future recommendations)</li>
           </ul>
+          <details class="svc-more">
+            <summary><span class="svc-more-closed"><span data-i18n="services.showall">Show all</span> (+5)</span><span class="svc-more-open" data-i18n="services.showless">Show less</span></summary>
+            <ul>
+              <li data-i18n="services.pc.4">Custom PC builds (gaming/work): parts advice, assembly & setup</li>
+              <li data-i18n="services.pc.5">Cleaning & thermal service (dust out, fresh paste)</li>
+              <li data-i18n="services.pc.6">Annual service check</li>
+              <li data-i18n="services.pc.7">All brands supported</li>
+              <li data-i18n="services.pc.8">Health report after service (what we did, future recommendations)</li>
+            </ul>
+          </details>
         </div>
         <!-- Home Tech -->
         <div>
@@ -223,11 +236,16 @@
           <ul>
             <li data-i18n="services.home.1">Wi-Fi setup & coverage boost (router/mesh)</li>
             <li data-i18n="services.home.2">TV & streaming setup (smart TVs, Apple TV, Chromecast, etc.)</li>
-            <li data-i18n="services.home.3">Game consoles (repair, setup, online play, family settings)</li>
             <li data-i18n="services.home.4">Printers & scanners (install, connect, fix common issues)</li>
-            <li data-i18n="services.home.5">Shared storage / NAS (files across devices)</li>
-            <li data-i18n="services.home.6">Smart home devices (lights, cameras, speakers)</li>
           </ul>
+          <details class="svc-more">
+            <summary><span class="svc-more-closed"><span data-i18n="services.showall">Show all</span> (+3)</span><span class="svc-more-open" data-i18n="services.showless">Show less</span></summary>
+            <ul>
+              <li data-i18n="services.home.3">Game consoles (repair, setup, online play, family settings)</li>
+              <li data-i18n="services.home.5">Shared storage / NAS (files across devices)</li>
+              <li data-i18n="services.home.6">Smart home devices (lights, cameras, speakers)</li>
+            </ul>
+          </details>
         </div>
       
       
@@ -237,14 +255,19 @@
           <ul>
             <li data-i18n="services.mobile.1">New device setup</li>
             <li data-i18n="services.mobile.2">Switching phones made easy (move photos, messages, WhatsApp, apps)</li>
-            <li data-i18n="services.mobile.3">Parental controls & safety (Screen Time/Family Link setup)</li>
-            <li data-i18n="services.mobile.4">Email, contacts & calendar sync</li>
             <li data-i18n="services.mobile.5">App & account help (Apple ID, Google)</li>
-            <li data-i18n="services.mobile.6">iCloud/Google backups & restores</li>
-            <li data-i18n="services.mobile.7">Storage cleanup (free up space safely)</li>
-            <li data-i18n="services.mobile.8">Security check (updates, passcodes, 2-step verification)</li>
-            <li data-i18n="services.mobile.9">Troubleshooting issues (sync, notifications, battery life)</li>
           </ul>
+          <details class="svc-more">
+            <summary><span class="svc-more-closed"><span data-i18n="services.showall">Show all</span> (+6)</span><span class="svc-more-open" data-i18n="services.showless">Show less</span></summary>
+            <ul>
+              <li data-i18n="services.mobile.3">Parental controls & safety (Screen Time/Family Link setup)</li>
+              <li data-i18n="services.mobile.4">Email, contacts & calendar sync</li>
+              <li data-i18n="services.mobile.6">iCloud/Google backups & restores</li>
+              <li data-i18n="services.mobile.7">Storage cleanup (free up space safely)</li>
+              <li data-i18n="services.mobile.8">Security check (updates, passcodes, 2-step verification)</li>
+              <li data-i18n="services.mobile.9">Troubleshooting issues (sync, notifications, battery life)</li>
+            </ul>
+          </details>
         </div>
         <!-- Software / OS -->
         <div>
@@ -252,15 +275,20 @@
           <ul>
             <li data-i18n="services.os.1">Reinstall Windows or macOS (keep files when possible)</li>
             <li data-i18n="services.os.2">New computer setup & file transfer</li>
-            <li data-i18n="services.os.3">Install programs & drivers</li>
             <li data-i18n="services.os.4">Remove viruses and unwanted apps</li>
-            <li data-i18n="services.os.5">Free up space (clean large & temporary files)</li>
-            <li data-i18n="services.os.6">Set up backups to an external drive or cloud</li>
-            <li data-i18n="services.os.7">Network & internet issues (Wi-Fi/Ethernet not connecting, slow speeds)</li>
-            <li data-i18n="services.os.8">Fix crashes and error messages</li>
-            <li data-i18n="services.os.9">Account & password recovery (Microsoft/Apple, email accounts)</li>
-            <li data-i18n="services.os.10">Set up email and cloud (OneDrive, iCloud, Google)</li>
           </ul>
+          <details class="svc-more">
+            <summary><span class="svc-more-closed"><span data-i18n="services.showall">Show all</span> (+7)</span><span class="svc-more-open" data-i18n="services.showless">Show less</span></summary>
+            <ul>
+              <li data-i18n="services.os.3">Install programs & drivers</li>
+              <li data-i18n="services.os.5">Free up space (clean large & temporary files)</li>
+              <li data-i18n="services.os.6">Set up backups to an external drive or cloud</li>
+              <li data-i18n="services.os.7">Network & internet issues (Wi-Fi/Ethernet not connecting, slow speeds)</li>
+              <li data-i18n="services.os.8">Fix crashes and error messages</li>
+              <li data-i18n="services.os.9">Account & password recovery (Microsoft/Apple, email accounts)</li>
+              <li data-i18n="services.os.10">Set up email and cloud (OneDrive, iCloud, Google)</li>
+            </ul>
+          </details>
         </div>
       
       </div>
@@ -280,8 +308,8 @@
       </div>
 
       <div class="pricing-groups">
-        <div class="pricing-group">
-          <h3 data-i18n="pricing.pc.title">Computers &amp; laptops</h3>
+        <details class="pricing-group" open>
+          <summary><h3 data-i18n="pricing.pc.title">Computers &amp; laptops</h3></summary>
           <table class="pricing-table">
             <tbody>
               <tr><td data-i18n="pricing.pc.r1">Diagnostics (capped at €150)</td><td data-i18n="pricing.pc.p1">€50/h</td></tr>
@@ -310,11 +338,11 @@
             extensive investigation, we'll let you know and always agree on how to proceed before
             continuing the work.
           </p>
-        </div>
+        </details>
 
         <div class="pricing-col">
-        <div class="pricing-group">
-          <h3 data-i18n="pricing.visits.title">Remote support &amp; visits</h3>
+        <details class="pricing-group" open>
+          <summary><h3 data-i18n="pricing.visits.title">Remote support &amp; visits</h3></summary>
           <table class="pricing-table">
             <tbody>
               <tr><td data-i18n="pricing.visits.r1">Remote support</td><td data-i18n="pricing.visits.p1">€20 / 30 min</td></tr>
@@ -326,22 +354,22 @@
           <p class="pricing-note" data-i18n="pricing.visits.note">
             Urgent work outside business hours: surcharge of +50% (Mon–Fri), +75% (Sat) and +100% (Sun).
           </p>
-        </div>
+        </details>
 
-        <div class="pricing-group">
-          <h3 data-i18n="pricing.console.title">Game consoles</h3>
+        <details class="pricing-group" open>
+          <summary><h3 data-i18n="pricing.console.title">Game consoles</h3></summary>
           <table class="pricing-table">
             <tbody>
               <tr><td data-i18n="pricing.console.r1">Cleaning, dust removal and thermal paste replacement (excl. PS5)</td><td data-i18n="pricing.console.p1">€100</td></tr>
               <tr><td data-i18n="pricing.console.r2">PS5 cleaning and liquid metal replacement</td><td data-i18n="pricing.console.p2">from €150</td></tr>
             </tbody>
           </table>
-        </div>
+        </details>
         </div>
 
         <div class="pricing-col">
-        <div class="pricing-group">
-          <h3 data-i18n="pricing.data.title">Data recovery</h3>
+        <details class="pricing-group" open>
+          <summary><h3 data-i18n="pricing.data.title">Data recovery</h3></summary>
           <table class="pricing-table">
             <tbody>
               <tr><td data-i18n="pricing.data.r1">File recovery, software faults</td><td data-i18n="pricing.data.p1">from €100</td></tr>
@@ -353,10 +381,10 @@
             as physically damaged drives, are assessed case by case and referred to a specialist when
             needed.
           </p>
-        </div>
+        </details>
 
-        <div class="pricing-group">
-          <h3 data-i18n="pricing.other.title">Other work</h3>
+        <details class="pricing-group" open>
+          <summary><h3 data-i18n="pricing.other.title">Other work</h3></summary>
           <table class="pricing-table">
             <tbody>
               <tr><td data-i18n="pricing.other.r1">New phone setup and data transfer</td><td data-i18n="pricing.other.p1">from €50</td></tr>
@@ -367,7 +395,7 @@
             We also take on other electronics and device repairs case by case. Don't hesitate to ask,
             even if your device isn't on the list.
           </p>
-        </div>
+        </details>
         </div>
       </div>
     </div>
@@ -663,6 +691,14 @@
     </div>
   </div>
 
+
+  <!-- MOBILE CALL BAR (fixed to the bottom of the screen on phones) -->
+  <div class="call-bar">
+    <a href="tel:+358400664767">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+      <span data-i18n="hero.cta.call">Call 040 066 4767</span>
+    </a>
+  </div>
 
   <footer>
     <div class="footer-container max-w format-horizontal format-vertical">
