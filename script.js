@@ -48,11 +48,11 @@ document.addEventListener('click', function ()
   const STORAGE_KEY = 'theme';
   const root = document.documentElement;
 
-  // Default = light (unless a saved choice exists).
+  // Default = dark (unless a saved choice exists).
   // The toggle button's icon and label are swapped by CSS via [data-theme],
   // so JS only needs to flip the attribute and remember the choice.
   const saved = localStorage.getItem(STORAGE_KEY);
-  const startTheme = saved === 'light' || saved === 'dark' ? saved : 'light';
+  const startTheme = saved === 'light' || saved === 'dark' ? saved : 'dark';
   applyTheme(startTheme);
 
   // The button is parsed after this deferred script runs setup, so bind on DOM ready
@@ -77,9 +77,9 @@ document.addEventListener('click', function ()
   {
     root.setAttribute('data-theme', theme);
 
-    // Keep the browser UI color (mobile address bar) in sync
+    // Keep the browser UI color (mobile address bar) in sync with the header
     const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0b1220' : '#f5f9fe');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0b1220' : '#0f172a');
   }
 })();
 
