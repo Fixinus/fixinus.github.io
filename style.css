@@ -339,10 +339,11 @@ img{
 .contact-head h2::after {
     content: '';
     display: block;
-    width: 100%;
+    /* a touch wider than the text so the soft fade tails poke out each side */
+    width: calc(100% + 3rem);
     height: 0.2rem;
-    background: linear-gradient(90deg, transparent, var(--primary) 22%, var(--primary) 78%, transparent);
-    margin: 0.5rem auto 0;
+    background: linear-gradient(90deg, transparent, var(--primary) 28%, var(--primary) 72%, transparent);
+    margin: 0.5rem 0 0 -1.5rem;
     border-radius: 999px;
 }
 
@@ -968,7 +969,8 @@ footer {
   --muted: #94a3b8;
   --surface: #0f172a;
   --surface-2: #111827;
-  --card: #0f172a;
+  --card: #131d33;            /* lifted a notch so cards sit above the cloud glow */
+  --card-border: rgba(255, 255, 255, 0.07);
   --primary: #007bff;
   --accent: #007bff;
   --heading: #e5e7eb;
@@ -989,6 +991,7 @@ footer {
   --surface: #ffffff;         /* white cards/sections */
   --surface-2: #d7e8f8;       /* tinted surfaces */
   --card: #ffffff;            /* cards/boxes */
+  --card-border: rgba(15, 42, 80, 0.10);
   --primary: #0062cc;         /* brand blue, darkened for contrast on light */
   --accent: #0062cc;
   --heading: #0b3f7e;
@@ -1852,6 +1855,82 @@ details.pricing-group[open] summary {
   background-repeat: repeat-y;
 }
 
+/* --- DARK MODE: the same "cloudy" treatment, navy clouds on near-black --- */
+/* Scoped to :not(light) so it applies to the default dark theme too. */
+
+html:not([data-theme="light"]) .hero-section,
+html:not([data-theme="light"]) .about-section,
+html:not([data-theme="light"]) .service-section,
+html:not([data-theme="light"]) .remote-section,
+html:not([data-theme="light"]) .reviews-section,
+html:not([data-theme="light"]) footer {
+  background-color: transparent;
+}
+
+/* Navy clouds + faint blue wisps on the near-black base, same tile as light */
+html:not([data-theme="light"]) body {
+  background-color: var(--bg);
+  background-image:
+    /* navy clouds */
+    radial-gradient(ellipse 42% 20% at 12% 15%, rgba(27, 41, 74, 0.85), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 50% 24% at 80% 22%, rgba(27, 41, 74, 0.70), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 40% 18% at 48% 45%, rgba(27, 41, 74, 0.80), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 46% 22% at 8% 68%, rgba(27, 41, 74, 0.65), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 52% 22% at 86% 68%, rgba(27, 41, 74, 0.85), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 38% 15% at 35% 88%, rgba(27, 41, 74, 0.60), rgba(27, 41, 74, 0) 70%),
+    /* blue wisps */
+    radial-gradient(ellipse 40% 22% at 30% 32%, rgba(37, 99, 235, 0.16), transparent 70%),
+    radial-gradient(ellipse 34% 18% at 95% 45%, rgba(56, 189, 248, 0.12), transparent 70%),
+    radial-gradient(ellipse 36% 20% at 3% 40%, rgba(37, 99, 235, 0.14), transparent 70%),
+    radial-gradient(ellipse 40% 20% at 60% 74%, rgba(37, 99, 235, 0.15), transparent 70%);
+  background-size: 100% 1400px;
+  background-repeat: repeat-y;
+}
+
+/* Hairline border defines every card as a raised panel over the clouds */
+.service-content div,
+.pricing-group,
+.review-card,
+#drop-text,
+#fast-service-text,
+#exp-text,
+#payment-text,
+.contact-info,
+.form-box {
+  border: 1px solid var(--card-border);
+}
+
+/* Clear the old hero dot-grid so the body clouds show through */
+html:not([data-theme="light"]) .hero-section {
+  background-image: none;
+}
+
+/* Cyan glow anchored to the logo's own container, so it stays centered on
+   the logo at every screen width (dark mode focal point). A pseudo-element
+   larger than the logo lets the glow spill out around it instead of hiding
+   behind it. */
+html:not([data-theme="light"]) .hero-picture {
+  position: relative;
+}
+
+html:not([data-theme="light"]) .hero-picture::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 135%;
+  height: 135%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.22), transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+html:not([data-theme="light"]) .hero-picture #logo {
+  position: relative;
+  z-index: 1;
+}
+
 /* --- TRUST STRIP (checkmark claims under the hero) --- */
 
 .trust-strip {
@@ -1896,7 +1975,7 @@ details.pricing-group[open] summary {
 /* --- CTA BAND (before contact) --- */
 
 .cta-band {
-    background: #0f172a;
+    background: transparent;
     padding: 2.25rem 1rem;
 }
 
@@ -1907,11 +1986,18 @@ details.pricing-group[open] summary {
     justify-content: center;
     gap: 1rem 2rem;
     text-align: center;
+    max-width: 55rem;
+    margin: 0 auto;
+    padding: 1.75rem 2rem;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px var(--shadow);
 }
 
 .cta-band p {
     margin: 0;
-    color: #e5e7eb;
+    color: var(--text);
     font-size: 1.25rem;
     font-weight: 600;
 }
