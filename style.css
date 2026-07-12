@@ -1848,7 +1848,7 @@ details.pricing-group[open] summary {
     radial-gradient(ellipse 38% 15% at 35% 88%, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0) 70%),
     /* blue wisps */
     radial-gradient(ellipse 40% 22% at 30% 32%, rgba(2, 98, 204, 0.11), transparent 70%),
-    radial-gradient(ellipse 34% 18% at 95% 45%, rgba(56, 189, 248, 0.12), transparent 70%),
+    radial-gradient(ellipse 34% 18% at 95% 45%, rgba(37, 99, 235, 0.13), transparent 70%),
     radial-gradient(ellipse 36% 20% at 3% 40%, rgba(2, 98, 204, 0.10), transparent 70%),
     radial-gradient(ellipse 40% 20% at 60% 74%, rgba(2, 98, 204, 0.11), transparent 70%);
   background-size: 100% 1400px;
@@ -1880,7 +1880,7 @@ html:not([data-theme="light"]) body {
     radial-gradient(ellipse 38% 15% at 35% 88%, rgba(27, 41, 74, 0.60), rgba(27, 41, 74, 0) 70%),
     /* blue wisps */
     radial-gradient(ellipse 40% 22% at 30% 32%, rgba(37, 99, 235, 0.16), transparent 70%),
-    radial-gradient(ellipse 34% 18% at 95% 45%, rgba(56, 189, 248, 0.12), transparent 70%),
+    radial-gradient(ellipse 34% 18% at 95% 45%, rgba(37, 99, 235, 0.13), transparent 70%),
     radial-gradient(ellipse 36% 20% at 3% 40%, rgba(37, 99, 235, 0.14), transparent 70%),
     radial-gradient(ellipse 40% 20% at 60% 74%, rgba(37, 99, 235, 0.15), transparent 70%);
   background-size: 100% 1400px;
@@ -1921,7 +1921,7 @@ html:not([data-theme="light"]) .hero-picture::before {
   width: 135%;
   height: 135%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.22), transparent 62%);
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.24), transparent 62%);
   pointer-events: none;
   z-index: 0;
 }
