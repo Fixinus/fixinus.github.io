@@ -2,12 +2,13 @@
 /* GENERAL STYLING */
 html{
     scroll-behavior: smooth;
+    font-size: 106.25%; /* 17px root: scales all rem-based text and spacing up ~6% */
 }*, *::before, *::after {
 box-sizing: border-box;
 }
 
 section {
-    scroll-margin-top: 5rem; /* match your header height */
+    scroll-margin-top: 4.25rem; /* match your header height */
 }
 
 html, body {
@@ -22,13 +23,13 @@ html, body {
 
 body {
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
+    font-size: 1.05rem; /* ~17.9px with the 17px root — larger base for readability */
     color: #333;
     line-height: 1.6;
     background-color: #fdfdfd;
     margin: 0;
     padding: 0;
-    padding-top: 5rem;
+    padding-top: 4.25rem;
 }
 
 body.nav-open {
@@ -90,7 +91,7 @@ header {
   }
 
   body {
-    padding-top: calc(5rem + env(safe-area-inset-top));
+    padding-top: calc(4.25rem + env(safe-area-inset-top));
   }
 }
 
@@ -99,7 +100,8 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 1.5rem 0;
+    /* slim bar, but with enough air that the theme toggle's border isn't cramped */
+    padding: 0.55rem 0;
   }
   
 .nav-bar h1 {
@@ -171,7 +173,7 @@ img{
 }
 
 .link{
-    color: rgb(74, 177, 247);
+    color: var(--accent-text);
 }
 
 .lang-switcher {
@@ -188,31 +190,17 @@ img{
 .lang-switcher:hover {
   background-color: color-mix(in srgb, var(--text) 10%, transparent);
 }
-[data-theme="light"] .lang-switcher {
-  /* stays readable on light backgrounds */
-  border-color: #cbd5e1;
-}
 
 
 
 /* --- HERO SECTION --- */
 
 
-.hero-section{
-    background-color: #0f172a;
-    background-image: radial-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-}
-
 .hero-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 2rem;
-}
-
-.hero-text{
-    color:white;
 }
 
 .hero-cta {
@@ -224,9 +212,10 @@ img{
 
 .hero-cta a {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    padding: 0.85rem 1.75rem;
+    border-radius: 999px;
     font-weight: 600;
+    font-size: 1.1rem;
     text-decoration: none;
     transition: background-color 0.2s, color 0.2s;
 }
@@ -243,6 +232,10 @@ img{
 .hero-cta .btn-outline {
     border: 2px solid var(--primary);
     color: #fff;
+}
+
+[data-theme="light"] .hero-cta .btn-outline {
+    color: var(--accent-text);
 }
 
 .hero-cta .btn-outline:hover {
@@ -300,18 +293,6 @@ img{
 
 /* --- ABOUT SECTION --- */
 
-/* Clean divider between About and Services */
-#about::after {
-  content: '';
-  display: block;
-  width: 60%;
-  max-width: 20rem;
-  height: 0.25rem;
-  background-color: #007bff;  /* your brand blue */
-  margin: 3rem auto 0;        /* centers the line */
-  border-radius: 0.125rem;
-}
-
 .about-section {
     background-color: #f9fafb;
     padding: 4rem 1rem;
@@ -337,14 +318,33 @@ img{
     line-height: 1.6;
 }
 
-.about-head::after {
+/* Every section heading gets an accent underline as wide as its text,
+   fading out at the ends */
+.about-head h2,
+.service-head h2,
+.pricing-head h2,
+.remote-head h2,
+.reviews-head h2,
+.contact-head h2 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-head h2::after,
+.service-head h2::after,
+.pricing-head h2::after,
+.remote-head h2::after,
+.reviews-head h2::after,
+.contact-head h2::after {
     content: '';
     display: block;
-    width: 3.75rem;   
-    height: 0.25rem;
-    background-color: #007bff;
-    margin: 1.5rem auto 0;
-    border-radius: 0.125rem; 
+    /* a touch wider than the text so the soft fade tails poke out each side */
+    width: calc(100% + 3rem);
+    height: 0.2rem;
+    background: linear-gradient(90deg, transparent, var(--primary) 28%, var(--primary) 72%, transparent);
+    margin: 0.5rem 0 0 -1.5rem;
+    border-radius: 999px;
 }
 
 .about-content {
@@ -404,17 +404,20 @@ img{
 #exp-text { grid-column: 1; grid-row: 2; }
 #payment-text { grid-column: 2; grid-row: 2; }
 
-/* vertical divider between the two columns */
-.about-text-top::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background-color: var(--divider);
-  transform: translateX(-50%);
-  pointer-events: none;
+/* The four about blocks are cards, matching the services/pricing sections */
+#drop-text,
+#fast-service-text,
+#exp-text,
+#payment-text {
+  background: var(--card);
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+.about-text h3 {
+  color: var(--accent-text);
+  margin-top: 0;
 }
 
 /* optional: bottom part of about section if you add it later */
@@ -516,7 +519,7 @@ img{
 
 .service-content h3 {
     font-size: 1.5rem;
-    color: rgb(74, 177, 247);
+    color: var(--accent-text);
     margin-bottom: 1rem;
 }
 
@@ -757,6 +760,13 @@ img{
     resize: vertical;
 }
 
+/* Darker placeholders (browser default grey is too faint on light theme) */
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+    color: var(--muted);
+    opacity: 1;
+}
+
 .form-box input:focus,
 .form-box textarea:focus,
 .form-box select:focus {
@@ -773,6 +783,8 @@ img{
     cursor: pointer;
     transition: background-color 0.2s;
     border: none;
+    border-radius: 999px;
+    min-height: 3rem;
 }
 
 .form-box button:hover {
@@ -810,7 +822,7 @@ img{
 
 .contact-info p {
     margin: 0 0 1rem;
-    color: #c4c3c3;
+    color: var(--text);
 }
 
 .contact-icons{
@@ -845,26 +857,36 @@ footer {
   
 .footer-container {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr auto; /* info left, links right — same column width as other sections */
+    gap: 2rem 4rem;
     align-items: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
 }
-  
+
 .footer-info,
 .footer-links {
-    padding: 2rem 0;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
   
 .footer-info h3,
 .footer-links h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--heading);
 }
 
 .footer-info p {
     line-height: 1.6;
-    color: #ccc;
+    color: var(--muted);
     max-width: 32rem;
 }
 
@@ -872,21 +894,31 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* two columns keep the list short */
+    gap: 0.4rem 3rem;
 }
 
 .footer-links ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .footer-links ul {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
 }
 
 .footer-links ul li a {
-    color: #ccc;
+    color: var(--muted);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
 .footer-links ul li a:hover {
-    color: #ffffff;
+    color: var(--text);
 }
 
 .footer-socials {
@@ -899,13 +931,13 @@ footer {
 }
 
 .icon-link {
-    color: #ccc;
+    color: var(--muted);
     transition: color 0.3s ease;
     margin-right: 2rem;
 }
 
 .icon-link:hover {
-    color: #ffffff;
+    color: var(--text);
 }
 
 .icon-link svg {
@@ -918,47 +950,56 @@ footer {
     grid-column: 1 / -1;
     text-align: center;
     font-size: 0.875rem;
-    color: #999;
-    padding: 1rem 0 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 2rem;
+    color: var(--muted);
+    padding: 0.9rem 0 0;
+    border-top: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
+    margin-top: 0.75rem;
 }
   
 
 
 
-/*   DARK MODE   */
+/*   THEMES   */
 
-/* ---------- THEME VARIABLES (default: dark) ---------- */
+/* ---------- THEME VARIABLES (default: dark, the original site look) ---------- */
 :root {
-  /* colors for dark */
+  color-scheme: dark;
   --bg: #0b1220;
   --text: #e5e7eb;
   --muted: #94a3b8;
-  --surface: #0f172a;         /* header / sections */
-  --surface-2: #111827;       /* hero / deep surfaces */
-  --card: #0f172a;            /* cards/boxes */
+  --surface: #0f172a;
+  --surface-2: #111827;
+  --card: #131d33;            /* lifted a notch so cards sit above the cloud glow */
+  --card-border: rgba(255, 255, 255, 0.07);
   --primary: #007bff;
   --accent: #007bff;
+  --heading: #e5e7eb;
+  --accent-text: rgb(74, 177, 247);
   --divider: #1f2937;
   --grid-dot: rgba(56, 189, 248, 0.10);
   --shadow: rgba(0,0,0,0.35);
+  --star: #fbbf24;
   --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23e5e7eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
-/* Light theme overrides */
+/* Light "cloudy" theme overrides */
 [data-theme="light"] {
-  --bg: #fdfdfd;
+  color-scheme: light;
+  --bg: #dcebfa;
   --text: #0f172a;
-  --muted: #556;
-  --surface: #ffffff;
-  --surface-2: #f3f4f6;
-  --card: #ffffff;
-  --primary: #007bff;
-  --accent: #007bff;
-  --divider: #e5e7eb;
-  --grid-dot: rgba(56, 189, 248, 0.10);
-  --shadow: rgba(0,0,0,0.08);
+  --muted: #42556e;
+  --surface: #ffffff;         /* white cards/sections */
+  --surface-2: #d7e8f8;       /* tinted surfaces */
+  --card: #ffffff;            /* cards/boxes */
+  --card-border: rgba(15, 42, 80, 0.10);
+  --primary: #0062cc;         /* brand blue, darkened for contrast on light */
+  --accent: #0062cc;
+  --heading: #0b3f7e;
+  --accent-text: #0b5fa5;     /* links / prices / card headings on light */
+  --divider: #d7e3f0;
+  --grid-dot: rgba(2, 98, 204, 0.08);
+  --shadow: rgba(15, 42, 80, 0.08);
+  --star: #d97706;
   --select-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
@@ -969,6 +1010,10 @@ html, body, section, header, footer, .price-box, .contact-info, .form-box {
 
 /* ---------- APPLY VARIABLES WITHOUT REWRITING EVERYTHING ---------- */
 body { background: var(--bg); color: var(--text); }
+
+/* Headings pick up the theme heading color (deep navy on light).
+   More specific rules (footer, cards) still override this. */
+h1, h2, h3, h4 { color: var(--heading); }
 
 /* Header / nav */
 header { background-color: var(--surface); box-shadow: 0 2px 8px var(--shadow); }
@@ -982,11 +1027,10 @@ nav ul li a::after { background-color: var(--accent); }
   background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
 }
 
-/* About */
-.about-section { background: var(--surface-2); }
-.about-head h2 { color: var(--text); }
+/* About (white in light theme so sections alternate) */
+.about-section { background: var(--surface); }
+.about-head h2 { color: var(--heading); }
 .about-head p { color: var(--muted); }
-.about-head::after { background-color: var(--accent); }
 .about-text-top::before { background-color: var(--divider); }
 
 /* Services / Cards */
@@ -1024,72 +1068,86 @@ footer { background: var(--surface); color: var(--text); }
 /* Divider used in About */
 .about-text-top::before { background: var(--divider); }
 
-/* Toggle button styling */
-/* --- Theme toggle base --- */
+/* --- Theme toggle (moon/sun icon + text label) --- */
 .theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   margin-left: 1rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--divider);
-  background: transparent;
+  padding: 0.5rem 0.9rem;
+  min-height: 2.75rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--divider);
+  background: var(--surface);
   color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
   transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-/* hover effect for both modes */
 .theme-toggle:hover {
   background-color: color-mix(in srgb, var(--text) 10%, transparent);
 }
 
-/* --- Specific styling when LIGHT mode is active --- */
-[data-theme="light"] .theme-toggle {
-  background-color: #0f172a;   /* dark button on white background */
-  color: #ffffff;              /* white text */
-  border-color: #0f172a;
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: none;
 }
 
-[data-theme="light"] .theme-toggle:hover {
-  background-color: #1e293b;   /* slightly lighter on hover */
-}
+/* Show sun + "Light mode" label on dark theme (default), moon + "Dark mode" on light */
+.theme-toggle .icon-moon,
+.theme-toggle .label-dark { display: none; }
+
+[data-theme="light"] .theme-toggle .icon-sun,
+[data-theme="light"] .theme-toggle .label-light { display: none; }
+
+[data-theme="light"] .theme-toggle .icon-moon { display: inline; }
+[data-theme="light"] .theme-toggle .label-dark { display: inline; }
 
 
 
 
-/* DARK AND LIGHT MODE EXEPTIONS */
+/* Footer follows the theme: soft blue tint on light, deep surface on dark */
 
 footer {
-  background-color: #0f172a !important; /* your original dark tone */
-  color: #ffffff !important;
+  background-color: var(--surface-2);
+  color: var(--text);
 }
 
 footer a,
 .footer-links a,
 .footer-info p,
 .footer-copyright {
-  color: #ccc !important;
+  color: var(--muted);
 }
 
 .footer-links a:hover {
-  color: #ffffff !important;
+  color: var(--text);
 }
 
 .footer-copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-top: 1px solid color-mix(in srgb, var(--text) 15%, transparent);
 }
 
 
-/* --- Keep hero section dark in both light and dark modes --- */
+/* --- Hero follows the theme (tinted in light, deep in dark) --- */
 .hero-section {
-  background-color: #0f172a !important;
-  background-image: radial-gradient(rgba(56, 189, 248, 0.1) 1px, transparent 1px) !important;
-  background-size: 20px 20px !important;
-  color: #ffffff !important;
+  background-color: var(--surface-2);
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--text);
 }
 
-.hero-text h1,
+.hero-text h1 {
+  color: var(--heading);
+}
+
 .hero-text p {
-  color: #ffffff !important;
+  color: var(--text);
 }
 
 /* Hero heading is an h1 for SEO but keeps the h2 visual size */
@@ -1279,13 +1337,13 @@ footer a,
   padding: 0;
   margin: 0;
   font: inherit;
-  color: #ccc;
+  color: var(--muted);
   cursor: pointer;
   text-align: left;
 }
 
 .footer-link-button:hover {
-  color: #ffffff;
+  color: var(--text);
 }
 
 
@@ -1427,7 +1485,7 @@ footer a,
 }
 
 .reviews-stars {
-    color: #fbbf24;
+    color: var(--star);
     letter-spacing: 0.15em;
 }
 
@@ -1471,7 +1529,7 @@ footer a,
 .reviews-link a {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
+    border-radius: 999px;
     background: var(--primary);
     color: #fff;
     font-weight: 600;
@@ -1585,7 +1643,7 @@ footer a,
     white-space: nowrap;
     padding-left: 1rem;
     font-weight: 600;
-    color: rgb(74, 177, 247); /* same cyan as .link and service card headings */
+    color: var(--accent-text); /* same accent as .link and service card headings */
 }
 
 .pricing-note {
@@ -1597,5 +1655,462 @@ footer a,
 @media (max-width: 900px) {
     .pricing-groups {
         grid-template-columns: 1fr;
+    }
+}
+
+/* --- SERVICE "SHOW ALL" EXPANDERS (native <details>, no JS needed) --- */
+
+.svc-more summary {
+    display: list-item;
+    cursor: pointer;
+    color: var(--accent-text);
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 0.6rem 0.25rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--divider);
+    min-height: 2.75rem;
+}
+
+.svc-more summary::marker {
+    color: var(--accent-text);
+}
+
+.svc-more[open] summary .svc-more-open,
+.svc-more:not([open]) summary .svc-more-closed {
+    display: inline;
+}
+
+.svc-more[open] summary .svc-more-closed,
+.svc-more:not([open]) summary .svc-more-open {
+    display: none;
+}
+
+.svc-more ul {
+    margin: 0.25rem 0 0;
+}
+
+/* --- COLLAPSIBLE PRICING GROUPS (details/summary) --- */
+
+details.pricing-group summary {
+    cursor: pointer;
+    min-height: 2.75rem;
+}
+
+details.pricing-group summary::marker {
+    color: var(--accent-text);
+}
+
+/* Desktop: groups are always open, so collapsing is pointless — hide the
+   arrow and disable toggling. Mobile keeps the expanders. */
+@media (min-width: 701px) {
+    details.pricing-group summary {
+        pointer-events: none;
+        cursor: default;
+        list-style: none;
+    }
+
+    details.pricing-group summary::-webkit-details-marker {
+        display: none;
+    }
+}
+
+details.pricing-group summary h3 {
+    display: inline;
+    margin: 0;
+}
+
+details.pricing-group[open] summary {
+    margin-bottom: 0.75rem;
+}
+
+/* --- MOBILE CALL BAR (fixed at bottom, phones only) --- */
+
+.call-bar {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .call-bar {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 240; /* below nav overlay (250) and header (400) */
+        background: var(--primary);
+        justify-content: center;
+        padding: 0.6rem 1rem;
+        padding-bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -2px 10px var(--shadow);
+    }
+
+    .call-bar a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        color: #fff;
+        font-size: 1.15rem;
+        font-weight: 700;
+        text-decoration: none;
+        min-height: 2.75rem;
+    }
+
+    .call-bar svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        flex: none;
+    }
+
+    /* Reserve space so the bar never covers page content */
+    body {
+        padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+/* --- LIGHT-MODE "CLOUDY" BACKGROUNDS --- */
+
+/* One continuous light-blue page: sections drop their own surface colors
+   (no hard color shifts between sections), and each section gets a soft
+   white "cloud" centered behind its content so the navy text stays easy
+   to read, plus faint blue wisps in the corners for texture.
+   Everything is center- or corner-anchored, so it holds on any screen
+   width. Dark mode is untouched. */
+
+[data-theme="light"] .hero-section,
+[data-theme="light"] .about-section,
+[data-theme="light"] .service-section,
+[data-theme="light"] .remote-section,
+[data-theme="light"] .reviews-section {
+  background-color: transparent;
+}
+
+/* The hero drops its dot-grid in light mode (dark keeps it) */
+[data-theme="light"] .hero-section {
+  background-image: none;
+}
+
+/* The footer joins the continuous backdrop too */
+[data-theme="light"] footer {
+  background-color: transparent;
+}
+
+/* --- LIGHT MODE: dark navy header/nav --- */
+/* Anchors the page and keeps the flag + controls off the white background */
+[data-theme="light"] header {
+  background-color: #0f172a;
+}
+
+/* The mobile slide-out menu is the same nav element — match it */
+[data-theme="light"] .main-nav {
+  background-color: #0f172a;
+}
+
+[data-theme="light"] nav ul li a {
+  color: #e5e7eb;
+}
+
+[data-theme="light"] nav ul li a:hover {
+  color: rgb(74, 177, 247);
+}
+
+[data-theme="light"] nav ul li a::after {
+  background-color: rgb(74, 177, 247);
+}
+
+[data-theme="light"] .lang-current,
+[data-theme="light"] .theme-toggle,
+[data-theme="light"] .nav-toggle {
+  background: transparent;
+  color: #e5e7eb;
+  border-color: #3b4a61;
+}
+
+[data-theme="light"] .lang-menu.open .lang-current,
+[data-theme="light"] .lang-menu:hover .lang-current,
+[data-theme="light"] .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* CLOUD BACKDROP: painted on the body itself so it scrolls with the page.
+   One 1400px-tall tile of soft white clouds and faint blue wisps repeats
+   down the whole document (footer included). Every gradient fades out
+   before the tile edge, so the repeat is seamless. */
+[data-theme="light"] body {
+  background-color: var(--bg);
+  background-image:
+    /* white clouds */
+    radial-gradient(ellipse 42% 20% at 12% 15%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse 50% 24% at 80% 22%, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse 40% 18% at 48% 45%, rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse 46% 22% at 8% 68%, rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse 52% 22% at 86% 68%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%),
+    radial-gradient(ellipse 38% 15% at 35% 88%, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0) 70%),
+    /* blue wisps */
+    radial-gradient(ellipse 40% 22% at 30% 32%, rgba(2, 98, 204, 0.11), transparent 70%),
+    radial-gradient(ellipse 34% 18% at 95% 45%, rgba(56, 189, 248, 0.12), transparent 70%),
+    radial-gradient(ellipse 36% 20% at 3% 40%, rgba(2, 98, 204, 0.10), transparent 70%),
+    radial-gradient(ellipse 40% 20% at 60% 74%, rgba(2, 98, 204, 0.11), transparent 70%);
+  background-size: 100% 1400px;
+  background-repeat: repeat-y;
+}
+
+/* --- DARK MODE: the same "cloudy" treatment, navy clouds on near-black --- */
+/* Scoped to :not(light) so it applies to the default dark theme too. */
+
+html:not([data-theme="light"]) .hero-section,
+html:not([data-theme="light"]) .about-section,
+html:not([data-theme="light"]) .service-section,
+html:not([data-theme="light"]) .remote-section,
+html:not([data-theme="light"]) .reviews-section,
+html:not([data-theme="light"]) footer {
+  background-color: transparent;
+}
+
+/* Navy clouds + faint blue wisps on the near-black base, same tile as light */
+html:not([data-theme="light"]) body {
+  background-color: var(--bg);
+  background-image:
+    /* navy clouds */
+    radial-gradient(ellipse 42% 20% at 12% 15%, rgba(27, 41, 74, 0.85), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 50% 24% at 80% 22%, rgba(27, 41, 74, 0.70), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 40% 18% at 48% 45%, rgba(27, 41, 74, 0.80), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 46% 22% at 8% 68%, rgba(27, 41, 74, 0.65), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 52% 22% at 86% 68%, rgba(27, 41, 74, 0.85), rgba(27, 41, 74, 0) 70%),
+    radial-gradient(ellipse 38% 15% at 35% 88%, rgba(27, 41, 74, 0.60), rgba(27, 41, 74, 0) 70%),
+    /* blue wisps */
+    radial-gradient(ellipse 40% 22% at 30% 32%, rgba(37, 99, 235, 0.16), transparent 70%),
+    radial-gradient(ellipse 34% 18% at 95% 45%, rgba(56, 189, 248, 0.12), transparent 70%),
+    radial-gradient(ellipse 36% 20% at 3% 40%, rgba(37, 99, 235, 0.14), transparent 70%),
+    radial-gradient(ellipse 40% 20% at 60% 74%, rgba(37, 99, 235, 0.15), transparent 70%);
+  background-size: 100% 1400px;
+  background-repeat: repeat-y;
+}
+
+/* Hairline border defines every card as a raised panel over the clouds */
+.service-content div,
+.pricing-group,
+.review-card,
+#drop-text,
+#fast-service-text,
+#exp-text,
+#payment-text,
+.contact-info,
+.form-box {
+  border: 1px solid var(--card-border);
+}
+
+/* Clear the old hero dot-grid so the body clouds show through */
+html:not([data-theme="light"]) .hero-section {
+  background-image: none;
+}
+
+/* Cyan glow anchored to the logo's own container, so it stays centered on
+   the logo at every screen width (dark mode focal point). A pseudo-element
+   larger than the logo lets the glow spill out around it instead of hiding
+   behind it. */
+html:not([data-theme="light"]) .hero-picture {
+  position: relative;
+}
+
+html:not([data-theme="light"]) .hero-picture::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 135%;
+  height: 135%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.22), transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+html:not([data-theme="light"]) .hero-picture #logo {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- TRUST STRIP (checkmark claims under the hero) --- */
+
+.trust-strip {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 2rem;
+    margin: 0;
+    padding: 0 0 1.75rem;
+}
+
+.trust-strip li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.trust-strip svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    color: #22c55e;
+    flex: none;
+}
+
+/* --- SERVICE CARD ICONS --- */
+
+.service-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.service-content h3 svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: none;
+}
+
+/* --- CTA BAND (before contact) --- */
+
+.cta-band {
+    background: transparent;
+    padding: 2.25rem 1rem;
+}
+
+.cta-band-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 2rem;
+    text-align: center;
+    max-width: 55rem;
+    margin: 0 auto;
+    padding: 1.75rem 2rem;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px var(--shadow);
+}
+
+.cta-band p {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.cta-band a {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.cta-band a:hover {
+    background: color-mix(in srgb, var(--primary) 80%, #000 20%);
+}
+
+/* --- ACCESSIBILITY --- */
+
+/* Strong, visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Respect users who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* --- COMPACT MOBILE SPACING (less scrolling, same text size) --- */
+
+@media (max-width: 600px) {
+    .format-vertical,
+    .about-section,
+    .service-section,
+    .remote-section {
+        padding-top: 2.25rem;
+        padding-bottom: 2.25rem;
+    }
+
+    .hero-container {
+        padding: 1.25rem 1.25rem 1.75rem;
+    }
+
+    #logo {
+        max-width: 200px;
+    }
+
+    .hero-cta {
+        margin-top: 1.25rem;
+    }
+
+    .about-head,
+    .service-head,
+    .pricing-head,
+    .remote-head,
+    .reviews-head,
+    .contact-head {
+        margin-bottom: 1.25rem;
+    }
+
+    .about-text-top {
+        gap: 1.25rem;
+    }
+
+    #about::after {
+        margin-top: 1.5rem;
+    }
+
+    .service-content {
+        gap: 1.25rem;
+    }
+
+    .service-content div {
+        padding: 1.25rem 1.25rem;
+    }
+
+    .pricing-groups,
+    .pricing-col {
+        gap: 1.25rem;
+    }
+
+    .pricing-group {
+        padding: 1.25rem;
+    }
+
+    .reviews-grid {
+        gap: 1.25rem;
+    }
+
+    .review-card {
+        padding: 1.25rem;
+    }
+
+    .reviews-link {
+        margin-top: 1.5rem;
     }
 }

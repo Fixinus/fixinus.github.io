@@ -47,36 +47,54 @@ document.addEventListener('click', function ()
 {
   const STORAGE_KEY = 'theme';
   const root = document.documentElement;
-  const btn = document.getElementById('theme-toggle');
 
-  // Default = dark (unless a saved choice exists)
+  // Default = dark (unless a saved choice exists).
+  // The toggle button's icon and label are swapped by CSS via [data-theme],
+  // so JS only needs to flip the attribute and remember the choice.
   const saved = localStorage.getItem(STORAGE_KEY);
   const startTheme = saved === 'light' || saved === 'dark' ? saved : 'dark';
-  root.setAttribute('data-theme', startTheme);
-  updateToggle(startTheme);
+  applyTheme(startTheme);
 
-  btn?.addEventListener('click', () =>
+  // The button is parsed after this deferred script runs setup, so bind on DOM ready
+  document.addEventListener('DOMContentLoaded', () =>
   {
-    const current = root.getAttribute('data-theme') || 'dark';
-    const next = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem(STORAGE_KEY, next);
-    updateToggle(next);
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    btn.setAttribute('aria-pressed', String(startTheme === 'dark'));
+
+    btn.addEventListener('click', () =>
+    {
+      const current = root.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem(STORAGE_KEY, next);
+      btn.setAttribute('aria-pressed', String(next === 'dark'));
+    });
   });
 
-  function updateToggle(theme) {
-  if (!btn) return;
-  const isDark = theme === 'dark';
+  function applyTheme(theme)
+  {
+    root.setAttribute('data-theme', theme);
 
-  btn.setAttribute('aria-pressed', String(isDark));
-  btn.textContent = isDark ? '☀️' : '🌙';
-  btn.setAttribute(
-    'aria-label',
-    isDark ? 'Switch to light theme' : 'Switch to dark theme'
-  );
-}
-
+    // Keep the browser UI color (mobile address bar) in sync with the header
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0b1220' : '#0f172a');
+  }
 })();
+
+
+// Collapse pricing groups on small screens (all open on desktop / without JS)
+document.addEventListener('DOMContentLoaded', () =>
+{
+  if (window.innerWidth <= 700)
+  {
+    document.querySelectorAll('details.pricing-group').forEach((group, index) =>
+    {
+      if (index > 0) group.removeAttribute('open');
+    });
+  }
+});
 
 
 
@@ -104,6 +122,15 @@ document.addEventListener('click', function ()
       'meta.title': 'Fixinus – Datorservice och IT-support i Borgå',
       'meta.description': 'Reparation, service och uppgradering av datorer samt IT-support i Borgå för privatpersoner och småföretag. Fjärrsupport, upphämtning och platsbesök enligt överenskommelse.',
       'nav.about': 'Om oss',
+      'theme.dark': 'Mörkt läge',
+      'theme.light': 'Ljust läge',
+      'services.showall': 'Visa alla',
+      'services.showless': 'Visa färre',
+      'trust.exp': 'Över 15 års erfarenhet',
+      'trust.warranty': '6 mån garanti på arbetet',
+      'trust.brands': 'Alla märken',
+      'trust.pickup': 'Gratis upphämtning i Borgå (10 km)',
+      'ctaband.text': 'Hittade du inte det du sökte? Ring oss så löser vi det tillsammans.',
       'nav.prices': 'Priser',
       'nav.services':'Tjänster',
       'nav.contact': 'Kontakt',
@@ -418,6 +445,15 @@ document.addEventListener('click', function ()
       'meta.title': 'Fixinus – Tietokonehuolto ja IT-tuki Porvoo',
       'meta.description': 'Tietokoneiden korjaus, huolto ja päivitykset sekä IT-tuki Porvoossa yksityisille ja pienyrityksille. Etätuki, nouto ja käynnit paikan päällä sopimuksen mukaan.',
       'nav.about': 'Tietoa meistä',
+      'theme.dark': 'Tumma tila',
+      'theme.light': 'Vaalea tila',
+      'services.showall': 'Näytä kaikki',
+      'services.showless': 'Näytä vähemmän',
+      'trust.exp': 'Yli 15 vuoden kokemus',
+      'trust.warranty': '6 kk takuu työlle',
+      'trust.brands': 'Kaikki merkit',
+      'trust.pickup': 'Ilmainen nouto Porvoossa (10 km)',
+      'ctaband.text': 'Etkö löytänyt etsimääsi? Soita, niin katsotaan yhdessä.',
       'nav.prices': 'Hinnat',
       'nav.services':'Palvelut',
       'nav.contact': 'Yhteystiedot',
@@ -750,6 +786,15 @@ document.addEventListener('click', function ()
       'meta.title': 'Fixinus – Computer Repair & IT Support in Porvoo',
       'meta.description': 'Computer repair, maintenance and upgrades plus IT support in Porvoo for individuals and small businesses. Remote support, pickup and on-site visits by arrangement.',
       'nav.about': 'About',
+      'theme.dark': 'Dark mode',
+      'theme.light': 'Light mode',
+      'services.showall': 'Show all',
+      'services.showless': 'Show less',
+      'trust.exp': '15+ years of experience',
+      'trust.warranty': '6-month warranty on labor',
+      'trust.brands': 'All brands serviced',
+      'trust.pickup': 'Free pickup & return in Porvoo (10 km)',
+      'ctaband.text': "Didn't find what you were looking for? Call us and we'll figure it out together.",
       'nav.prices': 'Prices',
       'nav.services':'Services',
       'nav.contact': 'Contact',
