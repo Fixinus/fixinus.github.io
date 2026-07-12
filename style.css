@@ -1698,6 +1698,20 @@ details.pricing-group summary::marker {
     color: var(--accent-text);
 }
 
+/* Desktop: groups are always open, so collapsing is pointless — hide the
+   arrow and disable toggling. Mobile keeps the expanders. */
+@media (min-width: 701px) {
+    details.pricing-group summary {
+        pointer-events: none;
+        cursor: default;
+        list-style: none;
+    }
+
+    details.pricing-group summary::-webkit-details-marker {
+        display: none;
+    }
+}
+
 details.pricing-group summary h3 {
     display: inline;
     margin: 0;
