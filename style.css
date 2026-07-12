@@ -318,7 +318,19 @@ img{
     line-height: 1.6;
 }
 
-/* Every section heading gets the same small rounded accent bar */
+/* Every section heading gets an accent underline as wide as its text,
+   fading out at the ends */
+.about-head h2,
+.service-head h2,
+.pricing-head h2,
+.remote-head h2,
+.reviews-head h2,
+.contact-head h2 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .about-head h2::after,
 .service-head h2::after,
 .pricing-head h2::after,
@@ -327,10 +339,10 @@ img{
 .contact-head h2::after {
     content: '';
     display: block;
-    width: 3.5rem;
-    height: 0.25rem;
-    background-color: var(--primary);
-    margin: 0.75rem auto 0;
+    width: 100%;
+    height: 0.2rem;
+    background: linear-gradient(90deg, transparent, var(--primary) 22%, var(--primary) 78%, transparent);
+    margin: 0.5rem auto 0;
     border-radius: 999px;
 }
 
@@ -1824,6 +1836,86 @@ details.pricing-group[open] summary {
     radial-gradient(ellipse 40% 20% at 60% 74%, rgba(2, 98, 204, 0.11), transparent 70%);
   background-size: 100% 1400px;
   background-repeat: repeat-y;
+}
+
+/* --- TRUST STRIP (checkmark claims under the hero) --- */
+
+.trust-strip {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 2rem;
+    margin: 0;
+    padding: 0 0 1.75rem;
+}
+
+.trust-strip li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.trust-strip svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    color: #22c55e;
+    flex: none;
+}
+
+/* --- SERVICE CARD ICONS --- */
+
+.service-content h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.service-content h3 svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: none;
+}
+
+/* --- CTA BAND (before contact) --- */
+
+.cta-band {
+    background: #0f172a;
+    padding: 2.25rem 1rem;
+}
+
+.cta-band-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem 2rem;
+    text-align: center;
+}
+
+.cta-band p {
+    margin: 0;
+    color: #e5e7eb;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.cta-band a {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.85rem 1.75rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.cta-band a:hover {
+    background: color-mix(in srgb, var(--primary) 80%, #000 20%);
 }
 
 /* --- ACCESSIBILITY --- */
