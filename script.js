@@ -212,15 +212,15 @@ document.addEventListener('DOMContentLoaded', () =>
 
       // ABOUT
       'about.title': 'Om Fixinus',
-      'about.lead': 'Fixinus är en lokal IT- och teknikhjälp i Borgå. Vi ser till att din teknik fungerar smidigt, oavsett om du är privatperson eller driver ett litet företag. Vi kan också komma till grannstäder om det behövs; reseersättning tillkommer.',
+      'about.lead': 'Fixinus är en lokal IT- och teknikhjälp i Borgå. Vi ser till att din teknik fungerar smidigt, oavsett om du är privatperson eller driver ett litet företag. Vi kan också komma till grannstäder om det behövs; reseersättning kan tillkomma.',
       'about.drop.title': 'Inlämning, upphämtning & på plats',
-      'about.drop.body': 'Enheter kan lämnas in enligt överenskommelse, eller så kan vi hämta dem. Om det ser ut som en snabb åtgärd – eller om arbetet behöver göras där enheten finns – kommer vi gärna på plats. Tid och plats bestäms i förväg via telefon eller e-post.',
+      'about.drop.body': 'Vi har inget fast kontor (ännu). Enheter kan lämnas in enligt överenskommelse, eller så kan vi hämta dem. Om det ser ut som en snabb åtgärd – eller om arbetet behöver göras där enheten finns – kommer vi gärna på plats. Tid och plats bestäms i förväg via telefon eller e-post.',
       'about.fast.title': 'Snabb service',
       'about.fast.body': 'De flesta standardreparationer blir klara inom 1–3 dagar och enklare problem ofta samma dag. Om ett jobb är brådskande så strävar vi till att börja så snart som möjligt.',
       'about.exp.title': 'Erfarenhet',
       'about.exp.body': 'Vi har formell utbildning inom teknik och över 15 års praktisk erfarenhet. Vi håller oss uppdaterade om branschens utveckling för att kunna leverera tydliga och praktiska lösningar.',
       'about.pay.title': 'Betalningsmetoder',
-      'about.pay.body': 'Kontanter, alla större bank- och kreditkort, MobilePay eller faktura.',
+      'about.pay.body': 'Kontanter, alla större bank- och kreditkort, MobilePay, Google Pay, Apple Pay eller faktura.',
 
       // WARRANTY (SV)
       'warranty.title': 'Arbetsgaranti',
@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
       'privacy.auth.title':'12. Tillsynsmyndighet',
       'privacy.auth.body.1':'Om du anser att dina rättigheter kränkts kan du skicka klagomål till:',
-      'privacy.auth.body.2':'Datainspektionen / Tietosuojavaltuutetun toimisto, PL 800, 00521 Helsingfors — tietosuoja@om.fi',
+      'privacy.auth.body.2':'Dataombudsmannens byrå (Tietosuojavaltuutetun toimisto), PB 800, 00521 Helsingfors — tietosuoja@om.fi',
 
       "company.title": "Företagsuppgifter",
       "company.legalForm": "Fixinus - Enskild firma",
@@ -309,9 +309,9 @@ document.addEventListener('DOMContentLoaded', () =>
       // SERVICES
       'services.title': 'Tjänster',
 
-      'services.pc.title': ' Stationära & bärbara datorer',
+      'services.pc.title': 'Stationära & bärbara datorer',
       'services.pc.1': 'Diagnostik & felsökning',
-      'services.pc.2': 'Hårdvarureparationer & delar (SSD, RAM-minne, Grafikkort, batteri, skärm, fläktar)',
+      'services.pc.2': 'Hårdvarureparationer & delar (SSD, RAM-minne, grafikkort, batteri, skärm, fläktar)',
       'services.pc.3': 'Komponentbyten & uppgraderingar (prestanda, lagringsutrymme, grafik)',
       'services.pc.4': 'Custom-PC-byggen (gaming/arbete): rådgivning, montering & installation',
       'services.pc.5': 'Rengöring & kylservice (damm, ny kylpasta)',
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.pc.7': 'Alla märken',
       'services.pc.8': 'Hälsorapport efter service (vad vi gjort, rekommendationer)',
 
-      'services.os.title': ' Programvara & operativsystem',
+      'services.os.title': 'Programvara & operativsystem',
       'services.os.1': 'Installera om Windows eller macOS (behåll filer när möjligt)',
       'services.os.2': 'Ny dator – första uppsättning & filflytt',
       'services.os.3': 'Installera program & drivrutiner',
@@ -331,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.os.9': 'Konto & lösenord (Microsoft/Apple, e-post)',
       'services.os.10': 'E-post och moln (OneDrive, iCloud, Google)',
 
-      'services.mobile.title': ' Telefoner & surfplattor (endast mjukvara och lätt rengöring)',
+      'services.mobile.title': 'Telefoner & surfplattor (endast mjukvara och lätt rengöring)',
       'services.mobile.1': 'Ny enhet – grundinställning',
       'services.mobile.2': 'Byte av telefon (flytta bilder, meddelanden, WhatsApp, appar)',
       'services.mobile.3': 'Föräldrakontroller & säkerhet (Skärmtid/Family Link)',
@@ -339,28 +339,16 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.mobile.5': 'App- & kontohjälp (Apple ID, Google)',
       'services.mobile.6': 'iCloud/Google – säkerhetskopior & återställning',
       'services.mobile.7': 'Lagringsstädning (frigör utrymme säkert)',
-      'services.mobile.8': 'Säkerhetskontroll (uppdateringar, koder, tvåstegsverifiering (2FA) )',
+      'services.mobile.8': 'Säkerhetskontroll (uppdateringar, koder, tvåstegsverifiering / 2FA)',
       'services.mobile.9': 'Felsökning (synkproblem, aviseringar, batteri)',
 
-      'services.home.title': ' Hemmateknik',
+      'services.home.title': 'Hemmateknik',
       'services.home.1': 'Wi-Fi-installation & täckning (router/mesh)',
       'services.home.2': 'TV & streaming (smart-TV, Apple TV, Chromecast m.m.)',
       'services.home.3': 'Spelkonsoler (reparation, setup, onlinespel, familjeinställningar)',
       'services.home.4': 'Skrivare & skannrar (installera, anslut, vanliga fel)',
       'services.home.5': 'Delad lagring / NAS (filer på flera enheter)',
       'services.home.6': 'Smarta hem (lampor, kameror, högtalare)',
-
-      // PRICES
-      'prices.title': 'Företagspriser',
-      'prices.lead': 'En fast månadsplan. Obegränsad support, 1–3 dagars schemaläggning. Akut stöd kan medföra extra kostnad.',
-      'prices.basic': 'Grundläggande diagnostik',
-      'prices.standard': 'Standardreparation',
-      'prices.premium': 'Premiumtjänster',
-      'prices.onetime': '/ engångs',
-      'prices.showmore': 'Visa mer',
-      'prices.infobox.basic': 'Perfekt för mindre behov. Uppgradera när som helst!',
-      'prices.infobox.standard': 'Bra för återkommande ärenden. Uppgradera när som helst!',
-      'prices.infobox.premium': 'För mer avancerade tjänster. Uppgradera när som helst!',
 
       // REMOTE
       'remote.title': 'Fjärrhjälp – så här fungerar det',
@@ -398,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.hours.monfri': 'Måndag–Fredag: 09:00 – 22:00',
       'contact.hours.sat': 'Lördag: 10:00 – 22:00',
       'contact.hours.sun': 'Söndag: 12:00 – 22:00',
-      'contact.hours.urgent': 'Akuta ärenden dygnet runt. Om vi inte svarar direkt – ring gärna igen. För icke-akuta frågor, lämna ett meddelande.',
+      'contact.hours.urgent': 'Akuta ärenden dygnet runt (tillägg utanför öppettiderna). Om vi inte svarar direkt – ring gärna igen. För icke-akuta frågor, lämna ett meddelande.',
 
       // FORM
       'form.sendus': 'Skicka ett meddelande',
@@ -523,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'pricing.data.p1': 'alk. 100 €',
       'pricing.data.note': 'Alkukartoitus ja hinta-arvio ovat maksuttomia, ja veloitamme vain onnistuneesta palautuksesta. Tarkka hinta vahvistetaan aina ennen työn aloittamista. Vaativammat tapaukset, kuten fyysisesti vaurioituneet levyt, arvioidaan tapauskohtaisesti ja ohjaamme tarvittaessa erikoisliikkeeseen.',
       'pricing.console.title': 'Pelikonsolit',
-      'pricing.console.r1': 'Puhdistus, pölynpoisto ja lämpötahnan vaihto (Ei PS5)',
+      'pricing.console.r1': 'Puhdistus, pölynpoisto ja lämpötahnan vaihto (ei PS5)',
       'pricing.console.p1': '100 €',
       'pricing.console.r2': 'PS5 puhdistus ja nestemetallin vaihto',
       'pricing.console.p2': 'alk. 150 €',
@@ -549,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () =>
         'Meillä on tekninen koulutus ja yli 15 vuoden käytännön kokemus. Pidämme osaamisen ajan tasalla tarjotaksemme selkeitä ja käytännöllisiä ratkaisuja.',
       'about.pay.title': 'Maksutavat',
       'about.pay.body':
-        'Käteinen, yleisimmät pankki- ja luottokortit, MobilePay tai lasku.',
+        'Käteinen, yleisimmät pankki- ja luottokortit, MobilePay, Google Pay, Apple Pay tai lasku.',
 
       // WARRANTY
       'warranty.title': 'Takuuehdot',
@@ -689,19 +677,6 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.home.5': 'Jaettu tallennus / NAS (tiedostot useilla laitteilla)',
       'services.home.6': 'Älykoti (valot, kamerat, kaiuttimet)',
 
-      // PRICES
-      'prices.title': 'Yrityshinnasto',
-      'prices.lead':
-        'Kiinteä kuukausipaketti. Rajoittamaton tuki, 1–3 päivän aikataulu. Päivystyksestä voi tulla lisäkuluja.',
-      'prices.basic': 'Perusdiagnostiikka',
-      'prices.standard': 'Vakiokorjaus',
-      'prices.premium': 'Premium-palvelut',
-      'prices.onetime': '/ kertamaksu',
-      'prices.showmore': 'Näytä lisää',
-      'prices.infobox.basic': 'Hyvä pieniin tarpeisiin. Päivitä milloin vain!',
-      'prices.infobox.standard': 'Sopii toistuviin tarpeisiin. Päivitä milloin vain!',
-      'prices.infobox.premium': 'Edistyneempiin palveluihin. Päivitä milloin vain!',
-
       // REMOTE
       'remote.title': 'Etätuki – näin se toimii',
       'remote.lead':
@@ -736,9 +711,9 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.hours.title': 'Aukioloajat',
       'contact.hours.monfri': 'Ma–Pe: 09:00 – 22:00',
       'contact.hours.sat': 'La: 10:00 – 22:00',
-      'contact.hours.sun': 'Su: 12:00 - 22:00',
+      'contact.hours.sun': 'Su: 12:00 – 22:00',
       'contact.hours.urgent':
-        'Kiireelliset asiat 24/7. Jos emme vastaa heti, yritä soittaa uudelleen. Ei-kiireellisissä asioissa jätä viesti.',
+        'Kiireelliset asiat 24/7 (lisämaksu aukioloaikojen ulkopuolella). Jos emme vastaa heti, yritä soittaa uudelleen. Ei-kiireellisissä asioissa jätä viesti.',
 
       // FORM
       'form.sendus': 'Lähetä viesti',
@@ -878,7 +853,7 @@ document.addEventListener('DOMContentLoaded', () =>
       // ABOUT
       'about.title': 'About Fixinus',
       'about.lead':
-        'Fixinus is a local IT and tech support service based in Porvoo. We help individuals and small businesses keep their technology running smoothly. We can also travel to nearby cities; a travel fee applies.',
+        'Fixinus is a local IT and tech support service based in Porvoo. We help individuals and small businesses keep their technology running smoothly. We can also travel to nearby cities; a travel fee may apply.',
       'about.drop.title': 'Drop-off, pickup & on-site',
       'about.drop.body':
         'We don’t have a fixed office (yet). Devices can be dropped off by appointment, or we can pick them up. If it looks like a quick fix — or the work needs to be done where the device is — we’re happy to come on-site. We’ll agree on the time and location in advance by phone or email.',
@@ -1019,19 +994,6 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.home.5': 'Shared storage / NAS (files across devices)',
       'services.home.6': 'Smart home devices (lights, cameras, speakers)',
 
-      // PRICES
-      'prices.title': 'Business Pricing',
-      'prices.lead':
-        'One simple monthly plan. Unlimited support, 1–3 day scheduling. Emergency support may incur additional costs.',
-      'prices.basic': 'Basic Diagnostics',
-      'prices.standard': 'Standard Repair',
-      'prices.premium': 'Premium Services',
-      'prices.onetime': '/ one-time',
-      'prices.showmore': 'Show more',
-      'prices.infobox.basic': 'Ideal for smaller needs. Upgrade anytime!',
-      'prices.infobox.standard': 'Great for recurring needs. Upgrade anytime!',
-      'prices.infobox.premium': 'For more advanced needs. Upgrade anytime!',
-
       // REMOTE
       'remote.title': 'Remote Help – How It Works',
       'remote.lead':
@@ -1066,9 +1028,9 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.hours.title': 'Hours',
       'contact.hours.monfri': 'Monday–Friday: 09:00 – 22:00',
       'contact.hours.sat': 'Saturday: 10:00 – 22:00',
-      'contact.hours.sun': 'Sunday: 12:00 - 22:00',
+      'contact.hours.sun': 'Sunday: 12:00 – 22:00',
       'contact.hours.urgent':
-        'Urgent matters 24/7. If we don’t answer right away, please call again. For non-urgent matters, leave a message.',
+        'Urgent matters 24/7 (surcharge outside business hours). If we don’t answer right away, please call again. For non-urgent matters, leave a message.',
       
 
       // FORM
