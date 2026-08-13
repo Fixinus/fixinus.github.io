@@ -59,6 +59,31 @@ function readMessages() {
   return new Function('dlBtn', 'genBtn', `return ${src.slice(open, end)};`)(dlBtn, genBtn);
 }
 
+/**
+ * Pull LANG_PATHS out of script.js and check it against LANGS above. The runtime
+ * decides the current language from the URL using its own copy of this mapping,
+ * so if the two drift apart a page renders in one language while claiming
+ * another. Failing the build is the only way that divergence gets noticed.
+ */
+function assertLangPathsAgree() {
+  const src = readFileSync(join(ROOT, 'script.js'), 'utf8');
+  const m = /const LANG_PATHS = (\{[^}]*\})/.exec(src);
+  if (!m) throw new Error('LANG_PATHS not found in script.js — the build can no longer verify it');
+
+  const runtime = new Function(`return ${m[1]};`)();
+  const expected = Object.fromEntries(
+    Object.keys(LANGS).map(l => [l, LANGS[l].dir ? `/${LANGS[l].dir}/` : '/']));
+
+  const keys = [...new Set([...Object.keys(expected), ...Object.keys(runtime)])].sort();
+  const bad = keys.filter(k => expected[k] !== runtime[k]);
+  if (bad.length) {
+    throw new Error(
+      `LANGS here and LANG_PATHS in script.js disagree for: ${bad.join(', ')}\n` +
+      `  build:   ${JSON.stringify(expected)}\n` +
+      `  runtime: ${JSON.stringify(runtime)}`);
+  }
+}
+
 /* ------------------------------------------------------------------- html  */
 
 const escAttr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
@@ -149,6 +174,7 @@ function applyHead(html, lang, dict) {
 /* -------------------------------------------------------------------- run  */
 
 const checkOnly = process.argv.includes('--check');
+assertLangPathsAgree();
 const MESSAGES = readMessages();
 
 const rawTemplate = readFileSync(join(ROOT, 'index.html'), 'utf8');

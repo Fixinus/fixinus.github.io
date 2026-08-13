@@ -114,9 +114,17 @@ document.addEventListener('DOMContentLoaded', () =>
   // search engines can index all three. The URL is the only source of truth for
   // the current language — a stored preference must not override it, or the
   // Finnish page would render in English for returning visitors.
+  // Adding a language means adding it here and to LANGS in tools/build-i18n.mjs.
+  // The build reads this object and refuses to run if the two disagree, so the
+  // lists cannot drift apart silently.
   const LANG_PATHS = { fi: '/', sv: '/sv/', en: '/en/' };
 
-  const langFromPath = () => (/^\/(sv|en)\//.exec(location.pathname) || [, DEFAULT_LANG])[1];
+  // Derived from LANG_PATHS rather than hardcoded, so a new language is picked
+  // up here automatically. The root path belongs to DEFAULT_LANG and is skipped,
+  // since every path starts with '/'.
+  const langFromPath = () =>
+    Object.keys(LANG_PATHS).find(l => LANG_PATHS[l] !== '/' && location.pathname.startsWith(LANG_PATHS[l]))
+    || DEFAULT_LANG;
 
   // Helper: reuse your <img> / <kbd> snippets inside translations
   const dlBtn = '<img id="downloadbtn" src="/media/downloadbutton.png" alt="">';
@@ -1146,7 +1154,7 @@ document.addEventListener('DOMContentLoaded', () =>
       map.split('|').forEach(pair =>
       {
         const [attr, key] = pair.split(':').map(s => s.trim());
-        if (attr && key && dict[key]) el.setAttribute(attr, dict[key]);
+        if (attr && key && dict[key]) el.setAttribute(attr, fill(dict[key]));
       });
     });
 
@@ -1203,14 +1211,16 @@ document.addEventListener('DOMContentLoaded', () =>
     document.documentElement.setAttribute('lang', safeLang);
   }
 
-  /** Switching language means going to that language's URL, keeping the anchor. */
+  /**
+   * Switching language means going to that language's URL. The query string and
+   * the anchor both carry over, so campaign parameters survive the switch and
+   * the reader lands back where they were on the page.
+   */
   function goToLang(lang) {
     const target = LANG_PATHS[lang] || LANG_PATHS[DEFAULT_LANG];
     if (langFromPath() === lang) return;
-    location.href = target + location.hash;
+    location.href = target + location.search + location.hash;
   }
-  // expose for the mobile flag buttons at the bottom of script.js
-  window.setLang = goToLang;
 
   function initLang() {
     // Initial language comes from the URL, never from a stored preference.
