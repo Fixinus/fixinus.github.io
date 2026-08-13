@@ -108,8 +108,23 @@ document.addEventListener('DOMContentLoaded', () =>
    ========================= */
 (() =>
 {
-  const STORAGE_KEY = 'site-lang';
   const DEFAULT_LANG = 'fi'; // Finnish by default
+
+  // Each language is served from its own URL (see tools/build-i18n.mjs) so that
+  // search engines can index all three. The URL is the only source of truth for
+  // the current language — a stored preference must not override it, or the
+  // Finnish page would render in English for returning visitors.
+  // Adding a language means adding it here and to LANGS in tools/build-i18n.mjs.
+  // The build reads this object and refuses to run if the two disagree, so the
+  // lists cannot drift apart silently.
+  const LANG_PATHS = { fi: '/', sv: '/sv/', en: '/en/' };
+
+  // Derived from LANG_PATHS rather than hardcoded, so a new language is picked
+  // up here automatically. The root path belongs to DEFAULT_LANG and is skipped,
+  // since every path starts with '/'.
+  const langFromPath = () =>
+    Object.keys(LANG_PATHS).find(l => LANG_PATHS[l] !== '/' && location.pathname.startsWith(LANG_PATHS[l]))
+    || DEFAULT_LANG;
 
   // Helper: reuse your <img> / <kbd> snippets inside translations
   const dlBtn = '<img id="downloadbtn" src="/media/downloadbutton.png" alt="">';
@@ -209,6 +224,11 @@ document.addEventListener('DOMContentLoaded', () =>
       'pricing.other.r2': 'Konfigurering av säkerhetskopiering (extern disk eller molntjänst)',
       'pricing.other.p2': 'fr. 40 €',
       'pricing.other.body': 'Vi utför även andra elektronik- och apparatreparationer från fall till fall. Fråga gärna, även om din enhet inte finns på listan.',
+      // SÖKMOTOROPTIMERING
+      'pricing.seo.title': 'Sökmotoroptimering',
+      'pricing.seo.r1': 'Startpaket för sökmotoroptimering',
+      'pricing.seo.p1': '300 €',
+      'pricing.seo.note': 'Startpaketet omfattar Google-företagsprofil, webbplatsens sökmotorinställningar, lokala nyckelord och en skriftlig rapport. Vi går igenom resultaten tillsammans och kommer alltid överens om fortsatta åtgärder separat.',
 
       // ABOUT
       'about.title': 'Om Fixinus',
@@ -330,6 +350,12 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.os.8': 'Åtgärda krascher och felmeddelanden',
       'services.os.9': 'Konto & lösenord (Microsoft/Apple, e-post)',
       'services.os.10': 'E-post och moln (OneDrive, iCloud, Google)',
+      'services.seo.title': 'Sökmotoroptimering och synlighet',
+      'services.seo.1': 'Skapande och optimering av Google-företagsprofil',
+      'services.seo.2': 'Webbplatsens synlighet i sökmotorer (rubriker, beskrivningar, nyckelord)',
+      'services.seo.3': 'Lokal synlighet i sökningar i Borgåområdet',
+      'services.seo.4': 'Skriftlig rapport och rekommendationer för fortsättningen',
+      'services.seo.5': 'Införande och uppföljning av Google Search Console',
 
       'services.mobile.title': 'Telefoner & surfplattor (endast mjukvara och lätt rengöring)',
       'services.mobile.1': 'Ny enhet – grundinställning',
@@ -400,6 +426,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'form.opt.hometech': 'Hemmateknik (Wi-Fi, TV, skrivare…)',
       'form.opt.phone': 'Hjälp med telefon eller surfplatta',
       'form.opt.software': 'Programvara & operativsystem',
+      'form.opt.seo': 'Sökmotoroptimering och synlighet',
       'form.opt.remote': 'Fjärrsupport',
       'form.opt.onsite': 'Platsbesök',
       'form.opt.other': 'Annat / osäker',
@@ -521,6 +548,11 @@ document.addEventListener('DOMContentLoaded', () =>
       'pricing.other.r2': 'Varmuuskopioinnin käyttöönotto (ulkoinen levy tai pilvipalvelu)',
       'pricing.other.p2': 'alk. 40 €',
       'pricing.other.body': 'Teemme myös muita elektroniikka- ja laitekorjauksia tapauskohtaisesti. Kysy rohkeasti, vaikka laitettasi ei löytyisi listalta.',
+      // HAKUKONEOPTIMOINTI
+      'pricing.seo.title': 'Hakukoneoptimointi',
+      'pricing.seo.r1': 'Hakukoneoptimoinnin aloituspaketti',
+      'pricing.seo.p1': '300 €',
+      'pricing.seo.note': 'Aloituspaketti sisältää Google-yritysprofiilin, verkkosivun hakukoneasetukset, paikalliset avainsanat ja kirjallisen raportin. Käymme tulokset yhdessä läpi, ja jatkotoimista sovitaan aina erikseen.',
 
       // ABOUT
       'about.title': 'Tietoa Fixinuksesta',
@@ -655,6 +687,12 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.os.8': 'Kaatumisten ja virheilmoitusten korjaus',
       'services.os.9': 'Tilit & salasanat (Microsoft/Apple, sähköposti)',
       'services.os.10': 'Sähköposti & pilvipalvelut (OneDrive, iCloud, Google)',
+      'services.seo.title': 'Hakukoneoptimointi ja näkyvyys',
+      'services.seo.1': 'Google-yritysprofiilin luonti ja optimointi',
+      'services.seo.2': 'Verkkosivun hakukonenäkyvyys (otsikot, kuvaukset, avainsanat)',
+      'services.seo.3': 'Paikallinen näkyvyys Porvoon alueen hauissa',
+      'services.seo.4': 'Kirjallinen raportti ja suositukset jatkoa varten',
+      'services.seo.5': 'Google Search Consolen käyttöönotto ja seuranta',
 
       'services.mobile.title':'Puhelimet & tabletit (vain ohjelmisto + kevyt puhdistus)',
       'services.mobile.1': 'Uuden laitteen käyttöönotto',
@@ -727,6 +765,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'form.opt.hometech': 'Kotitekniikka (Wi-Fi, TV, tulostin…)',
       'form.opt.phone': 'Puhelin- tai tablettiapu',
       'form.opt.software': 'Ohjelmisto & käyttöjärjestelmä',
+      'form.opt.seo': 'Hakukoneoptimointi ja näkyvyys',
       'form.opt.remote': 'Etätuki',
       'form.opt.onsite': 'Käynti paikan päällä',
       'form.opt.other': 'Muu / en ole varma',
@@ -849,6 +888,11 @@ document.addEventListener('DOMContentLoaded', () =>
       'pricing.other.r2': 'Backup setup (external drive or cloud)',
       'pricing.other.p2': 'from €40',
       'pricing.other.body': 'We also take on other electronics and device repairs case by case. Don\'t hesitate to ask, even if your device isn\'t on the list.',
+      // SEARCH VISIBILITY
+      'pricing.seo.title': 'Search visibility (SEO)',
+      'pricing.seo.r1': 'SEO starter package',
+      'pricing.seo.p1': '€300',
+      'pricing.seo.note': 'The starter package covers your Google Business Profile, the search settings on your site, local keywords and a written report. We go through the results together, and any further work is always agreed separately.',
 
       // ABOUT
       'about.title': 'About Fixinus',
@@ -971,6 +1015,12 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.os.8': 'Fix crashes and error messages',
       'services.os.9': 'Account & password help (Microsoft/Apple, email accounts)',
       'services.os.10': 'Email and cloud services (OneDrive, iCloud, Google)',
+      'services.seo.title': 'Search visibility (SEO)',
+      'services.seo.1': 'Google Business Profile setup and optimisation',
+      'services.seo.2': 'Website search visibility (titles, descriptions, keywords)',
+      'services.seo.3': 'Local visibility in Porvoo-area searches',
+      'services.seo.4': 'Written report and recommendations for next steps',
+      'services.seo.5': 'Google Search Console setup and monitoring',
 
       'services.mobile.title': 'Phones & Tablets (software only + light cleaning)',
       'services.mobile.1': 'New device setup',
@@ -1045,6 +1095,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'form.opt.hometech': 'Home tech help (Wi-Fi, TV, printer…)',
       'form.opt.phone': 'Phone or tablet help',
       'form.opt.software': 'Software & operating system',
+      'form.opt.seo': 'Search visibility (SEO)',
       'form.opt.remote': 'Remote support',
       'form.opt.onsite': 'On-site visit',
       'form.opt.other': 'Other / not sure',
@@ -1103,7 +1154,7 @@ document.addEventListener('DOMContentLoaded', () =>
       map.split('|').forEach(pair =>
       {
         const [attr, key] = pair.split(':').map(s => s.trim());
-        if (attr && key && dict[key]) el.setAttribute(attr, dict[key]);
+        if (attr && key && dict[key]) el.setAttribute(attr, fill(dict[key]));
       });
     });
 
@@ -1127,15 +1178,16 @@ document.addEventListener('DOMContentLoaded', () =>
     const currentBtn = menu.querySelector('.lang-current');
     const currentFlagEl = currentBtn?.querySelector('[data-current-flag]');
 
-    // Map language → flag image
+    // Map language → flag image. Absolute paths: /en/ and /sv/ are served from
+    // their own directories, so a relative path would resolve to /en/media/…
     const flagMap = {
-      fi: 'media/finland(scaled).png',
-      sv: 'media/sweden(scaled).png',
-      en: 'media/united-kingdom(scaled).png'
+      fi: '/media/finland(scaled).png',
+      sv: '/media/sweden(scaled).png',
+      en: '/media/united-kingdom(scaled).png'
     };
 
     if (currentFlagEl) {
-      currentFlagEl.innerHTML = `<img src="${flagMap[lang] || 'media/finland.png'}" alt="${lang.toUpperCase()}" class="flag-img">`;
+      currentFlagEl.innerHTML = `<img src="${flagMap[lang] || flagMap.fi}" alt="${lang.toUpperCase()}" class="flag-img">`;
     }
 
 
@@ -1146,24 +1198,33 @@ document.addEventListener('DOMContentLoaded', () =>
     });
   }
 
-  /** Change language, store it, re-render text, update menu */
+  /**
+   * Re-render the page in `lang`. The served HTML already carries the right
+   * text, so on load this is a no-op that simply keeps the DOM and the menu in
+   * agreement; it is kept so a stale cached page still corrects itself.
+   */
   function setLang(lang) {
     const safeLang = MESSAGES[lang] ? lang : DEFAULT_LANG;
-    localStorage.setItem(STORAGE_KEY, safeLang);
 
     applyTranslations(safeLang);             // update text & placeholders
     updateLangMenu(safeLang);                // update flag & active option
     document.documentElement.setAttribute('lang', safeLang);
   }
-  // expose for the mobile flag buttons at the bottom of script.js
-  window.setLang = setLang;
+
+  /**
+   * Switching language means going to that language's URL. The query string and
+   * the anchor both carry over, so campaign parameters survive the switch and
+   * the reader lands back where they were on the page.
+   */
+  function goToLang(lang) {
+    const target = LANG_PATHS[lang] || LANG_PATHS[DEFAULT_LANG];
+    if (langFromPath() === lang) return;
+    location.href = target + location.search + location.hash;
+  }
 
   function initLang() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    const startLang = (saved && MESSAGES[saved]) ? saved : DEFAULT_LANG;
-
-    // Initial language
-    setLang(startLang);
+    // Initial language comes from the URL, never from a stored preference.
+    setLang(langFromPath());
 
     const menu = $('#lang-menu');
     if (menu) {
@@ -1221,13 +1282,13 @@ document.addEventListener('DOMContentLoaded', () =>
         }
       });
 
-      // 🔹 Click behaviour: change language + close dropdown immediately
+      // 🔹 Click behaviour: navigate to that language's URL + close dropdown
       // (also close mobile sidebar if it's open)
       options.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           const lang = btn.dataset.lang;
-          setLang(lang);
+          goToLang(lang);
 
           clearTimeout(hideTimeout);
           menu.classList.remove('open');
@@ -1422,8 +1483,10 @@ document.addEventListener('DOMContentLoaded', () =>
   };
 
   function getLang() {
-    const stored = localStorage.getItem('site-lang');
-    if (stored && FORM_MESSAGES[stored]) return stored;
+    // <html lang> is set from the URL by the i18n block, so it follows whichever
+    // language page the visitor is actually on.
+    const lang = document.documentElement.lang;
+    if (lang && FORM_MESSAGES[lang]) return lang;
     return 'fi'; // fallback
   }
 

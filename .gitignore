@@ -1,0 +1,6 @@
+# Session handoff notes — local only, never committed
+HANDOFF-*.md
+
+# Claude Code workspace config. This repo is fixinus.github.io, so every file in
+# the root is published on the live site — keep tooling config out of it.
+.claude/
