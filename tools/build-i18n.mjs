@@ -210,9 +210,14 @@ const sitemapPath = join(ROOT, 'sitemap.xml');
 const sitemapPrev = existsSync(sitemapPath)
   ? readFileSync(sitemapPath, 'utf8').replace(/\r\n/g, '\n')
   : null;
-// lastmod alone changing every run would create pointless diffs
-const sitemapChanged = (sitemapPrev ?? '').replace(/<lastmod>[^<]*<\/lastmod>/g, '')
+// Rewrite the sitemap when the URL list changes, and also whenever any page's
+// content changed — lastmod is a recrawl hint, so it has to move when the pages
+// actually move. Comparing with lastmod stripped keeps a no-op rebuild a no-op,
+// so the date does not churn on every run.
+const structureChanged = (sitemapPrev ?? '').replace(/<lastmod>[^<]*<\/lastmod>/g, '')
   !== sitemap.replace(/<lastmod>[^<]*<\/lastmod>/g, '');
+const contentChanged = report.some(r => r.changed);
+const sitemapChanged = structureChanged || contentChanged;
 if (sitemapChanged) {
   stale = true;
   if (!checkOnly) writeFileSync(sitemapPath, toDisk(sitemap), 'utf8');
