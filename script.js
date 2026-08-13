@@ -1170,15 +1170,16 @@ document.addEventListener('DOMContentLoaded', () =>
     const currentBtn = menu.querySelector('.lang-current');
     const currentFlagEl = currentBtn?.querySelector('[data-current-flag]');
 
-    // Map language → flag image
+    // Map language → flag image. Absolute paths: /en/ and /sv/ are served from
+    // their own directories, so a relative path would resolve to /en/media/…
     const flagMap = {
-      fi: 'media/finland(scaled).png',
-      sv: 'media/sweden(scaled).png',
-      en: 'media/united-kingdom(scaled).png'
+      fi: '/media/finland(scaled).png',
+      sv: '/media/sweden(scaled).png',
+      en: '/media/united-kingdom(scaled).png'
     };
 
     if (currentFlagEl) {
-      currentFlagEl.innerHTML = `<img src="${flagMap[lang] || 'media/finland.png'}" alt="${lang.toUpperCase()}" class="flag-img">`;
+      currentFlagEl.innerHTML = `<img src="${flagMap[lang] || flagMap.fi}" alt="${lang.toUpperCase()}" class="flag-img">`;
     }
 
 
