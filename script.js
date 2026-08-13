@@ -108,8 +108,15 @@ document.addEventListener('DOMContentLoaded', () =>
    ========================= */
 (() =>
 {
-  const STORAGE_KEY = 'site-lang';
   const DEFAULT_LANG = 'fi'; // Finnish by default
+
+  // Each language is served from its own URL (see tools/build-i18n.mjs) so that
+  // search engines can index all three. The URL is the only source of truth for
+  // the current language — a stored preference must not override it, or the
+  // Finnish page would render in English for returning visitors.
+  const LANG_PATHS = { fi: '/', sv: '/sv/', en: '/en/' };
+
+  const langFromPath = () => (/^\/(sv|en)\//.exec(location.pathname) || [, DEFAULT_LANG])[1];
 
   // Helper: reuse your <img> / <kbd> snippets inside translations
   const dlBtn = '<img id="downloadbtn" src="/media/downloadbutton.png" alt="">';
@@ -1146,24 +1153,31 @@ document.addEventListener('DOMContentLoaded', () =>
     });
   }
 
-  /** Change language, store it, re-render text, update menu */
+  /**
+   * Re-render the page in `lang`. The served HTML already carries the right
+   * text, so on load this is a no-op that simply keeps the DOM and the menu in
+   * agreement; it is kept so a stale cached page still corrects itself.
+   */
   function setLang(lang) {
     const safeLang = MESSAGES[lang] ? lang : DEFAULT_LANG;
-    localStorage.setItem(STORAGE_KEY, safeLang);
 
     applyTranslations(safeLang);             // update text & placeholders
     updateLangMenu(safeLang);                // update flag & active option
     document.documentElement.setAttribute('lang', safeLang);
   }
+
+  /** Switching language means going to that language's URL, keeping the anchor. */
+  function goToLang(lang) {
+    const target = LANG_PATHS[lang] || LANG_PATHS[DEFAULT_LANG];
+    if (langFromPath() === lang) return;
+    location.href = target + location.hash;
+  }
   // expose for the mobile flag buttons at the bottom of script.js
-  window.setLang = setLang;
+  window.setLang = goToLang;
 
   function initLang() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    const startLang = (saved && MESSAGES[saved]) ? saved : DEFAULT_LANG;
-
-    // Initial language
-    setLang(startLang);
+    // Initial language comes from the URL, never from a stored preference.
+    setLang(langFromPath());
 
     const menu = $('#lang-menu');
     if (menu) {
@@ -1221,13 +1235,13 @@ document.addEventListener('DOMContentLoaded', () =>
         }
       });
 
-      // 🔹 Click behaviour: change language + close dropdown immediately
+      // 🔹 Click behaviour: navigate to that language's URL + close dropdown
       // (also close mobile sidebar if it's open)
       options.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           const lang = btn.dataset.lang;
-          setLang(lang);
+          goToLang(lang);
 
           clearTimeout(hideTimeout);
           menu.classList.remove('open');
@@ -1422,8 +1436,10 @@ document.addEventListener('DOMContentLoaded', () =>
   };
 
   function getLang() {
-    const stored = localStorage.getItem('site-lang');
-    if (stored && FORM_MESSAGES[stored]) return stored;
+    // <html lang> is set from the URL by the i18n block, so it follows whichever
+    // language page the visitor is actually on.
+    const lang = document.documentElement.lang;
+    if (lang && FORM_MESSAGES[lang]) return lang;
     return 'fi'; // fallback
   }
 
