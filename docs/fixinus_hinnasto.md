@@ -59,3 +59,11 @@ Alkukartoitus ja hinta-arvio ovat maksuttomia, ja veloitamme vain onnistuneesta 
 | Varmuuskopioinnin käyttöönotto (ulkoinen levy tai pilvipalvelu) | alk. 40 € |
 
 Teemme myös muita elektroniikka- ja laitekorjauksia tapauskohtaisesti. Kysy rohkeasti, vaikka laitettasi ei löytyisi listalta.
+
+## Hakukoneoptimointi
+
+| Palvelu | Hinta |
+|---|---|
+| Hakukoneoptimoinnin aloituspaketti | 300 € |
+
+Aloituspaketti sisältää Google-yritysprofiilin, verkkosivun hakukoneasetukset, paikalliset avainsanat ja kirjallisen raportin. Käymme tulokset yhdessä läpi, ja jatkotoimista sovitaan aina erikseen.
