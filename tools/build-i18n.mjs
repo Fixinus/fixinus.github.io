@@ -251,12 +251,16 @@ if (sitemapChanged) {
 
 /* ----------------------------------------------------------------- output  */
 
+// --check writes nothing, so say "stale" rather than "written" in that mode —
+// otherwise the log claims files were rewritten when they were only compared.
+const verb = changed => (changed ? (checkOnly ? 'stale' : 'written') : 'unchanged');
+
 for (const r of report) {
   const flag = r.missingKeys.length ? `MISSING ${r.missingKeys.length}` : 'ok';
-  console.log(`${r.lang.padEnd(3)} ${r.file.padEnd(16)} ${r.changed ? 'written' : 'unchanged'}  ${flag}`);
+  console.log(`${r.lang.padEnd(3)} ${r.file.padEnd(16)} ${verb(r.changed).padEnd(9)} ${flag}`);
   if (r.missingKeys.length) console.log(`    ${r.missingKeys.join(', ')}`);
 }
-console.log(`sitemap.xml      ${sitemapChanged ? 'written' : 'unchanged'}`);
+console.log(`sitemap.xml      ${verb(sitemapChanged)}`);
 
 const anyMissing = report.some(r => r.missingKeys.length);
 if (anyMissing) {
