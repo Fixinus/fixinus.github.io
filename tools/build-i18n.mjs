@@ -220,6 +220,12 @@ for (const lang of Object.keys(LANGS)) {
 }
 
 /* sitemap.xml — one <url> per language, each listing all alternates */
+
+// Local calendar date, not toISOString(): Finland runs UTC+2/+3, so between
+// midnight and 03:00 local the UTC date is still yesterday and the sitemap
+// would be stamped a day behind whoever ran the build.
+const today = (d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`)(new Date());
+
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -228,7 +234,7 @@ ${Object.keys(LANGS).map(lang => `  <url>
 ${Object.keys(LANGS).map(l =>
   `    <xhtml:link rel="alternate" hreflang="${l}" href="${urlFor(l)}" />`).join('\n')}
     <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('fi')}" />
-    <lastmod>${new Date().toISOString().slice(0, 10)}</lastmod>
+    <lastmod>${today}</lastmod>
   </url>`).join('\n')}
 </urlset>
 `;

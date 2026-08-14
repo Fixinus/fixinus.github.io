@@ -1178,6 +1178,9 @@ footer a,
   justify-content: center;
   gap: 0.35rem;
   padding: 0.4rem 0.6rem;
+  /* Match .theme-toggle and the mobile .nav-toggle, which are both 2.75rem, so
+     the three header controls line up instead of the flag sitting short. */
+  min-height: 2.75rem;
   border-radius: 0.5rem;
   border: 1px solid var(--divider);
   background: transparent;
@@ -1409,10 +1412,22 @@ footer a,
     padding: 0.35rem 0;
   }
 
-  /* Language button sits INSIDE the sliding panel */
-  .main-nav .lang-menu {
+  /* The language menu used to sit inside the sliding panel. It now lives in the
+     header bar (see the #lang-menu rule at the end of this block), so spacing
+     comes from the bar's own `gap` and not from per-element margins. Keeping
+     both gave 30px between the flag and the theme toggle but 13px before the
+     hamburger, because only the hamburger lacks a margin of its own. */
+  .nav-bar > .lang-menu,
+  .nav-bar > .theme-toggle {
     margin-left: 0;
-    margin-top: 1.5rem;
+  }
+
+  /* The flag sits mid-bar on mobile, so a dropdown anchored to its right edge
+     runs off the left of the screen — 5px clipped at 375px, 20px at 360px.
+     Open it rightwards instead, where there is room at every phone width. */
+  .lang-dropdown {
+    right: auto;
+    left: 0;
   }
 
   /* MOBILE HAMBURGER BUTTON */
