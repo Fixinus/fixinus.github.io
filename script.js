@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () =>
       // HERO
       'hero.title': 'Håll din teknik i skick. Vi reparerar, uppgraderar och hjälper dig.',
       'hero.subtitle': 'Fixinus är din lokala partner för datorservice och tekniksupport i Borgå – för både privatpersoner och småföretag. Stationära datorer, bärbara datorer och vardagselektronik hanteras med omsorg och tydlig kommunikation.',
-      'hero.cta.call': 'Ring 040 066 4767',
+      'hero.cta.call': 'Ring 046 804 6174',
       'hero.cta.contact': 'Skicka meddelande',
 
       // REVIEWS
@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () =>
       "company.heading.contact": "Kontaktuppgifter",
       "company.address.line1": "Snickarsvängen 15",
       "company.address.line2": "06150 Borgå",
-      "company.phone": "Telefon: 040 066 4767",
+      "company.phone": "Telefon: 046 804 6174",
       "company.email": "E-post: info@fixinus.fi",
 
       // SERVICES
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'remote.title': 'Fjärrhjälp – så här fungerar det',
       'remote.lead': 'På Windows 10/11 använder vi Snabbhjälp (Quick Assist). Har du inget Microsoft-konto eller fungerar Snabbhjälp inte? Då använder vi TeamViewer QuickSupport. På Mac och Linux använder vi också TeamViewer. Passar inget av alternativen? Då ordnar vi hembesök eller inlämning.',
 
-      'remote.step.1.html': '<strong>Kontakta oss:</strong> Ring <a class="link" href="tel:+358400664767">+358 40 066 4767</a> eller mejla <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> så bekräftar vi att fjärrhjälp passar ditt ärende.',
+      'remote.step.1.html': '<strong>Kontakta oss:</strong> Ring <a class="link" href="tel:+358468046174">+358 46 804 6174</a> eller mejla <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> så bekräftar vi att fjärrhjälp passar ditt ärende.',
 
       'remote.step.2.html': `<strong>Ladda ned rätt app:</strong><br>
         • <u>Windows 10/11:</u> Öppna Snabbhjälp genom att trycka <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.address.line1': 'Snickarsvängen 15',
       'contact.address.line2': '06150 Borgå ',
       'contact.phone.title': 'Telefon',
-      'contact.phone.value': '040 066 4767',
+      'contact.phone.value': '046 804 6174',
       'contact.email.title': 'E-post',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Öppettider',
@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'hero.title': 'Pidä tekniikka kunnossa. Korjaamme, päivitämme ja autamme.',
       'hero.subtitle':
         'Fixinus on paikallinen kumppani tietokonehuoltoon ja tekniseen tukeen Porvoossa – sekä yksityisille että pienyrityksille. Pöytäkoneet, kannettavat ja arkielektroniikka hoidetaan huolellisesti ja selkeällä viestinnällä.',
-      'hero.cta.call': 'Soita 040 066 4767',
+      'hero.cta.call': 'Soita 046 804 6174',
       'hero.cta.contact': 'Lähetä viesti',
 
       // REVIEWS
@@ -657,7 +657,7 @@ document.addEventListener('DOMContentLoaded', () =>
       "company.heading.contact": "Yhteystiedot",
       "company.address.line1": "Puusepänkaarre 15",
       "company.address.line2": "06150 Porvoo",
-      "company.phone": "Puhelin: 040 066 4767",
+      "company.phone": "Puhelin: 046 804 6174",
       "company.email": "Sähköposti: info@fixinus.fi",
 
       // SERVICES
@@ -720,7 +720,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'remote.lead':
         'Windows 10/11 -laitteissa käytämme Quick Assist -toimintoa. Jos sinulla ei ole Microsoft-tiliä tai Quick Assist ei toimi, käytämme TeamViewer QuickSupportia. Mac- ja Linux-laitteissa käytämme myös TeamVieweria. Jos mikään vaihtoehto ei sovi, järjestämme kotikäynnin tai laitteen tuonnin.',
       'remote.step.1.html':
-        '<strong>Ota yhteyttä:</strong> Soita <a class="link" href="tel:+358400664767">+358 40 066 4767</a> tai lähetä sähköpostia <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a>, niin varmistamme että etätuki sopii tilanteeseesi.',
+        '<strong>Ota yhteyttä:</strong> Soita <a class="link" href="tel:+358468046174">+358 46 804 6174</a> tai lähetä sähköpostia <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a>, niin varmistamme että etätuki sopii tilanteeseesi.',
       'remote.step.2.html': `<strong>Lataa oikea sovellus:</strong><br>
         • <u>Windows 10/11:</u> Avaa Quick Assist painamalla <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
         • <u>Ei Microsoft-tiliä tai Quick Assist ei toimi?</u> Lataa TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
@@ -743,7 +743,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.address.line1': 'Puusepänkaarre 15',
       'contact.address.line2': '06150 Porvoo',
       'contact.phone.title': 'Puhelin',
-      'contact.phone.value': '040 066 4767',
+      'contact.phone.value': '046 804 6174',
       'contact.email.title': 'Sähköposti',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Aukioloajat',
@@ -817,7 +817,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'hero.title': 'Keep your tech running right. We fix, upgrade and support.',
       'hero.subtitle':
         'Fixinus is your local partner for computer repairs and tech support in Porvoo — for individuals and small businesses. Desktops, laptops and everyday electronics, handled with care and clear communication.',
-      'hero.cta.call': 'Call 040 066 4767',
+      'hero.cta.call': 'Call 046 804 6174',
       'hero.cta.contact': 'Send a message',
 
       // REVIEWS
@@ -983,7 +983,7 @@ document.addEventListener('DOMContentLoaded', () =>
       "company.heading.contact": "Contact details",
       "company.address.line1": "Puusepänkaarre 15",
       "company.address.line2": "06150 Porvoo, Finland",
-      "company.phone": "Phone: 040 066 4767",
+      "company.phone": "Phone: 046 804 6174",
       "company.email": "Email: info@fixinus.fi",
 
       // SERVICES
@@ -1049,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'remote.lead':
         'On Windows 10/11 we use Quick Assist. If you don’t have a Microsoft account or Quick Assist isn’t available, we use TeamViewer QuickSupport instead. On Mac and Linux, we also use TeamViewer. If neither option fits, we arrange a home visit or drop-off.',
       'remote.step.1.html':
-        '<strong>Contact us:</strong> Call <a class="link" href="tel:+358400664767">+358 40 066 4767</a> or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.',
+        '<strong>Contact us:</strong> Call <a class="link" href="tel:+358468046174">+358 46 804 6174</a> or email <a class="link" href="mailto:info@fixinus.fi">info@fixinus.fi</a> to confirm that remote help is suitable for your issue.',
       'remote.step.2.html': `<strong>Download the right app:</strong><br>
         • <u>Windows 10/11:</u> Open Quick Assist by pressing <kbd><kbd>Ctrl</kbd>+<kbd>Windows</kbd>+<kbd>Q</kbd></kbd>.<br>
         • <u>No Microsoft account or Quick Assist not working?</u> Download TeamViewer QuickSupport: <a class="link" href="https://www.teamviewer.com/download/">teamviewer.com/download</a>.<br>
@@ -1072,7 +1072,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.address.line1': 'Puusepänkaarre 15',
       'contact.address.line2': '06150 Porvoo',
       'contact.phone.title': 'Phone',
-      'contact.phone.value': '040 066 4767',
+      'contact.phone.value': '046 804 6174',
       'contact.email.title': 'Email',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Hours',
