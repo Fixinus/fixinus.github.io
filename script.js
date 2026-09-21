@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Öppettider',
       'contact.hours.monfri': 'Måndag–Fredag: 09:00 – 22:00',
-      'contact.hours.sat': 'Lördag: 10:00 – 22:00',
+      'contact.hours.sat': 'Lördag: 12:00 – 20:00',
       'contact.hours.sun': 'Söndag: Stängt',
       'contact.hours.urgent': 'Akuta ärenden dygnet runt (tillägg utanför öppettiderna). Om vi inte svarar direkt – ring gärna igen. För icke-akuta frågor, lämna ett meddelande.',
 
@@ -748,7 +748,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Aukioloajat',
       'contact.hours.monfri': 'Ma–Pe: 09:00 – 22:00',
-      'contact.hours.sat': 'La: 10:00 – 22:00',
+      'contact.hours.sat': 'La: 12:00 – 20:00',
       'contact.hours.sun': 'Su: Suljettu',
       'contact.hours.urgent':
         'Kiireelliset asiat 24/7 (lisämaksu aukioloaikojen ulkopuolella). Jos emme vastaa heti, yritä soittaa uudelleen. Ei-kiireellisissä asioissa jätä viesti.',
@@ -1077,7 +1077,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Hours',
       'contact.hours.monfri': 'Monday–Friday: 09:00 – 22:00',
-      'contact.hours.sat': 'Saturday: 10:00 – 22:00',
+      'contact.hours.sat': 'Saturday: 12:00 – 20:00',
       'contact.hours.sun': 'Sunday: Closed',
       'contact.hours.urgent':
         'Urgent matters 24/7 (surcharge outside business hours). If we don’t answer right away, please call again. For non-urgent matters, leave a message.',
