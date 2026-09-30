@@ -282,18 +282,24 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.4':'Avtals- och tjänstehistorik',
       'privacy.rights.5':'Betalnings- och fakturauppgifter (om tillämpligt)',
       'privacy.rights.6':'Webbplats-användardata och cookies (om analys aktiveras)',
+      'privacy.rights.7':'IP-adress, som leverantörerna av webbplatsen och kontaktformuläret lagrar',
 
       'privacy.contact.title':'6. Lagringstid',
       'privacy.contact.body.1':'Kunddata: minst avtalsperiod + 5 år',
       'privacy.contact.body.2':'Bokföringsdata: minst 6 år enligt lag',
       'privacy.contact.body.3':'Eventuella analysdata: max 2 år (om analys används)',
 
-      'privacy.party.title':'7. Delning av uppgifter',
+      'privacy.party.title':'7. Delning av uppgifter och tjänsteleverantörer',
       'privacy.party.body.1':'Vi delar inte personuppgifter med tredje part utan samtycke eller laglig förpliktelse.',
-      'privacy.party.body.2':'Externa tjänsteleverantörer (hosting, e-post, formulärtjänst) behandlar uppgifter enligt instruktion och avtal.',
+      'privacy.party.body.2':'Vi använder följande tjänsteleverantörer som behandlar personuppgifter:',
+      'privacy.party.list.1':'GitHub (USA): webbplatsens hosting och lagring av material i kundprojekt. GitHub lagrar besökarens IP-adress av säkerhetsskäl.',
+      'privacy.party.list.2':'Formspree (USA): kontaktformuläret. Namn, e-postadress, telefonnummer och meddelande som du skickar via formuläret förmedlas till oss via Formspree.',
+      'privacy.party.list.3':'Google Workspace: e-post.',
+      'privacy.party.list.4':'TeamViewer och Microsoft Quick Assist: fjärrsupport, endast med ditt samtycke.',
 
-      'privacy.transfer.title':'8. Överföring utanför EU',
-      'privacy.transfer.body.1':'Vi överför för närvarande inga personuppgifter utanför EU. Om detta ändras informeras du i förväg.',
+      'privacy.transfer.title':'8. Överföring utanför EU och EES',
+      'privacy.transfer.body.1':'En del av de tjänsteleverantörer vi använder behandlar uppgifter utanför EU och EES, främst i USA.',
+      'privacy.transfer.body.2':'GitHub och Google uppger att de följer dataskyddsramverket mellan EU och USA (Data Privacy Framework) och dessutom använder Europeiska kommissionens standardavtalsklausuler. Formspree uppger att de använder standardavtalsklausuler, och deras servrar finns i USA.',
 
       'privacy.data.title':'9. Registrerads rättigheter',
       'privacy.data.body.1':'Du har rätt att:',
@@ -307,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.data.body.9':'För att använda dina rättigheter, kontakta info@fixinus.fi',
 
       'privacy.cookie.title':'10. Cookies och spårning',
-      'privacy.cookie.body.1':'Vi använder endast nödvändiga cookies — ingen extern spårning eller analys just nu.',
+      'privacy.cookie.body.1':'Vi använder endast nödvändiga cookies, ingen extern spårning eller analys just nu.',
       'privacy.cookie.body.2':'Om analys införs uppdateras denna beskrivning och cookie-inställningar erbjuds.',
 
       'privacy.changes.title':'11. Ändringar i beskrivningen',
@@ -315,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
       'privacy.auth.title':'12. Tillsynsmyndighet',
       'privacy.auth.body.1':'Om du anser att dina rättigheter kränkts kan du skicka klagomål till:',
-      'privacy.auth.body.2':'Dataombudsmannens byrå (Tietosuojavaltuutetun toimisto), PB 800, 00521 Helsingfors — tietosuoja@om.fi',
+      'privacy.auth.body.2':'Dataombudsmannens byrå (Tietosuojavaltuutetun toimisto), PB 800, 00521 Helsingfors, tietosuoja@om.fi',
 
       "company.title": "Företagsuppgifter",
       "company.legalForm": "Fixinus - Enskild firma",
@@ -613,18 +619,24 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.4':'Sopimus- ja palveluhistoria',
       'privacy.rights.5':'Maksu- ja laskutustiedot (jos sovellettavissa)',
       'privacy.rights.6':'Verkkosivuston käyttötiedot ja evästeet (jos analytiikka otetaan käyttöön)',
+      'privacy.rights.7':'IP-osoite, jonka verkkosivuston ja yhteydenottolomakkeen palveluntarjoajat tallentavat',
 
       'privacy.contact.title':'6. Tietojen säilytysaika',
       'privacy.contact.body.1':'Asiakastiedot: vähintään sopimuksen voimassaoloaika + 5 vuotta',
       'privacy.contact.body.2':'Kirjanpitoon liittyvät tiedot: vähintään 6 vuotta (lakisääteinen vaatimus)',
       'privacy.contact.body.3':'Verkkosivuanalytiikka: enintään 2 vuotta (jos analytiikka otetaan käyttöön)',
 
-      'privacy.party.title':'7. Tietojen luovuttaminen',
+      'privacy.party.title':'7. Tietojen luovuttaminen ja palveluntarjoajat',
       'privacy.party.body.1':'Henkilötietoja ei luovuteta kolmansille osapuolille ilman suostumusta tai lakisääteistä velvoitetta.',
-      'privacy.party.body.2':'Ulkopuoliset palveluntarjoajat (hosting, sähköposti, lomakepalvelu) käsittelevät tietoja ainoastaan ohjeidemme mukaisesti ja tietosuojasopimusten puitteissa.',
+      'privacy.party.body.2':'Käytämme seuraavia palveluntarjoajia, jotka käsittelevät henkilötietoja:',
+      'privacy.party.list.1':'GitHub (Yhdysvallat): verkkosivuston ylläpito ja asiakasprojektien aineiston säilytys. GitHub tallentaa sivuston kävijän IP-osoitteen tietoturvasyistä.',
+      'privacy.party.list.2':'Formspree (Yhdysvallat): yhteydenottolomake. Lomakkeella lähettämäsi nimi, sähköpostiosoite, puhelinnumero ja viesti välitetään meille Formspreen kautta.',
+      'privacy.party.list.3':'Google Workspace: sähköposti.',
+      'privacy.party.list.4':'TeamViewer ja Microsoft Quick Assist: etätuki, vain luvallasi.',
 
-      'privacy.transfer.title':'8. Tietojen siirto EU:n ulkopuolelle',
-      'privacy.transfer.body.1':'Tällä hetkellä emme siirrä tietoja EU:n ulkopuolelle. Mikäli tämä muuttuu, päivitämme selosteen ja tiedotamme käyttäjiä.',
+      'privacy.transfer.title':'8. Tietojen siirto EU:n ja ETA:n ulkopuolelle',
+      'privacy.transfer.body.1':'Osa käyttämistämme palveluntarjoajista käsittelee tietoja EU:n ja ETA:n ulkopuolella, pääasiassa Yhdysvalloissa.',
+      'privacy.transfer.body.2':'GitHub ja Google ilmoittavat noudattavansa EU:n ja Yhdysvaltojen välistä Data Privacy Framework -järjestelyä ja käyttävänsä lisäksi Euroopan komission vakiosopimuslausekkeita. Formspree ilmoittaa käyttävänsä vakiosopimuslausekkeita, ja sen palvelimet sijaitsevat Yhdysvalloissa.',
 
       'privacy.data.title':'9. Rekisteröidyn oikeudet',
       'privacy.data.body.1':'Sinulla on oikeus:',
@@ -638,7 +650,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.data.body.9':'Oikeuksien käyttämiseksi ota yhteyttä: info@fixinus.fi',
 
       'privacy.cookie.title':'10. Evästeet ja verkkosivuston seuranta',
-      'privacy.cookie.body.1':'Käytämme tällä hetkellä vain teknisesti välttämättömiä evästeitä — ei kolmannen osapuolen seurantaa tai analytiikkaa.',
+      'privacy.cookie.body.1':'Käytämme tällä hetkellä vain teknisesti välttämättömiä evästeitä, emme kolmannen osapuolen seurantaa tai analytiikkaa.',
       'privacy.cookie.body.2':'Jos analytiikka lisätään myöhemmin, päivitämme tämän selosteen ja tarjoamme evästehallinnan.',
 
       'privacy.changes.title':'11. Muutokset tietosuojaselosteeseen',
@@ -646,7 +658,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
       'privacy.auth.title':'12. Valvontaviranomainen',
       'privacy.auth.body.1':'Jos katsot, että tietosuojaoikeuksiasi on rikottu, voit tehdä valituksen:',
-      'privacy.auth.body.2':'Tietosuojavaltuutetun toimisto, PL 800, 00521 Helsinki — tietosuoja@om.fi',
+      'privacy.auth.body.2':'Tietosuojavaltuutetun toimisto, PL 800, 00521 Helsinki, tietosuoja@om.fi',
 
       
 
@@ -949,15 +961,21 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.4':'Service and contract history',
       'privacy.rights.5':'Billing and payment data (if applicable)',
       'privacy.rights.6':'Website usage data and cookies (if analytics are activated)',
+      'privacy.rights.7':'IP address, which the website hosting and contact form providers log',
       'privacy.contact.title':'6. Data Retention Period',
       'privacy.contact.body.1':'Customer data: at least for the duration of the contract + 5 years',
       'privacy.contact.body.2':'Accounting data: minimum 6 years (statutory requirement)',
       'privacy.contact.body.3':'Website analytics data: maximum 2 years (if analytics are used)',
-      'privacy.party.title':'7. Data Sharing & Third Parties',
+      'privacy.party.title':'7. Data Sharing & Service Providers',
       'privacy.party.body.1':'We will not share personal data with third parties without your consent or legal obligation.',
-      'privacy.party.body.2':'External service providers (hosting, email service, form backend) process data only under our instructions and applicable agreements.',
-      'privacy.transfer.title':'8. Transfer Outside EU',
-      'privacy.transfer.body.1':'Currently we do not transfer personal or customer data outside the EU. Should this change, we will update this policy and inform users.',
+      'privacy.party.body.2':'We use the following service providers, which process personal data:',
+      'privacy.party.list.1':'GitHub (United States): website hosting and storage of client project material. GitHub logs the IP address of visitors to the site for security purposes.',
+      'privacy.party.list.2':'Formspree (United States): contact form. The name, email address, phone number and message you send through the form reach us via Formspree.',
+      'privacy.party.list.3':'Google Workspace: email.',
+      'privacy.party.list.4':'TeamViewer and Microsoft Quick Assist: remote support, only with your permission.',
+      'privacy.transfer.title':'8. Transfers Outside the EU and EEA',
+      'privacy.transfer.body.1':'Some of the service providers we use process data outside the EU and EEA, mainly in the United States.',
+      'privacy.transfer.body.2':'GitHub and Google state that they comply with the EU-U.S. Data Privacy Framework and also use the standard contractual clauses of the European Commission. Formspree states that it relies on standard contractual clauses, and its servers are located in the United States.',
       'privacy.data.title':'9. Data Subject Rights',
       'privacy.data.body.1':'You have the right to:',
       'privacy.data.body.2':'request access to your data',
@@ -969,13 +987,13 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.data.body.8':'withdraw consent (if applicable)',
       'privacy.data.body.9':'To exercise these rights, contact info@fixinus.fi',
       'privacy.cookie.title':'10. Cookies & Website Tracking',
-      'privacy.cookie.body.1':'At present, we do not use third-party analytics, cookies or tracking tools — only strictly necessary cookies are used, which do not require consent.',
+      'privacy.cookie.body.1':'At present, we do not use third-party analytics, cookies or tracking tools. Only strictly necessary cookies are used, which do not require consent.',
       'privacy.cookie.body.2':'If we later adopt analytics or tracking tools, we will update this policy and provide a cookie consent mechanism.',
       'privacy.changes.title':'11. Changes to the Privacy Policy',
       'privacy.changes.body.1':'We reserve the right to update this policy. Any significant changes will be communicated via our website.',
       'privacy.auth.title':'12. Supervisory Authority',
       'privacy.auth.body.1':'If you believe that your rights under GDPR have been violated, you have the right to lodge a complaint with the supervisory authority:',
-      'privacy.auth.body.2':'Data Protection Ombudsman (Tietosuojavaltuutetun toimisto), PO Box 800, 00521 Helsinki, Finland — tietosuoja@om.fi',
+      'privacy.auth.body.2':'Data Protection Ombudsman (Tietosuojavaltuutetun toimisto), PO Box 800, 00521 Helsinki, Finland, tietosuoja@om.fi',
       
       "company.title": "Company details",
       "company.legalForm": "Fixinus - Sole trader",
