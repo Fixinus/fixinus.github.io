@@ -44,26 +44,21 @@ Kiireelliset työt aukioloaikojen ulkopuolella: lisähinta +50 % (ma–pe), +75 
 
 Alkukartoitus ja hinta-arvio ovat maksuttomia, ja veloitamme vain onnistuneesta palautuksesta. Tarkka hinta vahvistetaan aina ennen työn aloittamista. Vaativammat tapaukset, kuten fyysisesti vaurioituneet levyt, arvioidaan tapauskohtaisesti ja ohjaamme tarvittaessa erikoisliikkeeseen.
 
-## Pelikonsolit
-
-| Palvelu | Hinta |
-|---|---|
-| Puhdistus, pölynpoisto ja lämpötahnan vaihto (Ei PS5) | 100 € |
-| PS5 puhdistus ja nestemetallin vaihto | alk. 150 € |
-
 ## Muut työt
 
 | Palvelu | Hinta |
 |---|---|
 | Uuden puhelimen käyttöönotto ja tiedonsiirto | alk. 50 € |
 | Varmuuskopioinnin käyttöönotto (ulkoinen levy tai pilvipalvelu) | alk. 40 € |
+| Pelikonsolin puhdistus, pölynpoisto ja lämpötahnan vaihto (ei PS5) | 100 € |
 
 Teemme myös muita elektroniikka- ja laitekorjauksia tapauskohtaisesti. Kysy rohkeasti, vaikka laitettasi ei löytyisi listalta.
 
-## Hakukoneoptimointi
+## Verkkosivut ja hakukoneoptimointi
 
 | Palvelu | Hinta |
 |---|---|
+| Verkkosivut yritykselle | alk. 600 € |
 | Hakukoneoptimoinnin aloituspaketti | 300 € |
 
-Aloituspaketti sisältää Google-yritysprofiilin, verkkosivun hakukoneasetukset, paikalliset avainsanat ja kirjallisen raportin. Käymme tulokset yhdessä läpi, ja jatkotoimista sovitaan aina erikseen.
+Verkkosivujen hinta riippuu sivuston laajuudesta, ja tarkka hinta sovitaan tarjouksessa; ylläpidosta sovitaan erikseen. Hakukoneoptimoinnin aloituspaketti sisältää Google-yritysprofiilin, verkkosivun hakukoneasetukset, paikalliset avainsanat ja kirjallisen raportin. Käymme tulokset yhdessä läpi, ja jatkotoimista sovitaan aina erikseen.
