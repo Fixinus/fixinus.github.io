@@ -1,6 +1,6 @@
 # Hinnasto
 
-Kaikki hinnat sisältävät arvonlisäveron 25,5 %. Yritysasiakkaille hinnat ovat alv 0 % eli listahinta ilman arvonlisäveron osuutta, ja arvonlisävero lisätään laskulle. Varaosat veloitetaan erikseen ja niistä sovitaan aina ennen tilaamista. Vianmäärityksen jälkeen saat aina korjauksesta hinta-arvion, ja työ jatkuu vasta kun olet sen hyväksynyt. Jos laite todetaan korjauskelvottomaksi, veloitetaan vain vianmääritys.
+Yksityisasiakkaille hinnat sisältävät arvonlisäveron 25,5 %. Yritysasiakkaille hinnat ovat alv 0 %, ja arvonlisävero 25,5 % lisätään listahintaan. Varaosat veloitetaan erikseen ja niistä sovitaan aina ennen tilaamista. Vianmäärityksen jälkeen saat aina korjauksesta hinta-arvion, ja työ jatkuu vasta kun olet sen hyväksynyt. Jos laite todetaan korjauskelvottomaksi, veloitetaan vain vianmääritys.
 
 ## Tietokoneet ja kannettavat
 

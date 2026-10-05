@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
       // PRICING
       'pricing.title': 'Prislista',
-      'pricing.lead': 'Alla priser inkluderar moms 25,5 %. För företagskunder gäller priserna moms 0 %, det vill säga listpriset utan momsandelen, och momsen läggs till på fakturan. Reservdelar debiteras separat och avtalas alltid innan de beställs. Efter felsökningen får du alltid en prisuppskattning för reparationen, och arbetet fortsätter först när du har godkänt den. Om enheten konstateras vara oreparerbar debiteras endast felsökningen.',
+      'pricing.lead': 'För privatkunder inkluderar priserna moms 25,5 %. För företagskunder gäller priserna moms 0 %, och moms 25,5 % läggs till på listpriset. Reservdelar debiteras separat och avtalas alltid innan de beställs. Efter felsökningen får du alltid en prisuppskattning för reparationen, och arbetet fortsätter först när du har godkänt den. Om enheten konstateras vara oreparerbar debiteras endast felsökningen.',
       'pricing.pc.title': 'Datorer & bärbara datorer',
       'pricing.pc.r1': 'Felsökning (högst 150 €)',
       'pricing.pc.p1': '50 €/h',
@@ -501,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
       // PRICING
       'pricing.title': 'Hinnasto',
-      'pricing.lead': 'Kaikki hinnat sisältävät arvonlisäveron 25,5 %. Yritysasiakkaille hinnat ovat alv 0 % eli listahinta ilman arvonlisäveron osuutta, ja arvonlisävero lisätään laskulle. Varaosat veloitetaan erikseen ja niistä sovitaan aina ennen tilaamista. Vianmäärityksen jälkeen saat aina korjauksesta hinta-arvion, ja työ jatkuu vasta kun olet sen hyväksynyt. Jos laite todetaan korjauskelvottomaksi, veloitetaan vain vianmääritys.',
+      'pricing.lead': 'Yksityisasiakkaille hinnat sisältävät arvonlisäveron 25,5 %. Yritysasiakkaille hinnat ovat alv 0 %, ja arvonlisävero 25,5 % lisätään listahintaan. Varaosat veloitetaan erikseen ja niistä sovitaan aina ennen tilaamista. Vianmäärityksen jälkeen saat aina korjauksesta hinta-arvion, ja työ jatkuu vasta kun olet sen hyväksynyt. Jos laite todetaan korjauskelvottomaksi, veloitetaan vain vianmääritys.',
       'pricing.pc.title': 'Tietokoneet ja kannettavat',
       'pricing.pc.r1': 'Vianmääritys (enintään 150 €)',
       'pricing.pc.p1': '50 €/h',
@@ -851,7 +851,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
       // PRICING
       'pricing.title': 'Price list',
-      'pricing.lead': 'All prices include 25.5% VAT. For business customers prices are quoted at 0% VAT, that is the list price without the VAT share, with VAT added on the invoice. Spare parts are charged separately and always agreed on before ordering. After diagnostics you always get a price estimate for the repair, and work continues only once you have approved it. If the device turns out to be beyond repair, you only pay for the diagnostics.',
+      'pricing.lead': 'For private customers the prices include 25.5% VAT. For business customers the prices are exclusive of VAT, and 25.5% VAT is added to the list price. Spare parts are charged separately and always agreed on before ordering. After diagnostics you always get a price estimate for the repair, and work continues only once you have approved it. If the device turns out to be beyond repair, you only pay for the diagnostics.',
       'pricing.pc.title': 'Computers & laptops',
       'pricing.pc.r1': 'Diagnostics (capped at €150)',
       'pricing.pc.p1': '€50/h',
