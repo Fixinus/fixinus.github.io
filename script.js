@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.7':'IP-adress, som leverantörerna av webbplatsen och kontaktformuläret lagrar',
 
       'privacy.contact.title':'6. Lagringstid',
-      'privacy.contact.body.1':'Kontakter som inte leder till ett uppdrag: till utgången av kalenderåret efter den senaste kontakten. Meddelanden från kontaktformuläret sparas i formulärtjänsten (Formspree) i 30 dagar.',
+      'privacy.contact.body.1':'Kontakter som inte leder till ett uppdrag: till utgången av kalenderåret efter den senaste kontakten. En kopia av varje meddelande från kontaktformuläret lagras också i formulärtjänsten (Formspree). Vi raderar kopiorna inom samma tid.',
       'privacy.contact.body.2':'Kund- och tjänsteuppgifter: 3 år från utgången av det år då det senaste uppdraget avslutades.',
       'privacy.contact.body.3':'Filer som säkerhetskopierats eller återställts från kundens enhet: högst 3 månader efter att arbetet slutförts. Vi raderar dem tidigare om du ber om det.',
       'privacy.contact.body.4':'Fakturor och andra bokföringsverifikat: 6 år från utgången av det år då räkenskapsperioden går ut (bokföringslagen).',
@@ -298,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (USA): kontaktformuläret. Namn, e-postadress, telefonnummer och meddelande som du skickar via formuläret förmedlas till oss via Formspree.',
       'privacy.party.list.3':'Google Workspace: e-post.',
       'privacy.party.list.4':'TeamViewer och Microsoft Quick Assist: fjärrsupport, endast med ditt samtycke.',
+      'privacy.party.body.3':'Vi har ingått ett personuppgiftsbiträdesavtal enligt artikel 28 i dataskyddsförordningen med Google och med Formspree.',
 
       'privacy.transfer.title':'8. Överföring utanför EU och EES',
       'privacy.transfer.body.1':'En del av de tjänsteleverantörer vi använder behandlar uppgifter utanför EU och EES, främst i USA.',
@@ -624,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.7':'IP-osoite, jonka verkkosivuston ja yhteydenottolomakkeen palveluntarjoajat tallentavat',
 
       'privacy.contact.title':'6. Tietojen säilytysaika',
-      'privacy.contact.body.1':'Yhteydenotot, jotka eivät johda toimeksiantoon: viimeistä yhteydenottoa seuraavan kalenterivuoden loppuun. Yhteydenottolomakkeen viestit säilyvät lomakepalvelussa (Formspree) 30 päivää.',
+      'privacy.contact.body.1':'Yhteydenotot, jotka eivät johda toimeksiantoon: viimeistä yhteydenottoa seuraavan kalenterivuoden loppuun. Yhteydenottolomakkeen viesteistä jää kopio myös lomakepalveluun (Formspree). Poistamme kopiot saman määräajan kuluessa.',
       'privacy.contact.body.2':'Asiakas- ja palvelutiedot: 3 vuotta viimeisen toimeksiannon päättymisvuoden lopusta.',
       'privacy.contact.body.3':'Asiakkaan laitteelta varmuuskopioidut tai palautetut tiedostot: enintään 3 kuukautta työn valmistumisesta. Poistamme ne aiemmin, jos pyydät.',
       'privacy.contact.body.4':'Laskut ja muut kirjanpidon tositteet: 6 vuotta sen vuoden lopusta, jonka aikana tilikausi päättyy (kirjanpitolaki).',
@@ -637,6 +638,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (Yhdysvallat): yhteydenottolomake. Lomakkeella lähettämäsi nimi, sähköpostiosoite, puhelinnumero ja viesti välitetään meille Formspreen kautta.',
       'privacy.party.list.3':'Google Workspace: sähköposti.',
       'privacy.party.list.4':'TeamViewer ja Microsoft Quick Assist: etätuki, vain luvallasi.',
+      'privacy.party.body.3':'Olemme tehneet Googlen ja Formspreen kanssa tietosuoja-asetuksen 28 artiklan mukaisen tietojenkäsittelysopimuksen.',
 
       'privacy.transfer.title':'8. Tietojen siirto EU:n ja ETA:n ulkopuolelle',
       'privacy.transfer.body.1':'Osa käyttämistämme palveluntarjoajista käsittelee tietoja EU:n ja ETA:n ulkopuolella, pääasiassa Yhdysvalloissa.',
@@ -967,7 +969,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.6':'Files on a customer device, if we make a backup or recover data',
       'privacy.rights.7':'IP address, which the website hosting and contact form providers log',
       'privacy.contact.title':'6. Data Retention Period',
-      'privacy.contact.body.1':'Enquiries that do not lead to a job: until the end of the calendar year following the last contact. Contact form messages are kept by the form service (Formspree) for 30 days.',
+      'privacy.contact.body.1':'Enquiries that do not lead to a job: until the end of the calendar year following the last contact. A copy of each contact form message is also stored by the form service (Formspree). We delete those copies within the same period.',
       'privacy.contact.body.2':'Customer and service data: 3 years from the end of the year in which the last job was completed.',
       'privacy.contact.body.3':'Files backed up or recovered from a customer device: at most 3 months after the job is finished. We delete them earlier if you ask.',
       'privacy.contact.body.4':'Invoices and other accounting vouchers: 6 years from the end of the year in which the financial year ends (Finnish Accounting Act).',
@@ -979,6 +981,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (United States): contact form. The name, email address, phone number and message you send through the form reach us via Formspree.',
       'privacy.party.list.3':'Google Workspace: email.',
       'privacy.party.list.4':'TeamViewer and Microsoft Quick Assist: remote support, only with your permission.',
+      'privacy.party.body.3':'We have entered into a data processing agreement under Article 28 of the GDPR with Google and with Formspree.',
       'privacy.transfer.title':'8. Transfers Outside the EU and EEA',
       'privacy.transfer.body.1':'Some of the service providers we use process data outside the EU and EEA, mainly in the United States.',
       'privacy.transfer.body.2':'GitHub and Google state that they comply with the EU-U.S. Data Privacy Framework and also use the standard contractual clauses of the European Commission. Formspree states that it relies on standard contractual clauses, and its servers are located in the United States.',
