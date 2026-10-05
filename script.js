@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.7':'IP-adress, som leverantörerna av webbplatsen och kontaktformuläret lagrar',
 
       'privacy.contact.title':'6. Lagringstid',
-      'privacy.contact.body.1':'Kontakter som inte leder till ett uppdrag: till utgången av kalenderåret efter den senaste kontakten. Meddelanden från kontaktformuläret sparas i formulärtjänsten (Formspree) i 30 dagar.',
+      'privacy.contact.body.1':'Kontakter som inte leder till ett uppdrag: till utgången av kalenderåret efter den senaste kontakten. En kopia av varje meddelande från kontaktformuläret lagras också i formulärtjänsten (Formspree). Vi raderar kopiorna inom samma tid.',
       'privacy.contact.body.2':'Kund- och tjänsteuppgifter: 3 år från utgången av det år då det senaste uppdraget avslutades.',
       'privacy.contact.body.3':'Filer som säkerhetskopierats eller återställts från kundens enhet: högst 3 månader efter att arbetet slutförts. Vi raderar dem tidigare om du ber om det.',
       'privacy.contact.body.4':'Fakturor och andra bokföringsverifikat: 6 år från utgången av det år då räkenskapsperioden går ut (bokföringslagen).',
@@ -624,7 +624,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.7':'IP-osoite, jonka verkkosivuston ja yhteydenottolomakkeen palveluntarjoajat tallentavat',
 
       'privacy.contact.title':'6. Tietojen säilytysaika',
-      'privacy.contact.body.1':'Yhteydenotot, jotka eivät johda toimeksiantoon: viimeistä yhteydenottoa seuraavan kalenterivuoden loppuun. Yhteydenottolomakkeen viestit säilyvät lomakepalvelussa (Formspree) 30 päivää.',
+      'privacy.contact.body.1':'Yhteydenotot, jotka eivät johda toimeksiantoon: viimeistä yhteydenottoa seuraavan kalenterivuoden loppuun. Yhteydenottolomakkeen viesteistä jää kopio myös lomakepalveluun (Formspree). Poistamme kopiot saman määräajan kuluessa.',
       'privacy.contact.body.2':'Asiakas- ja palvelutiedot: 3 vuotta viimeisen toimeksiannon päättymisvuoden lopusta.',
       'privacy.contact.body.3':'Asiakkaan laitteelta varmuuskopioidut tai palautetut tiedostot: enintään 3 kuukautta työn valmistumisesta. Poistamme ne aiemmin, jos pyydät.',
       'privacy.contact.body.4':'Laskut ja muut kirjanpidon tositteet: 6 vuotta sen vuoden lopusta, jonka aikana tilikausi päättyy (kirjanpitolaki).',
@@ -967,7 +967,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.rights.6':'Files on a customer device, if we make a backup or recover data',
       'privacy.rights.7':'IP address, which the website hosting and contact form providers log',
       'privacy.contact.title':'6. Data Retention Period',
-      'privacy.contact.body.1':'Enquiries that do not lead to a job: until the end of the calendar year following the last contact. Contact form messages are kept by the form service (Formspree) for 30 days.',
+      'privacy.contact.body.1':'Enquiries that do not lead to a job: until the end of the calendar year following the last contact. A copy of each contact form message is also stored by the form service (Formspree). We delete those copies within the same period.',
       'privacy.contact.body.2':'Customer and service data: 3 years from the end of the year in which the last job was completed.',
       'privacy.contact.body.3':'Files backed up or recovered from a customer device: at most 3 months after the job is finished. We delete them earlier if you ask.',
       'privacy.contact.body.4':'Invoices and other accounting vouchers: 6 years from the end of the year in which the financial year ends (Finnish Accounting Act).',
