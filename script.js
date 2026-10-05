@@ -298,6 +298,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (USA): kontaktformuläret. Namn, e-postadress, telefonnummer och meddelande som du skickar via formuläret förmedlas till oss via Formspree.',
       'privacy.party.list.3':'Google Workspace: e-post.',
       'privacy.party.list.4':'TeamViewer och Microsoft Quick Assist: fjärrsupport, endast med ditt samtycke.',
+      'privacy.party.body.3':'Vi har ingått ett personuppgiftsbiträdesavtal enligt artikel 28 i dataskyddsförordningen med Google och med Formspree.',
 
       'privacy.transfer.title':'8. Överföring utanför EU och EES',
       'privacy.transfer.body.1':'En del av de tjänsteleverantörer vi använder behandlar uppgifter utanför EU och EES, främst i USA.',
@@ -637,6 +638,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (Yhdysvallat): yhteydenottolomake. Lomakkeella lähettämäsi nimi, sähköpostiosoite, puhelinnumero ja viesti välitetään meille Formspreen kautta.',
       'privacy.party.list.3':'Google Workspace: sähköposti.',
       'privacy.party.list.4':'TeamViewer ja Microsoft Quick Assist: etätuki, vain luvallasi.',
+      'privacy.party.body.3':'Olemme tehneet Googlen ja Formspreen kanssa tietosuoja-asetuksen 28 artiklan mukaisen tietojenkäsittelysopimuksen.',
 
       'privacy.transfer.title':'8. Tietojen siirto EU:n ja ETA:n ulkopuolelle',
       'privacy.transfer.body.1':'Osa käyttämistämme palveluntarjoajista käsittelee tietoja EU:n ja ETA:n ulkopuolella, pääasiassa Yhdysvalloissa.',
@@ -979,6 +981,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (United States): contact form. The name, email address, phone number and message you send through the form reach us via Formspree.',
       'privacy.party.list.3':'Google Workspace: email.',
       'privacy.party.list.4':'TeamViewer and Microsoft Quick Assist: remote support, only with your permission.',
+      'privacy.party.body.3':'We have entered into a data processing agreement under Article 28 of the GDPR with Google and with Formspree.',
       'privacy.transfer.title':'8. Transfers Outside the EU and EEA',
       'privacy.transfer.body.1':'Some of the service providers we use process data outside the EU and EEA, mainly in the United States.',
       'privacy.transfer.body.2':'GitHub and Google state that they comply with the EU-U.S. Data Privacy Framework and also use the standard contractual clauses of the European Commission. Formspree states that it relies on standard contractual clauses, and its servers are located in the United States.',
