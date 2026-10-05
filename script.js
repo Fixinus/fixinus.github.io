@@ -366,6 +366,10 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.seo.3': 'Lokal synlighet i sökningar i Borgåområdet',
       'services.seo.4': 'Skriftlig rapport och rekommendationer för fortsättningen',
       'services.seo.5': 'Införande och uppföljning av Google Search Console',
+      'services.data.title': 'Dataräddning och säkerhetskopiering',
+      'services.data.1': 'Filåterställning efter radering eller mjukvarufel',
+      'services.data.2': 'Kostnadsfri inledande bedömning, vi debiterar endast för en lyckad återställning',
+      'services.data.3': 'Konfigurering av säkerhetskopiering (extern disk eller molntjänst)',
 
       'services.mobile.title': 'Telefoner & surfplattor (endast mjukvara och lätt rengöring)',
       'services.mobile.1': 'Ny enhet – grundinställning',
@@ -713,6 +717,10 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.seo.3': 'Paikallinen näkyvyys Porvoon alueen hauissa',
       'services.seo.4': 'Kirjallinen raportti ja suositukset jatkoa varten',
       'services.seo.5': 'Google Search Consolen käyttöönotto ja seuranta',
+      'services.data.title': 'Tietojen palautus ja varmuuskopiointi',
+      'services.data.1': 'Tiedostojen palautus poistojen ja ohjelmallisten vikojen jälkeen',
+      'services.data.2': 'Maksuton alkukartoitus, veloitus vain onnistuneesta palautuksesta',
+      'services.data.3': 'Varmuuskopioinnin käyttöönotto (ulkoinen levy tai pilvipalvelu)',
 
       'services.mobile.title':'Puhelimet & tabletit (vain ohjelmisto + kevyt puhdistus)',
       'services.mobile.1': 'Uuden laitteen käyttöönotto',
@@ -1051,6 +1059,10 @@ document.addEventListener('DOMContentLoaded', () =>
       'services.seo.3': 'Local visibility in Porvoo-area searches',
       'services.seo.4': 'Written report and recommendations for next steps',
       'services.seo.5': 'Google Search Console setup and monitoring',
+      'services.data.title': 'Data recovery and backups',
+      'services.data.1': 'File recovery after deletion or software faults',
+      'services.data.2': 'Free initial assessment, charged only for a successful recovery',
+      'services.data.3': 'Backup setup (external drive or cloud)',
 
       'services.mobile.title': 'Phones & Tablets (software only + light cleaning)',
       'services.mobile.1': 'New device setup',
