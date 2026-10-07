@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (USA): kontaktformuläret. Namn, e-postadress, telefonnummer och meddelande som du skickar via formuläret förmedlas till oss via Formspree.',
       'privacy.party.list.3':'Google Workspace: e-post.',
       'privacy.party.list.4':'TeamViewer och Microsoft Quick Assist: fjärrsupport, endast med ditt samtycke.',
-      'privacy.party.list.5':'Anthropic (USA): under reparationsarbetet använder vi Claude-AI som hjälp vid felsökningen. Till den kan tekniska uppgifter om datorn förmedlas, såsom maskinvaru- och programvaruinformation, loggposter och filnamn. Vi förmedlar inte innehållet i dokument, bilder eller meddelanden. Anthropic lagrar uppgifterna i högst 30 dagar och använder dem inte för att träna AI-modeller.',
+      'privacy.party.list.5':'Anthropic (USA): under reparationsarbetet använder vi Claude-AI som hjälp vid felsökningen. Till den kan tekniska uppgifter om datorn förmedlas, såsom maskinvaru- och programvaruinformation, loggposter och filnamn. Vi förmedlar inte innehållet i dokument, bilder eller meddelanden. Anthropic lagrar uppgifterna i högst 30 dagar. Vi har stängt av användningen av dessa uppgifter för att träna AI-modeller.',
       'privacy.party.body.3':'Vi har ingått ett personuppgiftsbiträdesavtal enligt artikel 28 i dataskyddsförordningen med Google och med Formspree.',
 
       'privacy.transfer.title':'8. Överföring utanför EU och EES',
@@ -644,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (Yhdysvallat): yhteydenottolomake. Lomakkeella lähettämäsi nimi, sähköpostiosoite, puhelinnumero ja viesti välitetään meille Formspreen kautta.',
       'privacy.party.list.3':'Google Workspace: sähköposti.',
       'privacy.party.list.4':'TeamViewer ja Microsoft Quick Assist: etätuki, vain luvallasi.',
-      'privacy.party.list.5':'Anthropic (Yhdysvallat): korjaustyön aikana käytämme Claude-tekoälyä apuna vianmäärityksessä. Sille voidaan välittää koneesta teknisiä tietoja, kuten laitteisto- ja ohjelmistotietoja, lokimerkintöjä ja tiedostojen nimiä. Emme välitä asiakirjojen, kuvien tai viestien sisältöä. Anthropic säilyttää tiedot enintään 30 päivää eikä käytä niitä tekoälymallien kouluttamiseen.',
+      'privacy.party.list.5':'Anthropic (Yhdysvallat): korjaustyön aikana käytämme Claude-tekoälyä apuna vianmäärityksessä. Sille voidaan välittää koneesta teknisiä tietoja, kuten laitteisto- ja ohjelmistotietoja, lokimerkintöjä ja tiedostojen nimiä. Emme välitä asiakirjojen, kuvien tai viestien sisältöä. Anthropic säilyttää tiedot enintään 30 päivää. Olemme poistaneet käytöstä tietojen käytön tekoälymallien kouluttamiseen.',
       'privacy.party.body.3':'Olemme tehneet Googlen ja Formspreen kanssa tietosuoja-asetuksen 28 artiklan mukaisen tietojenkäsittelysopimuksen.',
 
       'privacy.transfer.title':'8. Tietojen siirto EU:n ja ETA:n ulkopuolelle',
@@ -994,7 +994,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'privacy.party.list.2':'Formspree (United States): contact form. The name, email address, phone number and message you send through the form reach us via Formspree.',
       'privacy.party.list.3':'Google Workspace: email.',
       'privacy.party.list.4':'TeamViewer and Microsoft Quick Assist: remote support, only with your permission.',
-      'privacy.party.list.5':'Anthropic (United States): during repair work we use the Claude AI assistant to help with diagnostics. Technical information about the machine may be passed to it, such as hardware and software details, log entries and file names. We do not pass on the contents of documents, images or messages. Anthropic retains the data for at most 30 days and does not use it to train AI models.',
+      'privacy.party.list.5':'Anthropic (United States): during repair work we use the Claude AI assistant to help with diagnostics. Technical information about the machine may be passed to it, such as hardware and software details, log entries and file names. We do not pass on the contents of documents, images or messages. Anthropic retains the data for at most 30 days. We have turned off the use of this data for training AI models.',
       'privacy.party.body.3':'We have entered into a data processing agreement under Article 28 of the GDPR with Google and with Formspree.',
       'privacy.transfer.title':'8. Transfers Outside the EU and EEA',
       'privacy.transfer.body.1':'Some of the service providers we use process data outside the EU and EEA, mainly in the United States.',
