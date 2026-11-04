@@ -1333,6 +1333,33 @@ footer a,
   cursor: pointer;
 }
 
+/* --- Notice pop-up (vacation image) --- */
+
+.modal-content-notice {
+  max-width: 28rem;
+  width: min(90%, 90vh);
+  padding: 0;
+  overflow: hidden;
+  background: #061142;
+}
+
+.modal-content-notice img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.modal-content-notice .modal-close {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  padding: 0;
+  text-align: center;
+}
+
 /* Make the footer "Warranty" button look like a text link */
 .footer-link-button {
   background: none;

@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.email.title': 'E-post',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Öppettider',
-      'contact.hours.monfri': 'Måndag–Fredag: 09:00 – 22:00',
+      'contact.hours.monfri': 'Måndag–Fredag: 10:00 – 20:00',
       'contact.hours.sat': 'Lördag: 12:00 – 20:00',
       'contact.hours.sun': 'Söndag: Stängt',
       'contact.hours.urgent': 'Akuta ärenden dygnet runt (tillägg utanför öppettiderna). Om vi inte svarar direkt – ring gärna igen. För icke-akuta frågor, lämna ett meddelande.',
@@ -779,7 +779,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.email.title': 'Sähköposti',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Aukioloajat',
-      'contact.hours.monfri': 'Ma–Pe: 09:00 – 22:00',
+      'contact.hours.monfri': 'Ma–Pe: 10:00 – 20:00',
       'contact.hours.sat': 'La: 12:00 – 20:00',
       'contact.hours.sun': 'Su: Suljettu',
       'contact.hours.urgent':
@@ -1124,7 +1124,7 @@ document.addEventListener('DOMContentLoaded', () =>
       'contact.email.title': 'Email',
       'contact.email.value': 'info@fixinus.fi',
       'contact.hours.title': 'Hours',
-      'contact.hours.monfri': 'Monday–Friday: 09:00 – 22:00',
+      'contact.hours.monfri': 'Monday–Friday: 10:00 – 20:00',
       'contact.hours.sat': 'Saturday: 12:00 – 20:00',
       'contact.hours.sun': 'Sunday: Closed',
       'contact.hours.urgent':
@@ -1359,6 +1359,59 @@ document.addEventListener('DOMContentLoaded', () =>
     document.addEventListener('DOMContentLoaded', initLang);
   } else {
     initLang();
+  }
+})();
+
+
+// VACATION NOTICE POP-UP
+// Shows the notice image once per browser session until NOTICE_UNTIL (inclusive).
+// Remove this block, the #notice-modal markup and media/vacation-2026-11.webp
+// after the vacation.
+
+(function () {
+  const NOTICE_UNTIL = '2026-11-15';
+  const KEY = 'fixinus-notice-2026-11';
+  const modal = document.getElementById('notice-modal');
+  const closeBtn = document.getElementById('notice-close');
+
+  if (!modal || !closeBtn) return;
+
+  const today = new Date();
+  const ymd = today.getFullYear() + '-' +
+    String(today.getMonth() + 1).padStart(2, '0') + '-' +
+    String(today.getDate()).padStart(2, '0');
+  if (ymd > NOTICE_UNTIL) return;
+
+  let seen = false;
+  try { seen = sessionStorage.getItem(KEY) === '1'; } catch (e) { /* storage blocked */ }
+  if (seen) return;
+
+  function openModal() {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    try { sessionStorage.setItem(KEY, '1'); } catch (e) { /* storage blocked */ }
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-backdrop')) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', openModal);
+  } else {
+    openModal();
   }
 })();
 

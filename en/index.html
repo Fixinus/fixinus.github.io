@@ -29,8 +29,8 @@
   <meta property="og:locale" content="en_GB" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="/style.css?v=21" />
-  <script src="/script.js?v=24" defer></script>
+  <link rel="stylesheet" href="/style.css?v=25" />
+  <script src="/script.js?v=25" defer></script>
   <link rel="icon" href="/media/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/media/favicon-180.png">
 
@@ -59,8 +59,8 @@
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "22:00"
+        "opens": "10:00",
+        "closes": "20:00"
       },
       {
         "@type": "OpeningHoursSpecification",
@@ -538,7 +538,7 @@
           </div>
           <div>
             <h4 data-i18n="contact.hours.title">Hours</h4>
-            <p data-i18n="contact.hours.monfri">Monday–Friday: 09:00 – 22:00</p>
+            <p data-i18n="contact.hours.monfri">Monday–Friday: 10:00 – 20:00</p>
             <p data-i18n="contact.hours.sat">Saturday: 12:00 – 20:00</p>
             <p data-i18n="contact.hours.sun">Sunday: Closed</p>
             <p data-i18n="contact.hours.urgent">Urgent matters 24/7 (surcharge outside business hours). If we don’t answer right away, please call again. For non-urgent matters, leave a message.</p>
@@ -547,6 +547,17 @@
       </div>
     </div>
   </section>
+
+  <div id="notice-modal" class="modal modal-notice" aria-hidden="true" role="dialog" aria-label="Lomalla / På semester / On vacation 5.–15.11.2026">
+    <div class="modal-backdrop"></div>
+
+    <div class="modal-content modal-content-notice">
+      <button type="button" class="modal-close" id="notice-close" aria-label="Close notice">
+        ×
+      </button>
+      <img src="/media/vacation-2026-11.webp" alt="Fixinus: Lomalla / På semester / On vacation 5.–15.11.2026. Takaisin / Tillbaka / Back 16.11." width="1024" height="1024" />
+    </div>
+  </div>
 
   <div id="warranty-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="warranty-title">
     <div class="modal-backdrop"></div>
