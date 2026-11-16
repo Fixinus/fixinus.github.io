@@ -29,8 +29,8 @@
   <meta property="og:locale" content="fi_FI" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="/style.css?v=25" />
-  <script src="/script.js?v=25" defer></script>
+  <link rel="stylesheet" href="/style.css?v=26" />
+  <script src="/script.js?v=26" defer></script>
   <link rel="icon" href="/media/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/media/favicon-180.png">
 
@@ -548,14 +548,17 @@
     </div>
   </section>
 
-  <div id="notice-modal" class="modal modal-notice" aria-hidden="true" role="dialog" aria-label="Lomalla / På semester / On vacation 5.–15.11.2026">
+  <div id="notice-modal" class="modal modal-notice" aria-hidden="true" role="dialog" aria-labelledby="notice-title">
     <div class="modal-backdrop"></div>
 
     <div class="modal-content modal-content-notice">
       <button type="button" class="modal-close" id="notice-close" aria-label="Close notice">
         ×
       </button>
-      <img src="/media/vacation-2026-11.webp" alt="Fixinus: Lomalla / På semester / On vacation 5.–15.11.2026. Takaisin / Tillbaka / Back 16.11." width="1024" height="1024" />
+
+      <h2 id="notice-title" data-i18n="notice.title">Tilapäisesti suljettu</h2>
+      <p data-i18n="notice.text">Perheenjäsenen kuoleman vuoksi en ole tavoitettavissa ennen maanantaita 23.11.2026.</p>
+      <p data-i18n="notice.thanks">Kiitos ymmärryksestä.</p>
     </div>
   </div>
 

@@ -242,6 +242,9 @@ document.addEventListener('DOMContentLoaded', () =>
       'about.pay.body': 'Kontanter, alla större bank- och kreditkort, MobilePay, Google Pay, Apple Pay eller faktura.',
 
       // WARRANTY (SV)
+      'notice.title': 'Tillfälligt stängt',
+      'notice.text': 'På grund av ett dödsfall i familjen är jag inte anträffbar förrän måndagen den 23.11.2026.',
+      'notice.thanks': 'Tack för förståelsen.',
       'warranty.title': 'Arbetsgaranti',
       'warranty.about': 'Vi lämnar sex månaders garanti på vårt arbete. Om ett problem beror på vårt utförande åtgärdar vi det utan kostnad. Garantin kompletterar dina lagstadgade konsumenträttigheter.',
       'warranty.not.title': 'Detta omfattas inte:',
@@ -587,6 +590,9 @@ document.addEventListener('DOMContentLoaded', () =>
         'Käteinen, yleisimmät pankki- ja luottokortit, MobilePay, Google Pay, Apple Pay tai lasku.',
 
       // WARRANTY
+      'notice.title': 'Tilapäisesti suljettu',
+      'notice.text': 'Perheenjäsenen kuoleman vuoksi en ole tavoitettavissa ennen maanantaita 23.11.2026.',
+      'notice.thanks': 'Kiitos ymmärryksestä.',
       'warranty.title': 'Takuuehdot',
       'warranty.about':
         'Annamme työllemme kuuden kuukauden takuun. Jos ongelma johtuu tekemästämme työstä, korjaamme sen ilman lisäkustannuksia. Takuu täydentää lakisääteisiä kuluttajaoikeuksiasi.',
@@ -943,6 +949,9 @@ document.addEventListener('DOMContentLoaded', () =>
         'Cash, major debit and credit cards, MobilePay, Google Pay, Apple Pay or invoice.',
 
       // WARRANTY
+      'notice.title': 'Temporarily closed',
+      'notice.text': 'Due to the death of a family member, I will be unavailable until Monday 23 November 2026.',
+      'notice.thanks': 'Thank you for your understanding.',
       'warranty.title': 'Warranty',
       'warranty.about':
         'We provide a six-month warranty on our labor. If an issue is caused by our work, we’ll fix it at no cost. This warranty supplements your statutory consumer rights.',
@@ -1363,14 +1372,14 @@ document.addEventListener('DOMContentLoaded', () =>
 })();
 
 
-// VACATION NOTICE POP-UP
-// Shows the notice image once per browser session until NOTICE_UNTIL (inclusive).
-// Remove this block, the #notice-modal markup and media/vacation-2026-11.webp
-// after the vacation.
+// NOTICE POP-UP
+// Shows the notice once per browser session until NOTICE_UNTIL (inclusive).
+// After 22.11.2026 remove this block, the #notice-modal markup, the notice.*
+// messages and the unused media/vacation-2026-11.webp.
 
 (function () {
-  const NOTICE_UNTIL = '2026-11-15';
-  const KEY = 'fixinus-notice-2026-11';
+  const NOTICE_UNTIL = '2026-11-22';
+  const KEY = 'fixinus-notice-2026-11b';
   const modal = document.getElementById('notice-modal');
   const closeBtn = document.getElementById('notice-close');
 
